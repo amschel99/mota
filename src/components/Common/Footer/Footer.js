@@ -85,7 +85,7 @@ const Footer = () => {
                             Copyright © 2022 <br />
                             All rights reserved <br />
                             Programmed, developed & designed by <br />
-                            <Link href="https://techagecompanies.space" color="primary" fontWeight="bold" target="_blank" rel="noopener noreferrer">TechAgeCompanies</Link>
+                            <Link href="https://amschel.tech" color="primary" fontWeight="bold" target="_blank" rel="noopener noreferrer">Amschel</Link>
                         </Typography>
                     </Grid>
                 </Grid>
