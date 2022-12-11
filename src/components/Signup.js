@@ -46,6 +46,10 @@ return setError(`passwords do not match`)
   email:emailRef.current.value,
 password:passwordRef.current.value,
 name:nameRef.current.value,
+location:locationRef.current.value,
+mobile:mobileRef.current.value,
+description:descriptionRef.current.value,
+
 
 
 
