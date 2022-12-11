@@ -18,15 +18,15 @@ const Footer = () => {
                             display: 'flex', alignItems: 'flex-end'
                         }
                     }}>
-                        <Box component='a' href="https://facebook.com/MillesMotorsLtd" target="_blank" rel="noopener noreferrer">
+                        <Box component='a' href="#" target="_blank" rel="noopener noreferrer">
                             <FacebookRounded color="primary" />
                         </Box>
-                        <Box component='a' href="https://twitter.com/@miles_motors" target="_blank" rel="noopener noreferrer">
+                        <Box component='a' href="#" target="_blank" rel="noopener noreferrer">
                             <Twitter color="primary" />
                         </Box>
-                        <Box component="a" href="tel:+254733381707">
+                        <Box component="a" href="tel:+254797168636">
                             <PhoneRounded sx={{ mx: 1 }} />
-                            (+254) 733 381 707
+                            (+254) 797168636
                         </Box>
                     </Box>
                 </Box>

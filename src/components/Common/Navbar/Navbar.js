@@ -88,6 +88,7 @@ const Navbar = () => {
               <TextField
                 onChange={(e) => {
                   setValue(e.target.value);
+                   return dispatch(search({ search: value }));
                 }}
                 onKeyPress={(e) => {
                   if (e.key === "Enter") {
@@ -103,7 +104,7 @@ const Navbar = () => {
 
               <button
                 style={{
-                  height: "40px",
+                  height: "38px",
                   width: "30px",
                   backgroundColor: "red",
                   border: "none",
