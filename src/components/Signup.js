@@ -14,6 +14,7 @@ import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
+import axios from 'axios'
 
 const theme = createTheme();
 
@@ -21,9 +22,11 @@ export default function SignUp() {
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
+    const [user,setUser]=React.useState('')
     const {signUp}=useAuth()
    
     const emailRef=useRef();
+     const nameRef=useRef();
     const passwordRef=useRef();
     const passwordConfirmationRef=useRef();
  async  function handleSubmit(e){
@@ -35,6 +38,17 @@ return setError(`passwords do not match`)
         setError('')
         setLoading(true)
  await  signUp(emailRef.current.value,passwordRef.current.value)
+ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/register`,{
+  email:emailRef.current.value,
+password:passwordRef.current.value,
+name:nameRef.current.value
+
+ })
+ if(data.message==="success"){
+setUser(`${data.message}`)
+ }
+
+ await
  history.push('/profile')
     }
     catch(error){
@@ -64,10 +78,22 @@ setError(`failed to create an account!${error}`)
             Sign up
           </Typography>
           {error && <Alert severity="error">{error}</Alert>}
+           {user && <Alert severity="success">{user}</Alert>}
 
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-             
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="name"
+                  label="Name"
+                  type="text"
+                  id="name"
+                   inputRef={nameRef}
+                  autoComplete="Enter your name"
+                />
+              </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
