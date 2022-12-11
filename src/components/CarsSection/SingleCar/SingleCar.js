@@ -12,11 +12,12 @@ import { Box } from "@mui/system";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios"
+import {Link} from 'react-router-dom'
 
 
 
 const SingleCar = ({ carInfo }) => {
- 
+ const[userId,setUserId]=React.useState('')
   const {
     carID,
     carImg,
@@ -39,6 +40,7 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 
 
 setUserName(data.name)
+setUserId(data._id)
   }
 
   catch(e){
@@ -82,6 +84,8 @@ setUserName(`error fetching user`)
                 | <span style={{ backgroundColor: "#EEF0F8" }}>{fuel}</span>
               </Typography>
                <Typography
+               component={Link}
+               to={`seller/${userId}`}
                 variant="body2"
                 color="text.secondary"
                 fontWeight={700}
