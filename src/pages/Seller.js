@@ -2,8 +2,8 @@ import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import LoadingSpinner from '../Common/LoadingSpinner/LoadingSpinner';
-import SingleCar from './SingleCar/SingleCar';
+import LoadingSpinner from '../components/Common/LoadingSpinner/LoadingSpinner';
+import SingleCar from '../components/CarsSection/SingleCar/SingleCar';
 import {   useSelector} from 'react-redux'
 import {useParams } from "react-router-dom";
 
