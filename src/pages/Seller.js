@@ -55,19 +55,19 @@ getUser()
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>About {user}</Typography>
-            <Typography  variant="h6" align="center" color="black" >
+            <Typography  variant="h6" align="center" color="black" mb={3} >
              {description}   
             </Typography>
             <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
-                Location 
-             <Typography  variant="p" align="center" color="black">{   location}</Typography>
+               We are located at  
+             <Typography  variant="p" align="center" color="black"> {location}</Typography>
             </Typography>
-             <Typography  variant="h6" align="center" color="black" fontWeight="bold"  >
+             <Typography  variant="h6" align="center" color="black" fontWeight="bold" mb={3} >
           
-                <a href={`tel:${mobile}`}>{mobile}</a>
+                <a href={`tel:${mobile}`}> Call {mobile}</a>
             </Typography>
-             <Typography  variant="h6" align="center" color="black"  >
-          Call now
+             <Typography  variant="h6" align="center" color="black" mb={3} >
+         
                <a href={`https://wa.me/${mobile}`}> Enquire on Whatsapp</a>
             </Typography>
 
