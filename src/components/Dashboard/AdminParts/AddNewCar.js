@@ -63,8 +63,8 @@ history.push("/login")
             {error&& <Alert severity="error">{error}</Alert>}
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
-                        <Typography variant="p" align="center" color="black" >{` Welcome !${currentUser.email}`}</Typography>
-            <Typography variant="h4" align="center" color="primary" fontWeight="bold">Add New Car In Shop</Typography>
+                        <Typography variant="p" align="center" color="black" >{` Welcome ! ${currentUser.email}`}</Typography>
+            <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
 
                 {/* new car information form */}
