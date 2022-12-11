@@ -39,7 +39,7 @@ React.useEffect(()=>{
  const getUser= async ()=>{
   try{
 const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
-  email:currentUser.email
+  email:user
 })
 const {name}=data
 setUserName(name)
@@ -50,7 +50,7 @@ setUserName(name)
   }
  }
  getUser()
-},[currentUser.email])
+},[user])
   // Numbers over 1000 to separated by commas
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
