@@ -46,7 +46,7 @@ return setError(`passwords do not match`)
   email:emailRef.current.value,
 password:passwordRef.current.value,
 name:nameRef.current.value,
-
+location:locationRef.current.value
 
 
 
@@ -107,8 +107,8 @@ setError(`failed to create an account!${error}`)
                 <TextField
                   required
                   fullWidth
-                  name="Location"
-                  label="Location"
+                  name="location"
+                  label="location"
                   type="text"
                   id="location"
                    inputRef={locationRef}
