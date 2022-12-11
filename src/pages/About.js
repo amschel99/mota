@@ -58,49 +58,57 @@ const About = () => {
         >
           About Us
         </Typography>
-        <Typography variant="p" sx={{ fontSize: "1rem" }}>
-          Miles Motors Ltd was established in 2011. We are a Brand New & Used
-          Car Dealership that is situated along Chyulu road, behind The Kenya
-          National Library in Upper-hill, Nairobi. We offer the best deal prices
-          around and also keep up to our record of being Kenya's Number 1 local
-          and international car dealership. Miles Motors Ltd was established in
-          2011. We are a Brand New & Used Car Dealership that is situated along
-          Chyulu road, behind The Kenya National Library in Upper-hill, Nairobi.
-          We offer the best deal prices around and also keep up to our record of
-          being Kenya's Number 1 local and international car dealership.
+
+        <Typography variant="h6"   sx={{ textAlign: "center"}}>
+        Get started with this Car dealers web platform. Its easy to get started, send me a message on 
+        <a href="https://wa.me/+254790569556"> whatsapp </a>.
+        This web app includes features like:
+        <ul>
+          <li>Search bar and Sort Menu</li>
+          <li>All cars page</li>
+          <li>Single car page</li>
+          <li>Admin Dashboard</li>
+          <li>Contact Us Page</li>
+          <li>About Us Page</li>
+          <li>Admin authentication and authorisation</li>
+
+
+        </ul>
+        This web app is highly scalable.
+      
         </Typography>
-        <Typography variant="h5" sx={{ marginTop: 1, color: "red" }}>
+        <Typography variant="h5"      sx={{ textAlign: "center", marginBottom: 2 }}>
           Services Offered
-        </Typography>
-        <Box>
-          <ol>
-            <li>(1)  Car Sales. i.e: Brand New and Foreign Used cars.</li>
+        </Typography  >
+        <Typography variant="h6"   sx={{ textAlign: "center"}}>
+          <ul>
+            <li> Car Sales. i.e: Brand New and Foreign Used cars.</li>
             <li>
-              (2) Trade-in: For those wanting to upgrade from their current used
+             Trade-in: For those wanting to upgrade from their current used
               units to a newer version.
             </li>
-            <li>(3) Importation of desired cars on behalf of customers.</li>
-            <li>(4) Buy locally used cars for re-sale.</li>
+            <li> Importation of desired cars on behalf of customers.</li>
+            <li> Buy locally used cars for re-sale.</li>
             <li>
-              (5) Liaise with financial institutions, i.e: Banks & Micro Finance to
+               Liaise with financial institutions, i.e: Banks & Micro Finance to
               provide car financing.
             </li>
             <li>
-              (6) Liaise with Insurance firms to provide insurance for customers
+               Liaise with Insurance firms to provide insurance for customers
               text
             </li>
-          </ol>
-        </Box>
-        <Typography variant="h5" color="red">
+       </ul>
+        </Typography>
+        <Typography  sx={{ textAlign: "center", marginBottom: 2 }}>
           Our Brands
         </Typography>
-        <Typography variant="p" fontStyle="sans-serif">
+        <Typography variant="h6"   sx={{ textAlign: "center"}}>
           We stock a wide variety of brands including, but not limited to;
           Toyota, Mercedes Benz, Lexus, Nissan, Subaru, Mazda, Isuzu, Suzuki,
           Volkswagen, Range Rover, Hyundai, Mitsubishi, Volvo, Honda, BMW, Audi,
           Jeep etc.
         </Typography>
-        <Box>
+     <Box sx={{width:'100vw',display:"flex",justifyContent:'center'}}>
           <img src={image1} alt="Cars_Logos" height="10%" width="70" />
           <img src={image2} alt="Cars_Logos" height="10%" width="70" />
           <img src={image3} alt="Cars_Logos" height="10%" width="70" />
@@ -129,7 +137,7 @@ const About = () => {
           <img src={image26} alt="Cars_Logos" height="10%" width="70" />
           <img src={image27} alt="Cars_Logos" height="10%" width="70" />
           <img src={image29} alt="Cars_Logos" height="10%" width="70" />
-        </Box>
+       </Box>
       </Box>
     </ThemeProvider>
   );
