@@ -43,7 +43,10 @@ const Home = () => {
             <Box>
                 <HomeBanner />
             </Box>
-            <Box>
+            <Box sx={{marginTop:'10px'}}>
+                <Typography    variant="h4"
+          color="red"
+          sx={{ textAlign: "center", marginBottom: 2 }}>Sort Car By Brand</Typography>
 
                  <Typography  variant="h6"   sx={{ textAlign: "center"}}>
           <img src={image1} alt="Cars_Logos" height="10%" width="70" />
