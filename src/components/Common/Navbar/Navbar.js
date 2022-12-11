@@ -125,7 +125,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faSearch} />
               
               </button>
-              */}  
+           
               <select
                 onChange={(e) => {
                   return dispatch(type({ type: e.target.value }));
@@ -157,6 +157,7 @@ const Navbar = () => {
                 
                 <option></option>
               </select>
+                  */} 
             </Box>
 
             <Box flex={2}>
