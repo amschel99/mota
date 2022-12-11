@@ -139,7 +139,7 @@ setError(`failed to create an account!${error}`)
                   id="description"
                   minRows={4}
                   maxRows={4}
-                style={{ width: 350 }}
+                style={{ width: "100%" }}
                   placeholder="enter a brief description about your car dealership business"
                   ref={descriptionRef}
                   autoComplete="describe your company/business"
