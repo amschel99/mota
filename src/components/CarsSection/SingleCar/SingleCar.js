@@ -41,13 +41,13 @@ React.useEffect(()=>{
 const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
   email:user
 })
-const {name}=data
-alert(data)
-setUserName(name)
+
+
+setUserName(data.name)
   }
 
   catch(e){
-
+setUserName(`error fetching user`)
   }
  }
  getUser()
