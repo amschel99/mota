@@ -3,6 +3,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import TextArea from '@mui/material/TextareaAutosize';
 import {useRef} from "react"
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
@@ -28,6 +29,9 @@ export default function SignUp() {
     const emailRef=useRef();
      const nameRef=useRef();
     const passwordRef=useRef();
+      const locationRef=useRef();
+        const MobileRef=useRef();
+         const descriptionRef=useRef();
     const passwordConfirmationRef=useRef();
  async  function handleSubmit(e){
         e.preventDefault()
@@ -41,7 +45,10 @@ return setError(`passwords do not match`)
  const {data}= await axios.post(`https://milesmotors.onrender.com/auth/register`,{
   email:emailRef.current.value,
 password:passwordRef.current.value,
-name:nameRef.current.value
+name:nameRef.current.value,
+location:locationRef.current.value,
+mobile:MobileRef,
+description:descriptionRef
 
  })
 
@@ -92,6 +99,42 @@ setError(`failed to create an account!${error}`)
                   id="name"
                    inputRef={nameRef}
                   autoComplete="Enter your name"
+                />
+              </Grid>
+                <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="Location"
+                  label="Location"
+                  type="text"
+                  id="location"
+                   inputRef={locationRef}
+                  autoComplete="Enter your location"
+                />
+              </Grid>
+               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="Mobile"
+                  label="Mobile"
+                  type="text"
+                  id="Mobile"
+                   inputRef={MobileRef}
+                  autoComplete="Enter your mobile number"
+                />
+              </Grid>
+               <Grid item xs={12}>
+                <TextArea
+                  required
+                  fullWidth
+                  name="description"
+                  label="Description"
+                  type="text"
+                  id="description"
+                   inputRef={descriptionRef}
+                  autoComplete="describe your company/business"
                 />
               </Grid>
               <Grid item xs={12}>

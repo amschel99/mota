@@ -77,6 +77,18 @@ const SignUp = () => {
                             required
                             onChange={handleChange('name')} />
                     </FormControl>
+                    
+
+ <FormControl sx={{ m: 1 }} color="primary" variant="standard" fullWidth >
+                        <InputLabel htmlFor="signUp-location">Location</InputLabel>
+                        <Input
+                            id="signUp-name"
+                            type='text'
+                            defaultValue={values.location}
+                            required
+                            onChange={handleChange('location')} />
+                    </FormControl>
+
                     <FormControl sx={{ m: 1 }} color="primary" variant="standard" fullWidth >
                         <InputLabel htmlFor="signUp-email">Email</InputLabel>
                         <Input
