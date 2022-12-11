@@ -100,7 +100,7 @@ function App() {
                 <Route exact path="/cars"><Cars /></Route>
                 <Route exact path="/about"><About /></Route>
                 <Route exact path="/contact"><Contact/></Route>
-                 <Route exact path="/seller/:userId"><Seller/></Route>
+                 
 
                   
                     
@@ -117,6 +117,7 @@ function App() {
                 {/* private routes */}
           
                 <Route path="/cars/details/:carID"><CarDetails /></Route>
+                <Route  path="/seller/:userId"><Seller/></Route>
             
              
 
