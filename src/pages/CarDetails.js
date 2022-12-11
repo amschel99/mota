@@ -37,21 +37,21 @@ const [mobile,setMobile]=React.useState('')
     description,
     user
   } = carDetails ? carDetails : {};
-useEffect(()=>{
-const getUser= async ()=>{
+
+  useEffect(() => {
+    axios
+      .get(`https://milesmotors.onrender.com/car/${carID}`)
+      .then(({ data }) => setCarDetails(data.data))
+      .catch((err) => console.log(err));
+      const getUser= async ()=>{
   const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
     email:user
   })
   setMobile(data.mobile)
 }
 getUser()
-},[user])
-  useEffect(() => {
-    axios
-      .get(`https://milesmotors.onrender.com/car/${carID}`)
-      .then(({ data }) => setCarDetails(data.data))
-      .catch((err) => console.log(err));
-  }, [carID]);
+
+  }, [carID,user]);
 
   // create table rows
   function createData(name, value) {
