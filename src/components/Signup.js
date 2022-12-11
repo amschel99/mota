@@ -45,7 +45,7 @@ name:nameRef.current.value
 
  })
 
-setUser(`${data.message}`)
+setUser(`${JSON.stringify(data)}`)
  
 
  await
