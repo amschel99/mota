@@ -85,7 +85,7 @@ setUserName(`error fetching user`)
               </Typography>
                <Typography
                component={Link}
-               to={`seller/${userId}`}
+               to={`/seller/${userId}`}
                 variant="body2"
                 color="text.secondary"
                 fontWeight={700}
