@@ -100,7 +100,7 @@ function App() {
                 <Route exact path="/cars"><Cars /></Route>
                 <Route exact path="/about"><About /></Route>
                 <Route exact path="/contact"><Contact/></Route>
-                 <Route exact path="/seller"><Seller/></Route>
+                 <Route exact path="/seller/:userId"><Seller/></Route>
 
                   
                     
