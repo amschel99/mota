@@ -40,7 +40,24 @@ history.push("/login")
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
+const[userName,setUserName]=React.useState('')
+    
       React.useEffect(()=>{
+        const getUser= async ()=>{
+  try{
+const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
+  email:currentUser.email
+})
+
+
+setUserName(data.name)
+  }
+
+  catch(e){
+setUserName(`error fetching user`)
+  }
+ }
+ getUser()
 setUser(currentUser.email)
     },[currentUser.email])
     const handleValueChange = (prop) => (event) => {
@@ -69,7 +86,7 @@ setUser(currentUser.email)
             {error&& <Alert severity="error">{error}</Alert>}
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
-                        <Typography variant="p" align="center" color="black" >{` Welcome ! ${currentUser.email}`}</Typography>
+                        <Typography variant="p" align="center" color="black" >{` Welcome ! ${userName}`}</Typography>
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
 

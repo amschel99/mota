@@ -8,30 +8,25 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { alpha, Box, styled } from "@mui/system";
+import { Box } from "@mui/system";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios"
-import useAuth from "../SingleCar/../../../others/useAuthContext"
-const Icon = styled("i")(({ theme }) => ({
-  color: theme.palette.primary.light,
-  fontSize: "22px",
-}));
+
 
 
 const SingleCar = ({ carInfo }) => {
-   const {currentUser}=useAuth()
+ 
   const {
     carID,
     carImg,
     carName,
-    carType,
+   
     transmission,
     fuel,
-    color,
-    mileage,
+   
     price,
-    engine,
+   
     user
   } = carInfo;
 const [userName,setUserName]=React.useState('')
