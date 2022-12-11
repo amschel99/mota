@@ -13,6 +13,7 @@ import Reset from './components/Reset'
 import UpdateProfile from './components/UpdateProfile'
 import CarDetails from "./pages/CarDetails";
 import Page404 from "./pages/404";
+import Seller from './pages/Seller';
 
 import Footer from "./components/Common/Footer/Footer";
 import SocialFlow from "./components/Common/socialFlow/socialFlow";
@@ -99,6 +100,7 @@ function App() {
                 <Route exact path="/cars"><Cars /></Route>
                 <Route exact path="/about"><About /></Route>
                 <Route exact path="/contact"><Contact/></Route>
+                 <Route exact path="/seller"><Seller/></Route>
 
                   
                     
