@@ -47,7 +47,7 @@ const [mobile,setMobile]=React.useState('')
   const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
     email:user
   })
-  setMobile(JSON.stringify(data))
+  setMobile(data.mobile)
 }
 getUser()
 
