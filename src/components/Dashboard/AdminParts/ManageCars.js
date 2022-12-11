@@ -32,7 +32,7 @@ fetchCars()
           setSuccess("")
 
              alert(`are you sure you want to delete ${carID},this action is irreversible!`)
-   await axios.delete(`https://milesmotors.herokuapp.com/car/${carID}`)
+   await axios.delete(`https://milesmotors.onrender.com/car/${carID}`)
    setSuccess(`success! car with id of ${carID} deleted`)
   
         }
