@@ -63,7 +63,7 @@ const About = () => {
         Get started with this Car dealers web platform. Its easy to get started, send me a message on 
         <a href="https://wa.me/+254790569556"> whatsapp </a>.
         This web app includes features like:
-        <ul>
+        <ol>
           <li>Search bar and Sort Menu</li>
           <li>All cars page</li>
           <li>Single car page</li>
@@ -73,15 +73,15 @@ const About = () => {
           <li>Admin authentication and authorisation</li>
 
 
-        </ul>
+        </ol>
         This web app is highly scalable.
       
         </Typography>
-        <Typography variant="h5"      sx={{ textAlign: "center", marginBottom: 2 }}>
+        <Typography variant="h4"  color="red"    sx={{ textAlign: "center", marginBottom: 2 }}>
           Services Offered
         </Typography  >
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
-          <ul>
+          <ol>
             <li> Car Sales. i.e: Brand New and Foreign Used cars.</li>
             <li>
              Trade-in: For those wanting to upgrade from their current used
@@ -97,9 +97,9 @@ const About = () => {
                Liaise with Insurance firms to provide insurance for customers
               text
             </li>
-       </ul>
+       </ol>
         </Typography>
-        <Typography  sx={{ textAlign: "center", marginBottom: 2 }}>
+        <Typography variant="h4"  color="red" sx={{ textAlign: "center", marginBottom: 2 }}>
           Our Brands
         </Typography>
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
@@ -108,7 +108,7 @@ const About = () => {
           Volkswagen, Range Rover, Hyundai, Mitsubishi, Volvo, Honda, BMW, Audi,
           Jeep etc.
         </Typography>
-     <Box sx={{width:'100vw',display:"flex",justifyContent:'center'}}>
+   <Typography  variant="h6"   sx={{ textAlign: "center"}}>
           <img src={image1} alt="Cars_Logos" height="10%" width="70" />
           <img src={image2} alt="Cars_Logos" height="10%" width="70" />
           <img src={image3} alt="Cars_Logos" height="10%" width="70" />
@@ -137,7 +137,7 @@ const About = () => {
           <img src={image26} alt="Cars_Logos" height="10%" width="70" />
           <img src={image27} alt="Cars_Logos" height="10%" width="70" />
           <img src={image29} alt="Cars_Logos" height="10%" width="70" />
-       </Box>
+    </Typography>
       </Box>
     </ThemeProvider>
   );
