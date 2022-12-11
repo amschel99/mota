@@ -50,7 +50,7 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 })
 
 
-setUserName(JSON.stringify(data))
+setUserName(data.name)
   }
 
   catch(e){
