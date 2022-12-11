@@ -44,9 +44,9 @@ password:passwordRef.current.value,
 name:nameRef.current.value
 
  })
- if(data.message==="success"){
+
 setUser(`${data.message}`)
- }
+ 
 
  await
  history.push('/profile')
