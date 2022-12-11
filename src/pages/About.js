@@ -60,21 +60,20 @@ const About = () => {
         </Typography>
 
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
-        Get started with this Car dealers web platform. Its easy to get started, send me a message on 
-        <a href="https://wa.me/+254790569556"> whatsapp </a>.
-        This web app includes features like:
+      Get new and used cars from our platform. Our dealers are verified!
+      Here at All Cars, finding the right car is easy. Backed by our price promise, you can shop safe so in the knowledge that you are getting the best vehicle at the best price. With a huge range all under one roof there is really no need to go elsewhere! 
+
+Be sure to experience top-tier Pre and After Sales Services.
+Search for any car that you want and chat with the seller.
+
         <ol>
-          <li>Search bar and Sort Menu</li>
-          <li>All cars page</li>
-          <li>Single car page</li>
-          <li>Admin Dashboard</li>
-          <li>Contact Us Page</li>
-          <li>About Us Page</li>
-          <li>Admin authentication and authorisation</li>
-
-
+          <li>Verified sellers</li>
+          <li>Best prices</li>
+          <li>A wide range of cars</li>
+        
         </ol>
-        This web app is highly scalable.
+       Drive your favorite car today
+       
       
         </Typography>
         <Typography variant="h4"  color="red"    sx={{ textAlign: "center", marginBottom: 2 }}>
