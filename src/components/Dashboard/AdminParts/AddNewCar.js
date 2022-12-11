@@ -35,15 +35,21 @@ history.push("/login")
    
 
     const [values, setValues] = React.useState({}) // form values state
-    const [carType, setCarType] = React.useState('') // form car type state
+    const [carType, setCarType] = React.useState('')
+    const[user,setUser]=React.useState(currentUser.email)
+     // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
+      React.useEffect(()=>{
+setUser(currentUser.email)
+    },[currentUser.email])
     const handleValueChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
     }
     // add new car in database
+  
     const handleSubmit = (event) => {
-        const newCarInfo = { ...values, carType, fuel }
+        const newCarInfo = { ...values, carType, fuel,user }
         axios.post('https://milesmotors.onrender.com/car', newCarInfo)
             .then(({ data }) => {
                 if (data.code===1) {
@@ -240,7 +246,8 @@ history.push("/login")
                         </Grid>
                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
                             <Button type="submit" variant="outlined"
-                                disabled={currentUser?.email !== 'kariukiamschel9@gmail.com'}>Add to Database</Button>
+                                >Add to Database</Button>
+                                {/**disabled={currentUser?.email !== 'kariukiamschel9@gmail.com'} */}
                         </Grid>
 
                          <Grid item xs={12} sx={{ textAlign: 'right' }}>
