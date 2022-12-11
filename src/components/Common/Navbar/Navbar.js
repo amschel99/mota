@@ -102,7 +102,9 @@ const Navbar = () => {
                 sx={{ width: "100%" }}
               />
 
-              <button
+           {
+            /** 
+            <button
                 style={{
                   height: "40px",
                   width: "30px",
@@ -118,10 +120,12 @@ const Navbar = () => {
                   return dispatch(search({ search: value }));
                 }}
               >
+                
 
               <FontAwesomeIcon icon={faSearch} />
               
               </button>
+              */}  
               <select
                 onChange={(e) => {
                   return dispatch(type({ type: e.target.value }));
