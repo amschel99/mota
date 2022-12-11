@@ -11,7 +11,8 @@ import {
 import { alpha, Box, styled } from "@mui/system";
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import axios from "axios"
+import useAuth from "../SingleCar/../../../others/useAuthContext"
 const Icon = styled("i")(({ theme }) => ({
   color: theme.palette.primary.light,
   fontSize: "22px",
@@ -19,6 +20,7 @@ const Icon = styled("i")(({ theme }) => ({
 
 
 const SingleCar = ({ carInfo }) => {
+   const {currentUser}=useAuth()
   const {
     carID,
     carImg,
@@ -30,9 +32,25 @@ const SingleCar = ({ carInfo }) => {
     mileage,
     price,
     engine,
+    user
   } = carInfo;
+const [userName,setUserName]=React.useState('')
+React.useEffect(()=>{
+ const getUser= async ()=>{
+  try{
+const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
+  email:currentUser.email
+})
+const {name}=data
+setUserName(name)
+  }
 
+  catch(e){
 
+  }
+ }
+ getUser()
+},[currentUser.email])
   // Numbers over 1000 to separated by commas
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -66,6 +84,13 @@ const SingleCar = ({ carInfo }) => {
                   {transmission}
                 </span>{" "}
                 | <span style={{ backgroundColor: "#EEF0F8" }}>{fuel}</span>
+              </Typography>
+               <Typography
+                variant="body2"
+                color="text.secondary"
+                fontWeight={700}
+              >
+               Seller:  {userName}
               </Typography>
             </CardContent>
           </CardActionArea>

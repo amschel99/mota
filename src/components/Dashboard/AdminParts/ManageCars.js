@@ -44,6 +44,7 @@ fetchCars()
     }
     
   return (
+    
     <TableContainer component={Paper}>
       {success && <Alert severity='success'>{success}</Alert>}
       <Table sx={{width:'100vw',maxWidth:'100vw' }} aria-label="simple table">
@@ -72,7 +73,7 @@ fetchCars()
            
               <TableCell  sx={{width:"10vw"}}  >
                 <Typography component={Button}
-                disabled={currentUser?.email!=='kariukiamschel9@gmail.com'}
+              
                 onClick={
                   ()=>deleteCar(carID)
                 }
