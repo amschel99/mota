@@ -137,7 +137,10 @@ setError(`failed to create an account!${error}`)
                   label="Description"
                   type="text"
                   id="description"
-                   inputRef={descriptionRef}
+                  minRows={4}
+                  maxRows={4}
+                  placeholder="enter a brief description about your car dealership business"
+                  ref={descriptionRef}
                   autoComplete="describe your company/business"
                 />
               </Grid>
