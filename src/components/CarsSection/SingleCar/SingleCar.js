@@ -19,7 +19,8 @@ import {Link} from 'react-router-dom'
 const SingleCar = ({ carInfo }) => {
  const[userId,setUserId]=React.useState('')
   const {
-    carID,
+    _id,
+   
     carImg,
     carName,
    
@@ -56,7 +57,7 @@ setUserName(`error fetching user`)
 
   return (
     <Grid item xs={12} sm={6} md={4} lg={3} sx={{display: "flex", justifyContent: "center"}}>
-      <NavLink to={`/cars/details/${carID}`}>
+      <NavLink to={`/cars/details/${_id}`}>
         <Box sx={{ display: "flex", flexDirection: "column"}}>
         <Card sx={{ maxWidth: 300, minWidth: 300}}>
           <CardActionArea>

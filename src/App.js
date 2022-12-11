@@ -116,7 +116,7 @@ function App() {
 
                 {/* private routes */}
           
-                <Route path="/cars/details/:carID"><CarDetails /></Route>
+                <Route path="/cars/details/:_id"><CarDetails /></Route>
                 <Route  path="/seller/:userId"><Seller/></Route>
             
              

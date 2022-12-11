@@ -26,14 +26,14 @@ const {data}=await axios.get(`https://milesmotors.onrender.com/cars/all?user=${c
 setCars(data)
 }
 fetchCars()
-    },[])
-    const deleteCar= async (carID)=>{
+    },[currentUser.email])
+    const deleteCar= async (_id)=>{
         try{
           setSuccess("")
 
-             alert(`are you sure you want to delete ${carID},this action is irreversible!`)
-   await axios.delete(`https://milesmotors.onrender.com/car/${carID}`)
-   setSuccess(`success! car with id of ${carID} deleted`)
+             alert(`are you sure you want to delete ${_id},this action is irreversible!`)
+   await axios.delete(`https://milesmotors.onrender.com/car/${_id}`)
+   setSuccess(`success! car with id of ${_id} deleted`)
   
         }
         catch(error){
@@ -58,16 +58,16 @@ fetchCars()
           </TableRow>
         </TableHead>
         <TableBody>
-          {cars.map(({ carID, carImg, carName, carType, transmission, fuel, color, mileage, price, engine }) => (
+          {cars.map(({ _id, carImg, carName, carType, transmission, fuel, color, mileage, price, engine }) => (
             <TableRow
-              key={carID}
+              key={_id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell  sx={{width:"15vw"}} component="th" scope="row">
                 {carName}
               </TableCell>
               <TableCell  sx={{width:"25vw"}} >
-                {carID}
+                {_id}
               
               </TableCell>
            
@@ -75,7 +75,7 @@ fetchCars()
                 <Typography component={Button}
               
                 onClick={
-                  ()=>deleteCar(carID)
+                  ()=>deleteCar(_id)
                 }
                 >Delete</Typography>
               </TableCell>

@@ -9,7 +9,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import LoadingSpinner from "../components/Common/LoadingSpinner/LoadingSpinner";
-import { useHistory } from "react-router-dom";
+
 import ImageCarousel from "../components/CarsSection/Courosel/ImageCourosel";
 import CarsSection from "../components/CarsSection/CarsSection";
 
@@ -21,7 +21,7 @@ const DetailsContainer = styled(Grid)(({ theme }) => ({
 }));
 
 const CarDetails = () => {
-  const { carID } = useParams(); // get car id from url parameter
+  const {_id} = useParams(); // get car id from url parameter
 const [mobile,setMobile]=React.useState('')
   const [carDetails, setCarDetails] = useState(null);
   // destructure car details
@@ -40,7 +40,7 @@ const [mobile,setMobile]=React.useState('')
 
   useEffect(() => {
     axios
-      .get(`https://milesmotors.onrender.com/car/${carID}`)
+      .get(`https://milesmotors.onrender.com/car/${_id}`)
       .then(({ data }) => setCarDetails(data.data))
       .catch((err) => console.log(err));
       const getUser= async ()=>{
@@ -51,7 +51,7 @@ const [mobile,setMobile]=React.useState('')
 }
 getUser()
 
-  }, [carID,user]);
+  }, [_id,user]);
 
   // create table rows
   function createData(name, value) {
@@ -67,7 +67,7 @@ getUser()
     createData("mileage", `${mileage} meters`),
   ];
 
-  const history = useHistory();
+ 
 
   // Numbers with Commas over 1000
   function numberWithCommas(x) {
@@ -156,7 +156,7 @@ getUser()
           </Box>
         </Grid>
       </DetailsContainer>
-      <NavLink to={`/cars/details/${carID}`}>
+      <NavLink to={`/cars/details/${_id}`}>
         <CarsSection />
       </NavLink>
     </Box>
