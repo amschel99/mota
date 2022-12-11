@@ -56,7 +56,7 @@ export default function ImageCarousel() {
           <img
             src={images[i].src}
             height="100%"
-            width="100%"
+            width="97%"
             alt={images[i].alt}
           />
         </a>

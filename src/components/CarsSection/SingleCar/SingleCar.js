@@ -42,7 +42,7 @@ const SingleCar = ({ carInfo }) => {
     <Grid item xs={12} sm={6} md={4} lg={3} sx={{display: "flex", justifyContent: "center"}}>
       <NavLink to={`/cars/details/${carID}`}>
         <Box sx={{ display: "flex", flexDirection: "column"}}>
-        <Card sx={{ maxWidth: 250, minWidth: 250}}>
+        <Card sx={{ maxWidth: 300, minWidth: 300}}>
           <CardActionArea>
             <CardMedia
               component="img"
