@@ -22,7 +22,7 @@ const DetailsContainer = styled(Grid)(({ theme }) => ({
 
 const CarDetails = () => {
   const { carID } = useParams(); // get car id from url parameter
-
+const [mobile,setMobile]=React.useState('')
   const [carDetails, setCarDetails] = useState(null);
   // destructure car details
   const {
@@ -35,8 +35,17 @@ const CarDetails = () => {
     price,
     engine,
     description,
+    user
   } = carDetails ? carDetails : {};
-
+useEffect(()=>{
+const getUser= async ()=>{
+  const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
+    email:user
+  })
+  setMobile(data.mobile)
+}
+getUser()
+},[user])
   useEffect(() => {
     axios
       .get(`https://milesmotors.onrender.com/car/${carID}`)
@@ -138,7 +147,7 @@ const CarDetails = () => {
               variant="outlined"
               fullWidth
               component="a"
-              href="http://wa.me/+254790569556"
+              href={`http://wa.me/${mobile}`}
               target="_blank"
             
             >
