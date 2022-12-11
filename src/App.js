@@ -1,7 +1,7 @@
 import { Backdrop, createTheme, ThemeProvider } from "@mui/material";
 import { Box, styled } from "@mui/system";
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React,{useEffect} from 'react'
+import { BrowserRouter as Router, Switch, Route,useLocation} from "react-router-dom";
 import './App.css';
 import Navbar from "./components/Common/Navbar/Navbar";
 import SignUp from "./components/Signup"
@@ -64,7 +64,15 @@ export const PageHeading = styled('div')(({ theme }) => ({
     fontSize: '50px'
   },
 }));
-
+const ScrollToTop=({children})=>{
+  const location=useLocation()
+  useEffect(()=>{
+window.scrollTo(0,0)
+  },[location])
+return <>
+{children}
+</>
+}
 function App() {
 
 
@@ -84,6 +92,7 @@ function App() {
           <Box className="App" sx={{ position: 'relative' }}>
             <Navbar   />   {/* navigation bar */}
             <Box sx={{ position: 'relative' }}>
+              <ScrollToTop>
               <Switch>
                 {/* routes */}
                 <Route exact path="/"><Home /></Route>
@@ -112,6 +121,7 @@ function App() {
                 {/* not found page */}
                 <Route path="*"><Page404 /></Route>
               </Switch>
+              </ScrollToTop>
             </Box>
             <SocialFlow/>
             <Footer />
