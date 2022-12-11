@@ -30,7 +30,7 @@ export default function SignUp() {
      const nameRef=useRef();
     const passwordRef=useRef();
       const locationRef=useRef();
-        const MobileRef=useRef();
+        const mobileRef=useRef();
          const descriptionRef=useRef();
     const passwordConfirmationRef=useRef();
  async  function handleSubmit(e){
@@ -47,7 +47,7 @@ return setError(`passwords do not match`)
 password:passwordRef.current.value,
 name:nameRef.current.value,
 location:locationRef.current.value,
-mobile:MobileRef.current.value,
+mobile:mobileRef.current.value,
 
 
  })
@@ -121,7 +121,7 @@ setError(`failed to create an account!${error}`)
                   label="Mobile"
                   type="text"
                   id="Mobile"
-                   inputRef={MobileRef}
+                   inputRef={mobileRef}
                   autoComplete="Enter your mobile number"
                 />
               </Grid>
