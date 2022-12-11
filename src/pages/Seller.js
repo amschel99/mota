@@ -55,16 +55,16 @@ getUser()
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>About {user}</Typography>
-            <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6}>
+            <Typography  variant="p" align="center" color="primary" fontWeight="bold" mb={6}>
              {description}   
             </Typography>
             <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
                 Location 
-                <span>{location}</span>
+             <Typography  variant="p" align="center" color="primary">{location}</Typography>
             </Typography>
              <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
           
-                <a href={`tel:${mobile}`}>Call now</a>
+                <a href={`tel:${mobile}`}>{mobile}</a>
             </Typography>
              <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
           Call now
