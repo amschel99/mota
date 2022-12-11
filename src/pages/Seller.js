@@ -26,7 +26,7 @@ const {data}= await axios.get(`https://milesmotors.onrender.com/seller/${userId}
 setUserEmail(data.email)
 setUser(data.name)
 setLocation(data.location)
-setMobile(data.Mobile)
+setMobile(data.mobile)
 setDescription(data.description)
     }
     catch(e){
@@ -55,20 +55,20 @@ getUser()
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>About {user}</Typography>
-            <Typography  variant="p" align="center" color="primary" fontWeight="bold" mb={6}>
+            <Typography  variant="h6" align="center" color="black" >
              {description}   
             </Typography>
             <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
                 Location 
-             <Typography  variant="p" align="center" color="primary">{location}</Typography>
+             <Typography  variant="p" align="center" color="black">{   location}</Typography>
             </Typography>
-             <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
+             <Typography  variant="h6" align="center" color="black" fontWeight="bold"  >
           
                 <a href={`tel:${mobile}`}>{mobile}</a>
             </Typography>
-             <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
+             <Typography  variant="h6" align="center" color="black"  >
           Call now
-               <a href={`https://wa.me/${mobile}`}>Whatsapp</a>
+               <a href={`https://wa.me/${mobile}`}> Enquire on Whatsapp</a>
             </Typography>
 
             <Typography variant="h5" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
