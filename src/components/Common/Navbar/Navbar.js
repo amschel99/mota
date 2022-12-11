@@ -111,7 +111,7 @@ const Navbar = () => {
                   borderRadius: "3px",
                   outline: "none",
                   position: "relative",
-                  right: "23px",
+                  right: "25px",
                   cursor: "pointer",
                 }}
                 onClick={() => {
