@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import { useRef } from "react";
 import "./Image.css";
 export default function ImageCarousel() {
-  const { carID } = useParams(); // get car id from url parameter
+  const { _id} = useParams(); // get car id from url parameter
 
   const [carImages, setCarImages] = useState(null);
   // destructure car details
@@ -15,10 +15,10 @@ export default function ImageCarousel() {
 
   useEffect(() => {
     axios
-      .get(`https://milesmotors.onrender.com/car/${carID}`)
+      .get(`https://milesmotors.onrender.com/car/${_id}`)
       .then(({ data }) => setCarImages(data.data))
       .catch((err) => console.log(err));
-  }, [carID]);
+  }, [_id]);
 
   const images = [
     {
