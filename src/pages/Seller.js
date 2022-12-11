@@ -7,7 +7,7 @@ import SingleCar from './SingleCar/SingleCar';
 import {   useSelector} from 'react-redux'
 import {useParams } from "react-router-dom";
 
-const CarsSection = ({ dataAmount }) => {
+const Seller = ({ dataAmount }) => {
       const { userId } = useParams();
       const[userEmail,setUserEmail]=React.useState('')
       const [user,setUser]=React.useState('')
@@ -59,4 +59,4 @@ getUser()
     );
 };
 
-export default CarsSection;
+export default Seller;
