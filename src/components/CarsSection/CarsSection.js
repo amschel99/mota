@@ -37,7 +37,7 @@ const {type}= useSelector((state)=>state.type)
             <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
                 {
-                    cars.map(carInfo => <SingleCar carInfo={carInfo} key={carInfo.carID} />)
+                    cars.map(carInfo => <SingleCar carInfo={carInfo} key={carInfo._id} />)
                 }
             </Grid>
         </Box>
