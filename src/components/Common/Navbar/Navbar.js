@@ -67,7 +67,7 @@ const Navbar = () => {
               marginLeft: { xs: "0", sm: "0" },
             }}
           >
-            <Box sx={{ display: { xs: "none", sm: "block" } }} flex={2}>
+            <Box sx={{ display: { xs: "block", sm: "block" } }} flex={2}>
               <Box
                 sx={{ width: { xs: "35vw", sm: "20vw" } }}
                 component={NavLink}
