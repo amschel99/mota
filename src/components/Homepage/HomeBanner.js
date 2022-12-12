@@ -27,7 +27,7 @@ const bannerSlides = [
   
     {
         id: 3,
-        label: 'located Upperhill',
+        label: 'Best deals',
         imgPath: 'images/all-cars/3.jpg',
     },
   

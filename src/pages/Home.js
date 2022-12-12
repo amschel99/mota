@@ -3,7 +3,8 @@ import { Box } from '@mui/system';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import CarsSection from '../components/CarsSection/CarsSection';
-
+import { type } from "../features/sort.js";
+import { useDispatch } from "react-redux";
 import HomeBanner from '../components/Homepage/HomeBanner';
 //Disabled reviews
 // import ReviewSection from '../components/Homepage/ReviewSection';
@@ -37,6 +38,7 @@ import image27 from '../images/image27.jpg'
 import image29 from '../images/image29.jpg'
 
 const Home = () => {
+      const dispatch = useDispatch();
     return (
         <div>
             {/* home banner */}
@@ -49,34 +51,289 @@ const Home = () => {
           sx={{ textAlign: "center", marginBottom: 2 }}>Sort Car By Brand</Typography>
 
                  <Typography  variant="h6"   sx={{ textAlign: "center"}}>
-          <img src={image1} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image2} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image3} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image4} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image5} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image6} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image7} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image8} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image9} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image10} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image11} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image12} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image13} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image14} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image15} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image16} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image17} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image18} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image19} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image20} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image21} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image22} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image23} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image24} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image25} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image26} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image27} alt="Cars_Logos" height="10%" width="70" />
-          <img src={image29} alt="Cars_Logos" height="10%" width="70" />
+
+                    <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Porsche' }));
+                }}
+                    >
+<img src={image1} alt="Cars_Logos" height="10%" width="70" />
+                    </Typography>
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Renault' }));
+                }}
+                    >
+<img src={image2} alt="Cars_Logos" height="10%" width="70" />
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Saab' }));
+                }}
+                    >
+                         <img src={image3} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Subaru' }));
+                }}
+                    >
+                         <img src={image4} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Suzuki' }));
+                }}
+                    >
+                      <img src={image5} alt="Cars_Logos" height="10%" width="70" />    
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Tata' }));
+                }}
+                    >
+                     <img src={image6} alt="Cars_Logos" height="10%" width="70" />    
+
+                    </Typography>
+
+
+                    <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Toyota' }));
+                }}
+                    >
+                      <img src={image7} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Volvo' }));
+                }}
+                    >
+                      <img src={image8} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Audi' }));
+                }}
+                    >
+                        <img src={image9} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Bmw' }));
+                }}
+                    >
+                      <img src={image10} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Chevrolet' }));
+                }}
+                    >
+                    <img src={image11} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+
+                    <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Hino' }));
+                }}
+                    >
+                    <img src={image12} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Honda' }));
+                }}
+                    >
+                   <img src={image13} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+
+                      <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Hyundai' }));
+                }}
+                    >
+                   <img src={image14} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Infiniti' }));
+                }}
+                    >
+                   <img src={image15} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Isuzu' }));
+                }}
+                    >
+                   <img src={image16} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Jaguar' }));
+                }}
+                    >
+                   <img src={image17} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                    <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Jeep' }));
+                }}
+                    >
+                   <img src={image18} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'LandRover' }));
+                }}
+                    >
+                   <img src={image19} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Lexus' }));
+                }}
+                    >
+                   <img src={image20} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Man' }));
+                }}
+                    >
+                   <img src={image21} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Mazda' }));
+                }}
+                    >
+                   <img src={image22} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Mercedez-Amg' }));
+                }}
+                    >
+                   <img src={image23} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                      <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Mercedez-Benz' }));
+                }}
+                    >
+                   <img src={image24} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Mini' }));
+                }}
+                    >
+                   <img src={image25} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+                    
+                     <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Mitsubishi' }));
+                }}
+                    >
+                   <img src={image26} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+
+                    <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Nissan' }));
+                }}
+                    >
+                   <img src={image27} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+                      <Typography component={Button} 
+                    onClick={() => {
+                  return dispatch(type({ type: 'Peugeot' }));
+                }}
+                    >
+                   <img src={image29} alt="Cars_Logos" height="10%" width="70" />
+
+                    </Typography>
+
+
+
+
+
+
+
+
+
+                    
+          
+          
+          
+          
+         
+          
+         
+          
+          
+          
+        
+          
+          
+          
+          
+          
+          
     </Typography>
             </Box>
 

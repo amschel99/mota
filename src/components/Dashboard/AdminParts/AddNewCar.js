@@ -140,10 +140,29 @@ setUser(currentUser.email)
                                             <MenuItem value={"Volkswagen"}>Volks Wagen</MenuItem>
                                             <MenuItem value={"Honda"}>Honda</MenuItem>
                                              <MenuItem value={"Mitsubishi"}>Mitsubishi</MenuItem>
-                                            
+                                             <MenuItem value={"Porsche"}>Porsche</MenuItem>
+                                             <MenuItem value={"Renault"}>Renault</MenuItem>
+                                              <MenuItem value={"Saab"}>Saab</MenuItem>
 
+                                            <MenuItem value={"Tata"}>Tata</MenuItem>
+                                             <MenuItem value={"Volvo"}>Volvo</MenuItem>
+                                             <MenuItem value={"Bmw"}>BMW</MenuItem>
+<MenuItem value={"Chevrolet"}>Chevrolet</MenuItem>
+  <MenuItem value={"Hino"}>Hino</MenuItem>
 
+  <MenuItem value={"Hyundai"}>Hyundai</MenuItem>
+    <MenuItem value={"Infiniti"}>Infiniti</MenuItem>
+       <MenuItem value={"Isuzu"}>Isuzu</MenuItem>
+          <MenuItem value={"Jaguar"}>Jaguar</MenuItem>
+           <MenuItem value={"Jeep"}>Jeep</MenuItem>
+            <MenuItem value={"LandRover"}>LandRover</MenuItem>
 
+            <MenuItem value={"Lexus"}>Lexus</MenuItem>
+            <MenuItem value={"Man"}>Man</MenuItem>
+            <MenuItem value={"Mercedez-Amg"}>Mercedez Amg</MenuItem>
+             <MenuItem value={"Mercedez-Benz"}>Mercedez Benz</MenuItem>
+             <MenuItem value={"Mini"}>Mini</MenuItem>
+<MenuItem value={"Peugeot"}>Peugeot</MenuItem>
 
                                     </Select>
                                 </FormControl>

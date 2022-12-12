@@ -10,9 +10,8 @@ import { Menu, MenuItem, TextField } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { search } from "../../../../src/features/query.js";
-import { type } from "../../../../src/features/sort.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
+
+
 
 const toggleHeaderVisibility = () => {
   document.getElementById("header-links").classList.toggle("show");
