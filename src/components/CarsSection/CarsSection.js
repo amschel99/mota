@@ -88,7 +88,7 @@ const getText=(value)=>`${value}`
         
        min={300000}
        max={50000000}
-        step={200000}
+        step={1000000}
         getAriaValueText={getText}
         valueLabelDisplay="auto"
         marks={marks}
