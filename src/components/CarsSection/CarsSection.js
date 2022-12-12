@@ -93,7 +93,7 @@ const getText=(value)=>`${value}`
         marks={marks}
         value={price}
         onChange={(e,value)=>{setPrice(value)}}
-        orientation="vertical"
+       
       />
     </Box>
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars</Typography>
