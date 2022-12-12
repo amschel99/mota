@@ -87,8 +87,8 @@ const getText=(value)=>`${value}`
         aria-label="Price Range"
         
        min={300000}
-       max={50000000}
-        step={1000000}
+       max={20000000}
+        step={null}
         getAriaValueText={getText}
         valueLabelDisplay="auto"
         marks={marks}
