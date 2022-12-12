@@ -16,7 +16,7 @@ import Page404 from "./pages/404";
 import Seller from './pages/Seller';
 
 import Footer from "./components/Common/Footer/Footer";
-import SocialFlow from "./components/Common/socialFlow/socialFlow";
+//import SocialFlow from "./components/Common/socialFlow/socialFlow";
 
 import LoadingSpinner from "./components/Common/LoadingSpinner/LoadingSpinner";
 import About from "./pages/About";
@@ -126,7 +126,9 @@ function App() {
               </Switch>
               </ScrollToTop>
             </Box>
-            <SocialFlow/>
+
+            {/* <SocialFlow/>*/}
+
             <Footer />
           </Box>
         </Router>

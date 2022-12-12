@@ -6,6 +6,7 @@ import LoadingSpinner from '../components/Common/LoadingSpinner/LoadingSpinner';
 import SingleCar from '../components/CarsSection/SingleCar/SingleCar';
 import {   useSelector} from 'react-redux'
 import {useParams } from "react-router-dom";
+import SocialFlow from "../components/Common/socialFlow/socialFlow";
 
 const Seller = ({ dataAmount }) => {
       const { userId } = useParams();
@@ -78,6 +79,7 @@ getUser()
                     cars.map(carInfo => <SingleCar carInfo={carInfo} key={carInfo.carID} />)
                 }
             </Grid>
+            <SocialFlow/>
         </Box>
     );
 };
