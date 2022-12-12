@@ -21,10 +21,7 @@ const[price,setPrice]=React.useState(20000000)
     value: 1000000,
     label: '1m',
   },
-  {
-    value: 1500000,
-    label: '1.5m',
-  },
+ 
   {
     value:2000000,
     label: '2m',
@@ -37,6 +34,15 @@ const[price,setPrice]=React.useState(20000000)
     value:4000000,
     label: '4m',
   },
+  {
+    value:5000000,
+    label: '5m',
+  },
+  {
+    value:6000000,
+    label: '6m',
+  },
+
    {
     value:7000000,
     label: '7m',
