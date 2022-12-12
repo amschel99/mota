@@ -25,7 +25,11 @@ export default function SignUp() {
     const[loading,setLoading]=React.useState(false)
     const [user,setUser]=React.useState('')
     const {signUp}=useAuth()
-   
+
+    const PHONE_REGEX=/^(\+|\d)[0-9]{7,16}$/;
+    const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const EMAIL_REGEX=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
     const emailRef=useRef();
      const nameRef=useRef();
     const passwordRef=useRef();
@@ -35,6 +39,22 @@ export default function SignUp() {
     const passwordConfirmationRef=useRef();
  async  function handleSubmit(e){
         e.preventDefault()
+const v1 = PHONE_REGEX.test(mobileRef.current.value);
+        const v2 = PWD_REGEX.test(passwordRef.current.value);
+        const v3 =EMAIL_REGEX.test(emailRef.current.value)
+        if (!v1 ) {
+            setError("Your mobile number should include a country code in the form ");
+            return;
+        }
+        if (!v2 ) {
+            setError("passwords should be a mixture of numbers, letters and atleast a special character. It should also be a minimum of 8 characters");
+            return;
+        }
+        if (!v3 ) {
+            setError("Invalid email adress");
+            return;
+        }
+
          if(passwordRef.current.value !== passwordConfirmationRef.current.value){
 return setError(`passwords do not match`)
     }
