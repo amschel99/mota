@@ -18,47 +18,47 @@ const[price,setPrice]=React.useState(20000000)
     const marks = [
         {
     value: 300000,
-    label: 'ksh 300,000',
+    label: '300k',
   },
   {
     value: 500000,
-    label: 'ksh 500,000',
+    label: '500k',
   },
   {
     value: 1000000,
-    label: 'ksh 1,000,000',
+    label: '1m',
   },
   {
     value: 1500000,
-    label: 'ksh 1,500,000',
+    label: '1.5m',
   },
   {
     value:2000000,
-    label: 'ksh 2,000,000',
+    label: '2m',
   },
    {
     value:3000000,
-    label: 'ksh 3,000,000',
+    label: '3m',
   },
    {
     value:4000000,
-    label: 'ksh 4,000,000',
+    label: '4m',
   },
    {
     value:7000000,
-    label: 'ksh 7,000,000',
+    label: '7m',
   },
    {
     value:10000000,
-    label: 'ksh 10,000,000',
+    label: '10m',
   },
    {
     value:15000000,
-    label: 'ksh 15,000,000',
+    label: '15m',
   },
    {
     value:20000000,
-    label: 'ksh 20,000,000',
+    label: '20m',
   },
 ];
 
