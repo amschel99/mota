@@ -16,14 +16,7 @@ const {type}= useSelector((state)=>state.type)
 
 const[price,setPrice]=React.useState(20000000)
     const marks = [
-        {
-    value: 300000,
-    label: '300k',
-  },
-  {
-    value: 500000,
-    label: '500k',
-  },
+      
   {
     value: 1000000,
     label: '1m',
