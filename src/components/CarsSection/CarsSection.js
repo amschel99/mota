@@ -14,7 +14,7 @@ const {type}= useSelector((state)=>state.type)
 
     const [cars, setCars] = useState(null);
 
-const[price,setPrice]=React.useState(20000000)
+const[price,setPrice]=React.useState([100000,20000000])
     const marks = [
       
   {
@@ -68,7 +68,7 @@ const[price,setPrice]=React.useState(20000000)
             params:{
                 name:search,
                 brand:type,
-                numericFilters:`price<=${price}`
+                numericFilters:`price>=${price[0]},price<=${price[1]}`
             }
         })
         setCars(data)
