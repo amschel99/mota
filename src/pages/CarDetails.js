@@ -156,8 +156,9 @@ getUser()
               Enquire
             </Button>
           </Box>
-           <Typography
-            variant="h6"
+           <Button
+            variant="outlined"
+            fullWidth
             component={Link}
             sx={{
               fontWeight: "medium",
@@ -166,7 +167,7 @@ getUser()
             to={`/seller/${id}`}
           >
             View more about the seller
-          </Typography>
+          </Button>
         </Grid>
       </DetailsContainer>
       <NavLink to={`/cars/details/${_id}`}>
