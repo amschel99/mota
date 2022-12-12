@@ -80,7 +80,7 @@ const[price,setPrice]=React.useState(20000000)
 const getText=(value)=>`${value}`
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
-            <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Sort cars by price</Typography>
+            <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Filter by price</Typography>
              <Box sx={{ width: 300 }}>
       <Slider
         aria-label="Price Range"
@@ -93,6 +93,7 @@ const getText=(value)=>`${value}`
         marks={marks}
         value={price}
         onChange={(e,value)=>{setPrice(value)}}
+        orientation="vertical"
       />
     </Box>
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars</Typography>
