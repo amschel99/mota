@@ -68,7 +68,7 @@ const[price,setPrice]=React.useState([100000,20000000])
             params:{
                 name:search,
                 brand:type,
-                numericFilters:`price>=${price[0]},price<=${price[1]}`
+                numericFilters:`price>${price[0]},price<${price[1]}`
             }
         })
         setCars(data)
