@@ -26,7 +26,7 @@ export default function SignUp() {
     const [user,setUser]=React.useState('')
     const {signUp}=useAuth()
 
-    const PHONE_REGEX= "^[+]{1}(?:[0-9\-\(\)\/\.]\s?){6, 15}[0-9]{1}$";
+    const PHONE_REGEX= /^\+(?:[0-9] ?){6,14}[0-9]$/;
 
     const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EMAIL_REGEX=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -44,7 +44,7 @@ const v1 = PHONE_REGEX.test(mobileRef.current.value);
         const v2 = PWD_REGEX.test(passwordRef.current.value);
         const v3 =EMAIL_REGEX.test(emailRef.current.value)
         if (!v1 ) {
-            setError("Your mobile number should include a country code in the form ");
+            setError("Your mobile number should valid  include a country code ");
             return;
         }
         if (!v2 ) {
