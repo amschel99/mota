@@ -77,9 +77,7 @@ const[price,setPrice]=React.useState(20000000)
     }
         FetchCars()   
     }, [dataAmount,search,type,price])
-function valuetext(value) {
-  return `${value} ksh`;
-}
+
 
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
@@ -88,7 +86,7 @@ function valuetext(value) {
       <Slider
         aria-label="Price Range"
         
-        getAriaValueText={valuetext}
+       
         step={200000}
         valueLabelDisplay="auto"
         marks={marks}
