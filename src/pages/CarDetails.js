@@ -2,7 +2,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams,Link } from "react-router-dom";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -23,6 +23,7 @@ const DetailsContainer = styled(Grid)(({ theme }) => ({
 const CarDetails = () => {
   const {_id} = useParams(); // get car id from url parameter
 const [mobile,setMobile]=React.useState('')
+const[id,setId]=React.useState('')
   const [carDetails, setCarDetails] = useState(null);
   // destructure car details
   const {
@@ -48,6 +49,7 @@ const [mobile,setMobile]=React.useState('')
     email:user
   })
   setMobile(data.mobile)
+  setId(data._id)
 }
 getUser()
 
@@ -154,6 +156,17 @@ getUser()
               Enquire
             </Button>
           </Box>
+           <Typography
+            variant="h6"
+            component={Link}
+            sx={{
+              fontWeight: "medium",
+              my: 2,
+            }}
+            to={`/seller/${id}`}
+          >
+            View more about the seller
+          </Typography>
         </Grid>
       </DetailsContainer>
       <NavLink to={`/cars/details/${_id}`}>

@@ -92,7 +92,7 @@ setUserName(`error fetching user`)
               
                 fontWeight={700}
               >
-               Seller:  {userName}
+             click to view more about  {userName}
               </Typography>
             </CardContent>
           </CardActionArea>
