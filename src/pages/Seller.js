@@ -15,6 +15,9 @@ const Seller = ({ dataAmount }) => {
       const[location,setLocation]=React.useState('')
       const[mobile,setMobile]=React.useState('')
       const[description,setDescription]=React.useState('')
+      const[facebook,setFacebook]=React.useState('')
+      const[ twitter,setTwitter]=React.useState('')
+      const[instagram,setInstagram]=React.useState('')
       
 const {search}= useSelector((state)=>state.query)
 const {type}= useSelector((state)=>state.type)
@@ -29,6 +32,9 @@ setUser(data.name)
 setLocation(data.location)
 setMobile(data.mobile)
 setDescription(data.description)
+setFacebook(data.facebook)
+setTwitter(data.twitter)
+setInstagram(data.instagram)
     }
     catch(e){
 
@@ -79,7 +85,7 @@ getUser()
                     cars.map(carInfo => <SingleCar carInfo={carInfo} key={carInfo.carID} />)
                 }
             </Grid>
-            <SocialFlow/>
+            <SocialFlow facebook={facebook} twitter={twitter} instagram={instagram} mobile={mobile}/>
         </Box>
     );
 };

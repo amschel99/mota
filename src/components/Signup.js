@@ -37,6 +37,9 @@ const EMAIL_REGEX=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
       const locationRef=useRef();
         const mobileRef=useRef();
          const descriptionRef=useRef();
+        const facebookRef=useRef();
+          const twitterRef=useRef();
+            const instagramRef=useRef();
     const passwordConfirmationRef=useRef();
  async  function handleSubmit(e){
         e.preventDefault()
@@ -69,7 +72,11 @@ password:passwordRef.current.value,
 name:nameRef.current.value,
 location:locationRef.current.value,
 mobile:mobileRef.current.value,
-description:descriptionRef.current.value
+description:descriptionRef.current.value,
+facebook:facebookRef.current.value,
+twitter:twitterRef.current.value,
+instagram:instagramRef.current.value
+
 
 
 
@@ -148,6 +155,42 @@ setError(`failed to create an account!${error}`)
                   id="Mobile"
                    inputRef={mobileRef}
                   autoComplete="Enter your mobile number"
+                />
+              </Grid>
+               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="facebook"
+                  label="facebook"
+                  type="url"
+                  id="facebook"
+                   inputRef={facebookRef}
+                  placeholder='facebook url'
+                />
+              </Grid>
+               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="twitter"
+                  label="twitter"
+                  type="url"
+                  id="twitter"
+                   inputRef={twitterRef}
+                  placeholder='twitter  url'
+                />
+              </Grid>
+               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="instagram"
+                  label="instagram"
+                  type="url"
+                  id="instagram"
+                   inputRef={instagramRef}
+                  placeholder='instagram url'
                 />
               </Grid>
                <Grid item xs={12}>

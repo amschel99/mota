@@ -7,13 +7,13 @@ import {
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function SocialFlow() {
+export default function SocialFlow({facebook,twitter,instagram,mobile}) {
   return (
     <nav>
       <ul>
         <li>
           <a
-            href="https://facebook.com/MillesMotorsLtd"
+            href={facebook}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -25,7 +25,7 @@ export default function SocialFlow() {
         </li>
         <li>
           <a
-            href="https://twitter.com/@miles_motors"
+            href={twitter}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -37,7 +37,7 @@ export default function SocialFlow() {
         </li>
         <li>
           <a
-            href="https://www.instagram.com/milesmotorsltd/"
+            href={instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -49,7 +49,7 @@ export default function SocialFlow() {
         </li>
         <li>
           <a
-            href="https://wa.me//+254733381707"
+            href={`http://wa.me/${mobile}`}
             target="_blank"
             rel="noopener noreferrer"
           >
