@@ -26,7 +26,8 @@ export default function SignUp() {
     const [user,setUser]=React.useState('')
     const {signUp}=useAuth()
 
-    const PHONE_REGEX= /^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/;
+    const PHONE_REGEX= /^[+]{1}(?:[0-9\-\(\)\/\.]\s?){6, 15}[0-9]{1}$/;
+
     const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EMAIL_REGEX=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
