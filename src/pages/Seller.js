@@ -78,7 +78,7 @@ getUser()
                component='a' href={`tel:${mobile}`}
                 variant="p"
                 
-              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'blue'}}
+              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'blue',width:'100vw'}}
                 fontWeight={700}
               >
               <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> Click here to call {user } {mobile}
