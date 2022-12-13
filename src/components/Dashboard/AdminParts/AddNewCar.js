@@ -99,18 +99,20 @@ setUser(currentUser.email)
                         {userName?
 
                       <Typography sx={{cursor:'pointer',fontStyle:'italic',display:'flex', flexDirection:'row',justifyContent:'center'}} variant="h4" align="center" color="primary" >
-                        <CopyToClipboard style={{marginLeft:'2px',marginRight:'2px'}} text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
+                        <CopyToClipboard style={{marginLeft:'10px',marginRight:'10px',marginTop:'10px'}} text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
                         }} ><Typography sx={{color:'blue'}}>Copy </Typography>
                         </CopyToClipboard>
-                        <a   style={{marginLeft:'2px',marginRight:'2px'}} href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
+                        <a   style={{marginLeft:'10px',marginRight:'10px'}} href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
                         
-                          <a  style={{marginLeft:'2px',marginRight:'2px'}} href={`https://www.facebook.com/share.php?u=https://carhub-xi.vercel.app/seller/${id} `}><Facebook/></a>
-                           <a  style={{marginLeft:'2px',marginRight:'2px'}} href={`https://www.twitter.com/share?url=https://carhub-xi.vercel.app/seller/${id} `}><Twitter/></a>
+                          <a  style={{marginLeft:'10px',marginRight:'10px'}} href={`https://www.facebook.com/share.php?u=https://carhub-xi.vercel.app/seller/${id} `}><Facebook/></a>
+                           <a  style={{marginLeft:'10px',marginRight:'10px'}} href={`https://www.twitter.com/share?url=https://carhub-xi.vercel.app/seller/${id} `}><Twitter/></a>
                         </Typography>:null}
                           <Typography variant="h6" align="center" color="black" fontWeight="bold">
                             {copied?<span style={{color:'red'}}>Copied!</span>:null}
                           </Typography>
+
+                                  <Typography variant="h6" align="center" color="red" fontWeight="bold">Update Profile</Typography>
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
 
