@@ -17,7 +17,7 @@ const {type}= useSelector((state)=>state.type)
 const[price,setPrice]=React.useState(20000000)
     const marks = [
     {
-    value: 100000,
+    value: 500000,
     label: '100k',
   },   
   {
@@ -64,13 +64,13 @@ const getText=(value)=>`${value}`
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Filter by price</Typography>
-             <Box sx={{ width: 300 }}>
+             <Box sx={{ width: 100vw }}>
       <Slider
         aria-label="Price Range"
         
-       min={300000}
+       min={500000}
        max={20000000}
-        step={null}
+        step={500000}
         getAriaValueText={getText}
         valueLabelDisplay="auto"
         marks={marks}
