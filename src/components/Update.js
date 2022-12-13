@@ -105,7 +105,7 @@ setError(`failed to Update Profile!${error}`)
        Update Profile
           </Typography>
           {error && <Alert severity="error">{error}</Alert>}
-           {user && <Alert severity="success">{user}</Alert>}
+      
 
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
