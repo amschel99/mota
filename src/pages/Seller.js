@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 import LoadingSpinner from '../components/Common/LoadingSpinner/LoadingSpinner';
 import SingleCar from '../components/CarsSection/SingleCar/SingleCar';
 import {   useSelector} from 'react-redux'
-import {useParams } from "react-router-dom";
+import {useParams,Link } from "react-router-dom";
 import SocialFlow from "../components/Common/socialFlow/socialFlow";
 
 const Seller = ({ dataAmount }) => {
@@ -65,20 +65,20 @@ getUser()
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
             <Typography   variant="h3" align="center" color="black" fontWeight="bold" mb={3}> More Details About {user}</Typography>
-            <Typography  variant="p" align="center" color="black" >
+            <Typography  variant="h6" align="center" color="primary" >
              {description}   
             </Typography>
-            <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={1}  >
-          Location   <Location/>
-             <Typography  variant="p" align="center" color="black"> {location}</Typography>
+            <Typography  variant="h6" align="center" color="black" fontWeight="bold" mb={3}  >
+            <Location sx={{marginRight:'10px'}}/>
+             <Typography  variant="p" align="center" color="primary"> {location}</Typography>
             </Typography>
-             <Typography  variant="h6" align="center" color="black" fontWeight="bold" >
+             <Typography  component={Link} to={`tel:${mobile}`} variant="h6" align="center" color="black" mb={3} >
           
-                <a href={`tel:${mobile}`}> <Phone/> {mobile}</a>
+                <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> {mobile}
             </Typography>
-             <Typography  variant="h6" align="center" color="black" mb={3} >
+             <Typography component={Link}  to={`https://wa.me/${mobile}`} variant="h6" align="center" color="black" mb={3} >
          
-               <a href={`https://wa.me/${mobile}`}> Enquire <Whatsapp/></a>
+                Enquire <Whatsapp sx={{marginTop:'2px',marginLeft:'5px'}}/>
             </Typography>
 
             <Typography variant="h5" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
