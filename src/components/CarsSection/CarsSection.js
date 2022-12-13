@@ -16,46 +16,21 @@ const {type}= useSelector((state)=>state.type)
 
 const[price,setPrice]=React.useState(20000000)
     const marks = [
-      
+    {
+    value: 100000,
+    label: '100k',
+  },   
   {
     value: 1000000,
     label: '1m',
   },
  
-  {
-    value:2000000,
-    label: '2m',
-  },
-   {
-    value:3000000,
-    label: '3m',
-  },
-   {
-    value:4000000,
-    label: '4m',
-  },
+  
   {
     value:5000000,
     label: '5m',
   },
-  {
-    value:6000000,
-    label: '6m',
-  },
-
-   {
-    value:7000000,
-    label: '7m',
-  },
-   {
-    value:8000000,
-    label: '7m',
-  },
-   {
-    value:9000000,
-    label: '9m',
-  },
-   {
+     {
     value:10000000,
     label: '10m',
   },
@@ -100,7 +75,7 @@ const getText=(value)=>`${value}`
         valueLabelDisplay="auto"
         marks={marks}
         value={price}
-        sx={{width:'100vw'}}
+      
         onChange={(e,value)=>{setPrice(value)}}
        
       />
