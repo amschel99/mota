@@ -28,8 +28,7 @@ export default function Update({name,location,mobile,description,facebook,twitte
 
     const PHONE_REGEX= /^\+(?:[0-9] ?){6,14}[0-9]$/;
 
-    const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const EMAIL_REGEX=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+ 
 
    
      const nameRef=useRef();
@@ -111,20 +110,36 @@ setError(`failed to Update Profile!${error}`)
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField
-                defaultValue={name}
+                <TextArea
+
+                  minRows={2}
+                maxRows={2}
+                 ref={nameRef}
+                    style={{ width: "100%" }}
+                  
+                  placeholder='business name'
+                     defaultValue={name}
+            
                   required
                   fullWidth
                   name="name"
                   label="Name"
                   type="text"
                   id="name"
-                   inputRef={nameRef}
+                   
                   autoComplete="Enter your name"
                 />
               </Grid>
                 <Grid item xs={12}>
-                <TextField
+                <TextArea
+
+                  minRows={2}
+                maxRows={2}
+                 ref={locationRef}
+                    style={{ width: "100%" }}
+                  
+                  placeholder='location url'
+                  
                      defaultValue={location}
                   required
                   fullWidth
@@ -132,12 +147,21 @@ setError(`failed to Update Profile!${error}`)
                   label="location"
                   type="text"
                   id="location"
-                   inputRef={locationRef}
+                  
                   autoComplete="Enter your location"
                 />
               </Grid>
                <Grid item xs={12}>
-                <TextField
+                <TextArea
+
+  minRows={2}
+                maxRows={2}
+                 ref={mobileRef}
+                    style={{ width: "100%" }}
+                  
+                  placeholder='mobile number +254...'
+                  
+
                      defaultValue={mobile}
                   required
                   fullWidth
@@ -145,12 +169,21 @@ setError(`failed to Update Profile!${error}`)
                   label="Mobile"
                   type="text"
                   id="Mobile"
-                   inputRef={mobileRef}
+                  
                   autoComplete="Enter your mobile number"
                 />
               </Grid>
                <Grid item xs={12}>
-                <TextField
+                <TextArea
+
+  minRows={2}
+                maxRows={2}
+                 ref={facebookRef}
+                    style={{ width: "100%" }}
+                  
+                  placeholder='facebook url'
+                    
+
                      defaultValue={facebook}
                   required
                   fullWidth
@@ -158,12 +191,18 @@ setError(`failed to Update Profile!${error}`)
                   label="facebook"
                   type="url"
                   id="facebook"
-                   inputRef={facebookRef}
-                  placeholder='facebook url'
+                  
+                 
                 />
               </Grid>
                <Grid item xs={12}>
-                <TextField
+                <TextArea
+                minRows={2}
+                maxRows={2}
+                 ref={twitterRef}
+                    style={{ width: "100%" }}
+                  
+                  placeholder='twitter url'
                      defaultValue={twitter}
                   required
                   fullWidth
@@ -171,12 +210,13 @@ setError(`failed to Update Profile!${error}`)
                   label="twitter"
                   type="url"
                   id="twitter"
-                   inputRef={twitterRef}
-                  placeholder='twitter  url'
+                 
                 />
               </Grid>
                <Grid item xs={12}>
-                <TextField
+                <TextArea
+                 minRows={2}
+                  maxRows={2}
                      defaultValue={instagram}
                   required
                   fullWidth
@@ -184,7 +224,9 @@ setError(`failed to Update Profile!${error}`)
                   label="instagram"
                   type="url"
                   id="instagram"
-                   inputRef={instagramRef}
+                ref={instagramRef}
+                    style={{ width: "100%" }}
+                  
                   placeholder='instagram url'
                 />
               </Grid>
