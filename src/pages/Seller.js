@@ -1,4 +1,7 @@
 import { Grid, Typography } from '@mui/material';
+import Location from "@mui/icons-material/LocationCity"
+import Phone from "@mui/icons-material/Call"
+import Whatsapp from "@mui/icons-material/WhatsApp"
 import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -61,21 +64,21 @@ getUser()
 
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
-            <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>About {user}</Typography>
-            <Typography  variant="h6" align="center" color="black" mb={3} >
+            <Typography   variant="h3" align="center" color="black" fontWeight="bold" mb={3}> More Details About {user}</Typography>
+            <Typography  variant="p" align="center" color="black" >
              {description}   
             </Typography>
-            <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={6} >
-               We are located at  
+            <Typography  variant="h6" align="center" color="primary" fontWeight="bold" mb={1}  >
+          Location   <Location/>
              <Typography  variant="p" align="center" color="black"> {location}</Typography>
             </Typography>
-             <Typography  variant="h6" align="center" color="black" fontWeight="bold" mb={3} >
+             <Typography  variant="h6" align="center" color="black" fontWeight="bold" >
           
-                <a href={`tel:${mobile}`}> Call {mobile}</a>
+                <a href={`tel:${mobile}`}> <Phone/> {mobile}</a>
             </Typography>
              <Typography  variant="h6" align="center" color="black" mb={3} >
          
-               <a href={`https://wa.me/${mobile}`}> Enquire on Whatsapp</a>
+               <a href={`https://wa.me/${mobile}`}> Enquire <Whatsapp/></a>
             </Typography>
 
             <Typography variant="h5" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
