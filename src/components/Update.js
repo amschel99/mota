@@ -55,7 +55,7 @@ const v1 = PHONE_REGEX.test(mobileRef.current.value);
         setError('')
         setLoading(true)
 
- const {data}= await axios.post(`https://milesmotors.onrender.com/auth/register`,{
+ const {data}= await axios.patch(`https://milesmotors.onrender.com/auth/register`,{
  
 name:nameRef.current.value,
 location:locationRef.current.value,
