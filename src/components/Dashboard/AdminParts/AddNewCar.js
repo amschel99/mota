@@ -91,13 +91,16 @@ setUser(currentUser.email)
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
                         <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
-                      <Button variant="outlined">
+                      <Typography component={Button} variant="outlined" align="center" >
                         <CopyToClipboard text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
                         }} ><Typography>Copy your unique url to clipboard</Typography>
                         </CopyToClipboard>
-                        {copied? <span style={{color:'red'}}>Copied!</span>:null}
-                        </Button>
+                       
+                        </Typography>
+                          <Typography variant="h6" align="center" color="black" fontWeight="bold">
+                            {copied?<span style={{color:'red'}}>Copied!</span>:null}
+                          </Typography>
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
 
