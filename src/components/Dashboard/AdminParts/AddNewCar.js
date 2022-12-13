@@ -95,13 +95,13 @@ setUser(currentUser.email)
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
                         <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
-                         <Typography variant="h6" align="center" color="black" >Share your profile, let others discover you</Typography>
+                         <Typography sx={{fontStyle:'italic'}} variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile, let others discover you</Typography>
                         {userName?
 
-                      <Typography sx={{cursor:'pointer',fontStyle:'italic'}} variant="h4" align="center" color="primary" >
+                      <Typography sx={{cursor:'pointer',fontStyle:'italic',display:'flex', flexDirection:'row',justifyContent:'space-between'}} variant="h4" align="center" color="primary" >
                         <CopyToClipboard text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
-                        }} ><Typography>Copy url to clipboard</Typography>
+                        }} ><Typography>Copy</Typography>
                         </CopyToClipboard>
                         <a href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
                         
