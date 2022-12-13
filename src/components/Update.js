@@ -23,7 +23,7 @@ export default function Update({id,name,location,mobile,description,facebook,twi
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
-    const [user,setUser]=React.useState('')
+  
   
 
     const PHONE_REGEX= /^\+(?:[0-9] ?){6,14}[0-9]$/;
@@ -55,7 +55,7 @@ const v1 = PHONE_REGEX.test(mobileRef.current.value);
         setError('')
         setLoading(true)
 
- const {data}= await axios.patch(`https://milesmotors.onrender.com/seller/${id}`,{
+  await axios.patch(`https://milesmotors.onrender.com/seller/${id}`,{
  
 name:nameRef.current.value,
 location:locationRef.current.value,
@@ -72,7 +72,7 @@ instagram:instagramRef.current.value
 
  })
 
-setUser(`${JSON.stringify(data)}`)
+
  
 
  await
