@@ -7,7 +7,7 @@ import useAuth from "../AdminParts/../../../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import Whatsapp from '@mui/icons-material/WhatsApp'
-import Instagram from '@mui/icons-material/Instagram'
+import Update from "../AdminParts/../../../components/Update.js"
 import Facebook from '@mui/icons-material/Facebook'
 import Twitter from '@mui/icons-material/Twitter'
 
@@ -42,6 +42,7 @@ history.push("/login")
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
     const[user,setUser]=React.useState(currentUser.email)
+    const[data,setData]=React.useState()
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
@@ -59,6 +60,7 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 
 setUserName(data.name)
 setId(data._id)
+setData(data)
   }
 
   catch(e){
@@ -101,7 +103,7 @@ setUser(currentUser.email)
                       <Typography sx={{cursor:'pointer',fontStyle:'italic',display:'flex', flexDirection:'row',justifyContent:'center'}} variant="h4" align="center" color="primary" >
                         <CopyToClipboard style={{marginLeft:'10px',marginRight:'10px'}} text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
-                        }} ><Typography sx={{color:'blue',marginTop:{xs:'0',md:'10px'}}}>Copy </Typography>
+                        }} ><Typography sx={{color:'blue',marginTop:{xs:'0',md:'12px'}}}>Copy </Typography>
                         </CopyToClipboard>
                         <a   style={{marginLeft:'10px',marginRight:'10px'}} href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
                         
@@ -113,6 +115,10 @@ return setCopied(true)
                           </Typography>
 
                                   <Typography variant="h6" align="center" color="red" fontWeight="bold">Update Profile</Typography>
+
+                                     <Typography variant="h6" align="center" color="red" fontWeight="bold">
+                                        <Update name={userName} mobile={data.mobile} twitter={data.twitter} facebook={data.facebook} instagram={data.instagram} location={data.location} description={data.description}/>
+                                     </Typography>
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
 
