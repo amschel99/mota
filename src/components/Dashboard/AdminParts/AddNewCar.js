@@ -6,6 +6,10 @@ import {Link} from "react-router-dom"
 import useAuth from "../AdminParts/../../../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
+import Whatsapp from '@mui/icons-material/WhatsApp'
+import Instagram from '@mui/icons-material/Instagram'
+import Facebook from '@mui/icons-material/Facebook'
+import Twitter from '@mui/icons-material/Twitter'
 
 // styled component for font awesome icon
 const Icon = styled('i')(({ theme }) => ({
@@ -91,13 +95,18 @@ setUser(currentUser.email)
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
                         <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
+                         <Typography variant="h6" align="center" color="black" >Share your profile, let others discover you</Typography>
+                        {userName?
+
                       <Typography sx={{cursor:'pointer',fontStyle:'italic'}} variant="h4" align="center" color="primary" >
                         <CopyToClipboard text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
-                        }} ><Typography>Copy your unique url to clipboard</Typography>
+                        }} ><Typography>Copy url to clipboard</Typography>
                         </CopyToClipboard>
+                        <a href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
+                        
                        
-                        </Typography>
+                        </Typography>:null}
                           <Typography variant="h6" align="center" color="black" fontWeight="bold">
                             {copied?<span style={{color:'red'}}>Copied!</span>:null}
                           </Typography>
