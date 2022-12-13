@@ -19,7 +19,7 @@ import axios from 'axios'
 
 const theme = createTheme();
 
-export default function Update({name,location,mobile,description,facebook,twitter,instagram}) {
+export default function Update({id,name,location,mobile,description,facebook,twitter,instagram}) {
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -55,7 +55,7 @@ const v1 = PHONE_REGEX.test(mobileRef.current.value);
         setError('')
         setLoading(true)
 
- const {data}= await axios.patch(`https://milesmotors.onrender.com/auth/register`,{
+ const {data}= await axios.patch(`https://milesmotors.onrender.com/seller/${id}`,{
  
 name:nameRef.current.value,
 location:locationRef.current.value,

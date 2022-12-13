@@ -128,7 +128,7 @@ return setCopied(true)
                                   <Typography variant="h6" align="center" color="red" fontWeight="bold">Update Profile</Typography>
 
                                      <Typography variant="h6" align="center" color="red" fontWeight="bold">
-                                        <Update name={userName} mobile={mobile} twitter={twitter} facebook={facebook} instagram={instagram} location={location} description={description}/>
+                                        <Update id={id} name={userName} mobile={mobile} twitter={twitter} facebook={facebook} instagram={instagram} location={location} description={description}/>
                                      </Typography>
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
