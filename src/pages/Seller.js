@@ -72,13 +72,13 @@ getUser()
             <Location sx={{marginRight:'10px',marginTop:'3px'}}/> {location}
             
             </Typography>
-             <Typography  component={Link} to={`tel:${mobile}`} variant="h5" align="center" color="primary" mb={6} >
+             <Typography  component='a' href={`tel:${mobile}`} variant="h5" align="center" color="blue" mb={6} >
           
                 <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> Call {mobile}
             </Typography>
             
 
-            <Typography variant="h5" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
+            <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
             <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
                 {
