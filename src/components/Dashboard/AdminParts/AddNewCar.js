@@ -99,9 +99,9 @@ setUser(currentUser.email)
                         {userName?
 
                       <Typography sx={{cursor:'pointer',fontStyle:'italic',display:'flex', flexDirection:'row',justifyContent:'center'}} variant="h4" align="center" color="primary" >
-                        <CopyToClipboard style={{marginLeft:'10px',marginRight:'10px',marginTop:'10px'}} text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
+                        <CopyToClipboard style={{marginLeft:'10px',marginRight:'10px'}} text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
-                        }} ><Typography sx={{color:'blue'}}>Copy </Typography>
+                        }} ><Typography sx={{color:'blue',marginTop:{xs:'0',md:'10px'}}}>Copy </Typography>
                         </CopyToClipboard>
                         <a   style={{marginLeft:'10px',marginRight:'10px'}} href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
                         
