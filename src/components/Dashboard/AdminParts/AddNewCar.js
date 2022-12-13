@@ -98,15 +98,15 @@ setUser(currentUser.email)
                          <Typography sx={{fontStyle:'italic'}} variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile, let others discover you</Typography>
                         {userName?
 
-                      <Typography sx={{cursor:'pointer',fontStyle:'italic',display:'flex', flexDirection:'row',justifyContent:'space-around'}} variant="h4" align="center" color="primary" >
-                        <CopyToClipboard text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
+                      <Typography sx={{cursor:'pointer',fontStyle:'italic',display:'flex', flexDirection:'row',justifyContent:'center'}} variant="h4" align="center" color="primary" >
+                        <CopyToClipboard style={{marginLeft:'2px',marginRight:'2px'}} text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
                         }} ><Typography sx={{color:'blue'}}>Copy </Typography>
                         </CopyToClipboard>
-                        <a href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
+                        <a   style={{marginLeft:'2px',marginRight:'2px'}} href={`whatsapp://send?text=Hello,check out our cars at https://carhub-xi.vercel.app/seller/${id} `}><Whatsapp/></a>
                         
-                          <a href={`https://www.facebook.com/share.php?u=https://carhub-xi.vercel.app/seller/${id} `}><Facebook/></a>
-                           <a href={`https://www.twitter.com/share?url=https://carhub-xi.vercel.app/seller/${id} `}><Twitter/></a>
+                          <a  style={{marginLeft:'2px',marginRight:'2px'}} href={`https://www.facebook.com/share.php?u=https://carhub-xi.vercel.app/seller/${id} `}><Facebook/></a>
+                           <a  style={{marginLeft:'2px',marginRight:'2px'}} href={`https://www.twitter.com/share?url=https://carhub-xi.vercel.app/seller/${id} `}><Twitter/></a>
                         </Typography>:null}
                           <Typography variant="h6" align="center" color="black" fontWeight="bold">
                             {copied?<span style={{color:'red'}}>Copied!</span>:null}
