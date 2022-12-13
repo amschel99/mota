@@ -77,8 +77,8 @@ getUser()
              <Typography
                component='a' href={`tel:${mobile}`}
                 variant="p"
-                color="red"
-              sx={{display:'flex',justifyContent:'center',alignItems:'center'}}
+                
+              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'blue'}}
                 fontWeight={700}
               >
               <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> Click here to call {user } {mobile}
@@ -86,7 +86,7 @@ getUser()
              
             
 
-            <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
+            <Typography sx={{marginTop:'10px'}} variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
             <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
                 {
