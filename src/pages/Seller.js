@@ -64,22 +64,19 @@ getUser()
 
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
-            <Typography   variant="h3" align="center" color="black" fontWeight="bold" mb={3}> More Details About {user}</Typography>
+            <Typography   variant="h4" align="center" color="black" fontWeight="bold" mb={3}> More Details About {user}</Typography>
             <Typography  variant="h6" align="center" color="primary" >
              {description}   
             </Typography>
-            <Typography  variant="h6" align="center" color="black" fontWeight="bold" mb={3}  >
-            <Location sx={{marginRight:'10px'}}/>
+            <Typography  align="center" color="black"  mb={3}  >
+            <Location sx={{marginRight:'10px',marginTop:'2px'}}/>
              <Typography  variant="p" align="center" color="primary"> {location}</Typography>
             </Typography>
              <Typography  component={Link} to={`tel:${mobile}`} variant="h6" align="center" color="black" mb={3} >
           
                 <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> {mobile}
             </Typography>
-             <Typography component={Link}  to={`https://wa.me/${mobile}`} variant="h6" align="center" color="black" mb={3} >
-         
-                Enquire <Whatsapp sx={{marginTop:'2px',marginLeft:'5px'}}/>
-            </Typography>
+            
 
             <Typography variant="h5" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
             <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
