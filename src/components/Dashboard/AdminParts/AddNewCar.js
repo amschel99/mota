@@ -5,6 +5,7 @@ import React from 'react';
 import {Link} from "react-router-dom"
 import useAuth from "../AdminParts/../../../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
+import {CopyToClipboard} from 'react-copy-to-clipboard'
 
 // styled component for font awesome icon
 const Icon = styled('i')(({ theme }) => ({
@@ -41,6 +42,8 @@ history.push("/login")
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
 const[userName,setUserName]=React.useState('')
+const[id,setId]=React.useState('')
+const[copied,setCopied]=React.useState(false)
     
       React.useEffect(()=>{
         const getUser= async ()=>{
@@ -51,6 +54,7 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 
 
 setUserName(data.name)
+setId(data._id)
   }
 
   catch(e){
@@ -87,6 +91,11 @@ setUser(currentUser.email)
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
                         <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
+                    
+                        <CopyToClipboard text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
+setCopied(true)
+                        }} >Copy your unique url to keyboard</CopyToClipboard>
+                        {copied?<span style={{color:'red'}}>Copied!</span>:null}
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
 
