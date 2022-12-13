@@ -2,7 +2,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { NavLink, useParams,Link } from "react-router-dom";
+import {  useParams,Link } from "react-router-dom";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -11,7 +11,7 @@ import TableRow from "@mui/material/TableRow";
 import LoadingSpinner from "../components/Common/LoadingSpinner/LoadingSpinner";
 
 import ImageCarousel from "../components/CarsSection/Courosel/ImageCourosel";
-import CarsSection from "../components/CarsSection/CarsSection";
+//import CarsSection from "../components/CarsSection/CarsSection";
 
 const DetailsContainer = styled(Grid)(({ theme }) => ({
   flexDirection: "column",
@@ -170,9 +170,7 @@ getUser()
           </Button>
         </Grid>
       </DetailsContainer>
-      <NavLink to={`/cars/details/${_id}`}>
-        <CarsSection />
-      </NavLink>
+     
     </Box>
   );
 };
