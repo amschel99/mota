@@ -69,10 +69,10 @@ getUser()
              {description}   
             </Typography>
             <Typography  align="center" color="black"  mb={3}  >
-            <Location sx={{marginRight:'10px',marginTop:'3px'}}/> {location}
+            <Location sx={{marginRight:'10px',marginTop:'5px'}}/><span>{location}</span> 
             
             </Typography>
-             <Typography  component='a' href={`tel:${mobile}`} variant="h5" align="center" color="blue" mb={6} >
+             <Typography  component='a' href={`tel:${mobile}`}  align="center" color="blue" mb={6} >
           
                 <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> Call {mobile}
             </Typography>
