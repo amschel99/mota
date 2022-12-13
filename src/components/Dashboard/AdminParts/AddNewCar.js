@@ -125,7 +125,7 @@ return setCopied(true)
                             {copied?<span style={{color:'red'}}>Copied!</span>:null}
                           </Typography>
 
-                                  <Typography variant="h6" align="center" color="red" fontWeight="bold">Update Profile</Typography>
+                                  
 
                                      <Typography variant="h6" align="center" color="red" fontWeight="bold">
                                         <Update id={id} name={userName} mobile={mobile} twitter={twitter} facebook={facebook} instagram={instagram} location={location} description={description}/>
