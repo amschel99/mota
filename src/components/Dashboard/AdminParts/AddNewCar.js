@@ -42,11 +42,17 @@ history.push("/login")
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
     const[user,setUser]=React.useState(currentUser.email)
-    const[data,setData]=React.useState()
+   
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
 const[userName,setUserName]=React.useState('')
+const[location,setLocation]=React.useState('')
+const[mobile,setMobile]=React.useState('')
+const[description,setDescription]=React.useState('')
+const[facebook,setFacebook]=React.useState('')
+const[twitter,setTwitter]=React.useState('')
+const[instagram,setInstagram]=React.useState('')
 const[id,setId]=React.useState('')
 const[copied,setCopied]=React.useState(false)
     
@@ -60,7 +66,12 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 
 setUserName(data.name)
 setId(data._id)
-setData(data)
+setLocation(data.location)
+setDescription(data.description)
+setFacebook(data.facebook)
+setTwitter(data.twitter)
+setInstagram(data.instagram)
+setMobile(data.mobile)
   }
 
   catch(e){
@@ -117,7 +128,7 @@ return setCopied(true)
                                   <Typography variant="h6" align="center" color="red" fontWeight="bold">Update Profile</Typography>
 
                                      <Typography variant="h6" align="center" color="red" fontWeight="bold">
-                                        <Update name={userName} mobile={data.mobile} twitter={data.twitter} facebook={data.facebook} instagram={data.instagram} location={data.location} description={data.description}/>
+                                        <Update name={userName} mobile={mobile} twitter={twitter} facebook={facebook} instagram={instagram} location={location} description={description}/>
                                      </Typography>
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
