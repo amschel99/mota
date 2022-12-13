@@ -91,7 +91,7 @@ setUser(currentUser.email)
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
                         <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
-                      <Typography sx={{border:'2px solid red'}} variant="h4" align="center" color="primary" >
+                      <Typography sx={{cursor:'pointer',fontStyle:'italic'}} variant="h4" align="center" color="primary" >
                         <CopyToClipboard text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
 return setCopied(true)
                         }} ><Typography>Copy your unique url to clipboard</Typography>
