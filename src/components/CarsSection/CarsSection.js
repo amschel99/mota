@@ -64,13 +64,13 @@ const getText=(value)=>`${value}`
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Filter by price</Typography>
-             <Box sx={{ width: '100vw' }}>
+             <Box sx={{ width: {md:'100vw'} }}>
       <Slider
         aria-label="Price Range"
         
        min={500000}
        max={20000000}
-       
+       step={null}
         getAriaValueText={getText}
         valueLabelDisplay="auto"
         marks={marks}
