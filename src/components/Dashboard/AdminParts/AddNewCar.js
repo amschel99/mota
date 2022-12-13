@@ -93,9 +93,9 @@ setUser(currentUser.email)
                         <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
                       <Typography variant="h5" align="center" color="black" >
                         <CopyToClipboard text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
-setCopied(true)
+return setCopied(true)
                         }} >Copy your unique url to keyboard</CopyToClipboard>
-                        {copied?<span style={{color:'red'}}>Copied!</span>:null}
+                        {copied? <span style={{color:'red'}}>Copied!</span>:null}
                         </Typography>
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
