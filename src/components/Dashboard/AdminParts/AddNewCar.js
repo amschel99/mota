@@ -7,7 +7,7 @@ import useAuth from "../AdminParts/../../../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import Whatsapp from '@mui/icons-material/WhatsApp'
-import Update from "../AdminParts/../../../components/Update.js"
+
 import Facebook from '@mui/icons-material/Facebook'
 import Twitter from '@mui/icons-material/Twitter'
 
@@ -47,12 +47,7 @@ history.push("/login")
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
 const[userName,setUserName]=React.useState('')
-const[location,setLocation]=React.useState('')
-const[mobile,setMobile]=React.useState('')
-const[description,setDescription]=React.useState('')
-const[facebook,setFacebook]=React.useState('')
-const[twitter,setTwitter]=React.useState('')
-const[instagram,setInstagram]=React.useState('')
+
 const[id,setId]=React.useState('')
 const[copied,setCopied]=React.useState(false)
     
@@ -66,12 +61,7 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 
 setUserName(data.name)
 setId(data._id)
-setLocation(data.location)
-setDescription(data.description)
-setFacebook(data.facebook)
-setTwitter(data.twitter)
-setInstagram(data.instagram)
-setMobile(data.mobile)
+
   }
 
   catch(e){
@@ -127,9 +117,7 @@ return setCopied(true)
 
                                   
 
-                                     <Typography variant="h6" align="center" color="red" fontWeight="bold">
-                                        <Update id={id} name={userName} mobile={mobile} twitter={twitter} facebook={facebook} instagram={instagram} location={location} description={description}/>
-                                     </Typography>
+                                  
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
 
