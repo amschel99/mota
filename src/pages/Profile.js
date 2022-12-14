@@ -19,6 +19,7 @@ const Profile = () => {
   <Stack sx={{display:{xs:'none',sm:'flex'}}} direction="row" spacing={50} p={2}>
 <Drawer  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
 <MobileDrawer open={open} setOpen={setOpen}  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
+<Box>
 <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
                 aria-label="Menu"
@@ -26,6 +27,7 @@ const Profile = () => {
                 >
                     <MenuIcon/>
                 </IconButton>
+                </Box>
 {add && <AddNewCar/>}
 {update && <Update/> }
 {share && <ShareProfile/> }
