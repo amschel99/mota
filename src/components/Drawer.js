@@ -38,7 +38,7 @@ const DrawerComponent = () => {
       marginTop:'130px',
        backgroundColor:'white',
        
-       height:'300px'
+       height:'100vh'
     }
   }}
     variant='permanent' sx={{'z-index':5, backgroundColor:'transparent', display:{xs:'none',sm:'block'}}} >
