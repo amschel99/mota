@@ -24,16 +24,16 @@ const Sidebar = ({mode,setMode}) => {
 
      
         <List >
-          {items.map(({label,Icon},i)=>(
-            <ListItem key={i} component={Link} to="/">
-              <ListItemIcon><Icon/></ListItemIcon>
-              <ListItemText>{label}</ListItemText>
+           {items.map(({label,Icon,path},i)=>{
+            return <ListItem component={Link} to={`${path}`} key={i}>
 
+<ListItemIcon>
+    <Icon/>
+</ListItemIcon>
+<ListItemText>{label}</ListItemText>
 
             </ListItem>
-
-
-          ))}
+        })}
            <ListItem>
               <ListItemIcon>
                 
