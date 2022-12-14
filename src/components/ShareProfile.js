@@ -54,7 +54,7 @@ return setCopied(true)
                           <Typography variant="h6" align="center" color="black" fontWeight="bold">
                             {copied?<span style={{color:'red'}}>Copied!</span>:null}
                           </Typography>
-                          </Box>
+                          </Stack>
 
   )
 }
