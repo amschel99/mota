@@ -34,9 +34,10 @@ const DrawerComponent = () => {
     <Drawer
       PaperProps={{
     sx: {
-      width: 240,
-       backgroundColor:'transparent',
-       'z-index':5
+      width: 150,
+       backgroundColor:'white',
+       'z-index':5,
+       height:'30vh'
     }
   }}
     variant='permanent' sx={{'z-index':5, backgroundColor:'transparent', display:{xs:'none',sm:'block'}}} >
