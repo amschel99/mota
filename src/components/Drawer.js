@@ -35,7 +35,7 @@ const DrawerComponent = () => {
       PaperProps={{
     sx: {
       width: 300,
-      marginTop:'30px',
+      marginTop:'130px',
        backgroundColor:'white',
        
        height:'500px'
