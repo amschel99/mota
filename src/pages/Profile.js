@@ -6,7 +6,7 @@ import {Stack} from "@mui/material"
 
 const Profile = () => {
   return (
-  <Stack direction="row" spacing={6} p={2}>
+  <Stack direction="row" spacing={20} p={2}>
 <Drawer/>
 
 <AddNewCar/>
