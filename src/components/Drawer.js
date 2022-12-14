@@ -31,8 +31,8 @@ const DrawerComponent = () => {
         </>
     }
   return (
-    <Drawer variant='permanent' sx={{'z-index':5, display:{xs:'none',sm:'block'}}} >
-<List sx={{marginTop:20}}>
+    <Drawer variant='permanent' sx={{'z-index':5, display:{xs:'none',sm:'block', backgroundColor:'transparent'}}} >
+<List sx={{marginTop:25}}>
 <ListSubheader>Actions</ListSubheader>
 <ListItems items={items.Actions}/>
 
