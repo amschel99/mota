@@ -2,6 +2,7 @@ import React from 'react'
 import Drawer from '../components/Drawer'
 //import AddNewCar from '../components/Dashboard/AdminParts/AddNewCar'
 import Update from '../components/Update'
+import ShareProfile from '../components/ShareProfile'
 import {Stack} from "@mui/material"
 
 const Profile = () => {
@@ -14,6 +15,7 @@ const Profile = () => {
   <Stack sx={{display:{xs:'none',sm:'flex'}}} direction="row" spacing={50} p={2}>
 <Drawer  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
 {update && <Update/> }
+{share && <ShareProfile/> }
 
 
 </Stack>
