@@ -1,11 +1,11 @@
 import React from 'react'
-import Drawer from '../components/Drawer'
+import Sidebar from '../components/Sidebar'
 import {Box} from "@mui/material"
 
 const Profile = () => {
   return (
    <Box>
-    <Drawer/>
+    <Sidebar/>
    </Box>
   )
 }
