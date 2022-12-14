@@ -34,7 +34,7 @@ return null
     },[currentUser.email])
     
   return (
-    <Stack direction="column" gap="10"  sx={{width:'50vw'}}>
+    <Stack direction="column" gap="10"  sx={{width:'80vw'}}>
      <Typography sx={{fontStyle:'italic'}} variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile and  let others discover you</Typography>
                         {userName?
                         
