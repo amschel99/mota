@@ -17,17 +17,18 @@ const Profile = () => {
 
   return (
   <Stack  direction="row" spacing={50} p={2}>
-<Drawer  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
-<MobileDrawer open={open} setOpen={setOpen}  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
-<Box sx={{display:{xs:'block',sm:'none'}}}>
-<IconButton
+    <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
                 aria-label="Menu"
                 sx={{display:{xs:"block",sm:"none"},color:'red'}}
                 >
                     <MenuIcon/>
                 </IconButton>
-                </Box>
+<Drawer  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
+<MobileDrawer open={open} setOpen={setOpen}  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
+
+
+             
 {add && <AddNewCar/>}
 {update && <Update/> }
 {share && <ShareProfile/> }
