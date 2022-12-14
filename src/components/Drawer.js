@@ -64,7 +64,7 @@ history.push("/login")
                 return setShare(true)
               }
                if(i===4){
-              return handleLogout
+              return handleLogout()
               }
             }}
             >
