@@ -16,7 +16,7 @@ const Profile = () => {
           const[share,setShare]=React.useState(false)
 
   return (
-  <Stack sx={{display:{xs:'none',sm:'flex'}}} direction="row" spacing={50} p={2}>
+  <Stack  direction="row" spacing={50} p={2}>
 <Drawer  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
 <MobileDrawer open={open} setOpen={setOpen}  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
 <Box>

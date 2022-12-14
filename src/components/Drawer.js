@@ -84,7 +84,7 @@ history.push("/login")
     sx: {
       width: 300,
       marginTop:'130px',
-       backgroundColor:'white',
+       backgroundColor:'transparent',
        
        height:'100vh'
     }
