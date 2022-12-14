@@ -83,7 +83,7 @@ history.push("/login")
       PaperProps={{
     sx: {
       width: 300,
-      marginTop:'130px',
+      marginTop:{xs:'100px',sm:'125px'},
        backgroundColor:'white',
        
        height:'100vh'
