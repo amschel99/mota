@@ -41,7 +41,7 @@ const DrawerComponent = () => {
     }
   }}
     variant='permanent' sx={{'z-index':5, backgroundColor:'transparent', display:{xs:'none',sm:'block'}}} >
-<List sx={{marginTop:25}}>
+<List >
 <ListSubheader>Actions</ListSubheader>
 <ListItems items={items.Actions}/>
 
