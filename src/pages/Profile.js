@@ -20,7 +20,7 @@ const Profile = () => {
     <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
                 aria-label="Menu"
-                sx={{display:{xs:"block",sm:"none"},color:'red',position:'absolute',top:'5vw'}}
+                sx={{display:{xs:"block",sm:"none"},color:'red',position:'absolute',top:'1vw'}}
                 >
                     <MenuIcon/>
                 </IconButton>
