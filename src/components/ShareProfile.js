@@ -35,7 +35,7 @@ return null
     
   return (
    
-    <Stack direction="column" gap="10"  sx={{width:'80vw',marginTop:{xs:'5px',sm:'0px'}}}>
+    <Stack direction="column" gap="10"  sx={{width:'80vw',marginTop:{xs:'10px',sm:'0px'}}}>
      <Typography sx={{fontStyle:'italic'}} variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile and  let others discover you</Typography>
                         {userName?
                         
