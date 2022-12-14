@@ -82,8 +82,8 @@ history.push("/login")
     <Drawer
       PaperProps={{
     sx: {
-      width: 300,
-      marginTop:{xs:'100px',sm:'125px'},
+      width:{xs:'200',sm:'300'},
+      marginTop:{xs:'70px',sm:'125px'},
        backgroundColor:'white',
        
        height:'100vh'
