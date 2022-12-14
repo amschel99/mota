@@ -90,11 +90,11 @@ setUser(currentUser.email)
         event.preventDefault()
     }
     return (
-        <Box>
+        <Box sx={{marginTop:{xs:'5px',sm:'0px'}}}>
             {error&& <Alert severity="error">{error}</Alert>}
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
-                        <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
+                        <Typography variant="h6" align="center" color="black" >{` Welcome ${userName}`}</Typography>
                         
                        
 
