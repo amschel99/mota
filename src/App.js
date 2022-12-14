@@ -21,6 +21,7 @@ import Footer from "./components/Common/Footer/Footer";
 import LoadingSpinner from "./components/Common/LoadingSpinner/LoadingSpinner";
 import About from "./pages/About";
 import Contact from './pages/Contact';
+import Drawer from "./pages/Profile"
 import AddNewCar from "./components/Dashboard/AdminParts/AddNewCar.js"
 import ManageCars from "./components/Dashboard/AdminParts/ManageCars.js"
 
@@ -108,9 +109,12 @@ function App() {
                         <Route exact path="/login"><Login/></Route>
                            <Route exact path="/reset"><Reset/></Route>
                 
-                <PrivateRoute exact path="/profile" component={AddNewCar}/>
+              {/* <PrivateRoute exact path="/profile" component={AddNewCar}/>*/}
+
+              <PrivateRoute exact path="/profile" component={Drawer}/>
                 <PrivateRoute exact path="/manage" component={ManageCars}/>
                  <PrivateRoute exact path="/update" component={UpdateProfile}/>
+                    <PrivateRoute exact path="/add" component={AddNewCar}/>
 
                  
 
