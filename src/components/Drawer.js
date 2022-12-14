@@ -22,16 +22,28 @@ const DrawerComponent = ({setAdd,setDelete,setShare, setUpdate}) => {
             return <ListItem component={Button}  key={i}
             onClick={()=>{
               if(i===0){
+                setUpdate(false)
+                setDelete(false)
+                setShare(false)
                 return setAdd(true)
               }
                if(i===1){
+                 setAdd(false)
+                setDelete(false)
+                setShare(false)
                 return setUpdate(true)
 
               }
                if(i===2){
+                 setAdd(false)
+                setUpdate(false)
+                setShare(false)
                 return setDelete(true)
               }
                if(i===3){
+                 setAdd(false)
+                setUpdate(false)
+                setDelete(false)
                 return setShare(true)
               }
             }}
