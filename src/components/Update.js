@@ -2,10 +2,10 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
+
 import TextArea from '@mui/material/TextareaAutosize';
 import {useRef} from "react"
-import Link from '@mui/material/Link';
+
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -13,14 +13,59 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import {useAuth} from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 
 const theme = createTheme();
 
-export default function Update({id,name,location,mobile,description,facebook,twitter,instagram}) {
-  const history=useHistory();
+export default function Update() {
+ const history=useHistory()
+  const {currentUser}=useAuth()
+
+   
+
+   
+     // form car type state
+
+    // handle changing value in form
+const[name,setUserName]=React.useState('')
+const[location,setLocation]=React.useState('')
+const[mobile,setMobile]=React.useState('')
+const[description,setDescription]=React.useState('')
+const[facebook,setFacebook]=React.useState('')
+const[twitter,setTwitter]=React.useState('')
+const[instagram,setInstagram]=React.useState('')
+const[id,setId]=React.useState('')
+
+  React.useEffect(()=>{
+        const getUser= async ()=>{
+  try{
+const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
+  email:currentUser.email
+})
+
+
+setUserName(data.name)
+setId(data._id)
+setLocation(data.location)
+setDescription(data.description)
+setFacebook(data.facebook)
+setTwitter(data.twitter)
+setInstagram(data.instagram)
+setMobile(data.mobile)
+  }
+
+  catch(e){
+return null
+  }
+ }
+ getUser()
+
+    },[currentUser.email])
+   
+
+
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
   
