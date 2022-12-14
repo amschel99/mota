@@ -36,7 +36,7 @@ const DrawerComponent = () => {
     sx: {
       width: 200,
        backgroundColor:'white',
-       'z-index':5,
+       
        height:'300px'
     }
   }}
