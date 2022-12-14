@@ -1,15 +1,32 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {ListItem,ListItemIcon,ListItemText,Drawer,List,ListSubheader,Button} from '@mui/material'
-import {Add,Update,Delete,Share} from "@mui/icons-material"
+import {Add,Update,Delete,Share,Logout} from "@mui/icons-material"
+import useAuth from "../others/useAuthContext"
+import {useHistory} from 'react-router-dom'
 const DrawerComponent = ({setAdd,setDelete,setShare, setUpdate}) => {
+    const history=useHistory()
+    
+  
+    const{logout}=useAuth()
+async function handleLogout(){
+ 
+   try{
+await logout()
+history.push("/login")
+   }
+   catch(e){
+  return null
+   }
 
+  }
     const [items]=React.useState({
       Actions:[
         {label:"Add New Car",Icon:Add,state:'setAdd'},
           {label:"Update Account",Icon:Update,state:'setUpdate'},
             {label:"Delete Car",Icon:Delete,state:'setDelete'},
-              {label:"Share Profile",Icon:Share,state:'setShare'}
+              {label:"Share Profile",Icon:Share,state:'setShare'},
+                {label:"Logout",Icon:Logout,state:'setShare'}
       ]
       
 
@@ -45,6 +62,9 @@ const DrawerComponent = ({setAdd,setDelete,setShare, setUpdate}) => {
                 setUpdate(false)
                 setDelete(false)
                 return setShare(true)
+              }
+               if(i===4){
+              return handleLogout
               }
             }}
             >

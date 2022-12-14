@@ -95,7 +95,7 @@ setUser(currentUser.email)
              {status && <Alert severity="success">{status}</Alert>}
               {failed&& <Alert severity="error">{failed}</Alert>}
                         <Typography variant="h5" align="center" color="black" >{` Welcome back ${userName}`}</Typography>
-                         <Typography sx={{fontStyle:'italic'}} variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile, let others discover you</Typography>
+                        
                        
 
                     
@@ -301,18 +301,8 @@ setUser(currentUser.email)
                                 {/**disabled={currentUser?.email !== 'kariukiamschel9@gmail.com'} */}
                         </Grid>
 
-                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
-                       <Typography component={Link} to="/manage">
-                        Manage All cars
-                       </Typography>
-                        </Grid>
-                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
-                       <Typography
-                       onClick={handleLogout}
-                        component={Button} >
-                       Logout
-                       </Typography>
-                        </Grid>
+                        
+                        
 
 
                     </Grid>

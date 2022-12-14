@@ -1,6 +1,7 @@
 import React from 'react'
 import Drawer from '../components/Drawer'
 import AddNewCar from '../components/Dashboard/AdminParts/AddNewCar'
+import Delete from "../components/Dashboard/AdminParts/ManageCars"
 import Update from '../components/Update'
 import ShareProfile from '../components/ShareProfile'
 import {Stack} from "@mui/material"
@@ -18,7 +19,7 @@ const Profile = () => {
 {update && <Update/> }
 {share && <ShareProfile/> }
 
-
+{deleteComponent &&<Delete/> }
 </Stack>
     
   
