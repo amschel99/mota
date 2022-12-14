@@ -1,6 +1,6 @@
 import React from 'react'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
-import {Typography} from '@mui/material'
+import {Typography,Box,Stack} from '@mui/material'
 import useAuth from "../others/useAuthContext"
 import axios from 'axios'
 import Whatsapp from '@mui/icons-material/WhatsApp'
@@ -34,9 +34,10 @@ return null
     },[currentUser.email])
     
   return (
-    <>
+    <Stack direction="column" gap="10"  sx={{width:'50vw'}}>
      <Typography sx={{fontStyle:'italic'}} variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile and  let others discover you</Typography>
                         {userName?
+                        
 
                       <Typography sx={{cursor:'pointer',fontStyle:'italic',display:'flex', flexDirection:'row',justifyContent:'center'}} variant="h4" align="center" color="primary" >
                         <CopyToClipboard style={{marginLeft:'10px',marginRight:'10px'}} text={`https://carhub-xi.vercel.app/seller/${id}`} onCopy={()=>{
@@ -53,7 +54,7 @@ return setCopied(true)
                           <Typography variant="h6" align="center" color="black" fontWeight="bold">
                             {copied?<span style={{color:'red'}}>Copied!</span>:null}
                           </Typography>
-                          </>
+                          </Box>
 
   )
 }
