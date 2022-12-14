@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Drawer'
 import {Box} from "@mui/material"
 
 const Profile = () => {
