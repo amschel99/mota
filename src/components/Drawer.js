@@ -1,15 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {ListItem,ListItemIcon,ListItemText,Drawer,List,ListSubheader} from '@mui/material'
+import {ListItem,ListItemIcon,ListItemText,Drawer,List,ListSubheader,Button} from '@mui/material'
 import {Add,Update,Delete,Share} from "@mui/icons-material"
-const DrawerComponent = () => {
+const DrawerComponent = ({setAdd,setDelete,setShare, setUpdate}) => {
 
     const [items]=React.useState({
       Actions:[
-        {label:"Add New Car",Icon:Add,path:'add'},
-          {label:"Update Account",Icon:Update,path:'update'},
-            {label:"Delete Car",Icon:Delete,path:'delete'},
-              {label:"Share Profile",Icon:Share,path:'share'}
+        {label:"Add New Car",Icon:Add,state:'setAdd'},
+          {label:"Update Account",Icon:Update,state:'setUpdate'},
+            {label:"Delete Car",Icon:Delete,state:'setDelete'},
+              {label:"Share Profile",Icon:Share,state:'setShare'}
       ]
       
 
@@ -18,8 +18,12 @@ const DrawerComponent = () => {
 
     const ListItems=({items})=>{
         return <>
-        {items.map(({label,Icon,path},i)=>{
-            return <ListItem component={Link} to={`${path}`} key={i}>
+        {items.map(({label,Icon,state},i)=>{
+            return <ListItem component={Button}  key={i}
+            onClick={()=>{
+                state(true)
+            }}
+            >
 
 <ListItemIcon>
     <Icon/>
