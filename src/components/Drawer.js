@@ -82,14 +82,14 @@ history.push("/login")
     <Drawer
       PaperProps={{
     sx: {
-      width: 200,
+      width: 300,
       marginTop:'130px',
        backgroundColor:'white',
        
        height:'100vh'
     }
   }}
-    variant='permanent' sx={{'z-index':5, backgroundColor:'transparent', display:{xs:'none',sm:'block'}}} >
+    variant='permanent' sx={{'z-index':5, backgroundColor:'white', display:{xs:'none',sm:'block'}}} >
 <List >
 <ListSubheader>Actions</ListSubheader>
 <ListItems items={items.Actions}/>
