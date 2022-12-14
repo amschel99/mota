@@ -21,7 +21,19 @@ const DrawerComponent = ({setAdd,setDelete,setShare, setUpdate}) => {
         {items.map(({label,Icon,state},i)=>{
             return <ListItem component={Button}  key={i}
             onClick={()=>{
-                state(true)
+              if(i===0){
+                return setAdd(true)
+              }
+               if(i===1){
+                return setUpdate(true)
+
+              }
+               if(i===2){
+                return setDelete(true)
+              }
+               if(i===3){
+                return setShare(true)
+              }
             }}
             >
 
