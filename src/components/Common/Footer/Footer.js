@@ -5,7 +5,7 @@ import { FacebookRounded, PhoneRounded, Twitter } from '@mui/icons-material';
 
 const Footer = () => {
     return (
-        <Box sx={{'z-index':1}} component="footer">
+        <Box sx={{'z-index':6}} component="footer">
             <Container sx={{ my: 8 }}>
                 <Box sx={{
                     display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'
