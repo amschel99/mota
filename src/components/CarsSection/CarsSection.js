@@ -53,7 +53,7 @@ const[price,setPrice]=React.useState(20000000)
         })
         setCars(data)
      window.scrollTo({
-  top: 700,
+  top: 1000,
   left: 100,
   behavior: 'smooth'
 });
