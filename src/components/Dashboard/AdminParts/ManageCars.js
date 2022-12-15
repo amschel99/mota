@@ -45,7 +45,7 @@ fetchCars()
     
   return (
     
-    <TableContainer sx={{position:'absolute', top:'100px',left:'50px'}}  component={Paper}>
+    <TableContainer sx={{position:'absolute', top:'100px',left:'150px'}}  component={Paper}>
       {success && <Alert severity='success'>{success}</Alert>}
       <Table sx={{width:'60',maxWidth:'60vw' }} aria-label="simple table">
         <TableHead sx={{width:"100vw"}}>
