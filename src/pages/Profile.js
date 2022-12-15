@@ -7,7 +7,7 @@ import Update from '../components/Update'
 import ShareProfile from '../components/ShareProfile'
 //import MenuIcon from "@mui/icons-material/Menu"
 import Navbar2 from '../components/Common/Navbar2/Navbar2'
-import {Stack,IconButton} from "@mui/material"
+import {Stack} from "@mui/material"
 
 const Profile = () => {
       const[open,setOpen]=React.useState(false)
