@@ -45,7 +45,7 @@ const About = () => {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          marginTop: 2,
+          marginTop: '100px',
           marginLeft: 5,
           marginRight: 4,
           

@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <>
     <Toast/>
-    <Box sx={{ display: "flex", justifyContent: { xs: "center" } }}>
+    <Box sx={{ display: "flex", marginTop:'100px',justifyContent: { xs: "center" } }}>
       <Box
         sx={{
           display: "flex",
