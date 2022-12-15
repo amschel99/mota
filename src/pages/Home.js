@@ -37,8 +37,9 @@ import image26 from '../images/image26.jpg'
 import image27 from '../images/image27.jpg'
 import image29 from '../images/image29.jpg'
 
-const Home = () => {
+const Home = ({clickedColor,setClickedColor}) => {
       const dispatch = useDispatch();
+     
     return (
         <div>
             {/* home banner */}
@@ -46,21 +47,25 @@ const Home = () => {
                 <HomeBanner />
             </Box>
             <Box sx={{marginTop:'10px'}}>
-                <Typography    variant="h4"
+                <Typography   variant="h4"
           color="red"
           sx={{ textAlign: "center", marginBottom: 2 }}>Sort Car By Brand</Typography>
 
                  <Typography  variant="h6"   sx={{ textAlign: "center"}}>
 
                     <Typography component={Button} 
+                    sx={{backgroundColor:clickedColor}}
                     onClick={() => {
+                      setClickedColor('gray')
                   return dispatch(type({ type: 'Porsche' }));
                 }}
                     >
 <img src={image1} alt="Cars_Logos" height="10%" width="70" />
                     </Typography>
                      <Typography component={Button} 
+                      sx={{backgroundColor:clickedColor}}
                     onClick={() => {
+                            setClickedColor('gray')
                   return dispatch(type({ type: 'Renault' }));
                 }}
                     >
@@ -68,7 +73,9 @@ const Home = () => {
                     </Typography>
 
                      <Typography component={Button} 
+                     sx={{backgroundColor:clickedColor}}
                     onClick={() => {
+                      setClickedColor('gray')
                   return dispatch(type({ type: 'Saab' }));
                 }}
                     >
@@ -77,7 +84,9 @@ const Home = () => {
                     </Typography>
 
                      <Typography component={Button} 
+                     sx={{backgroundColor:clickedColor}}
                     onClick={() => {
+                      setClickedColor('gray')
                   return dispatch(type({ type: 'Subaru' }));
                 }}
                     >
@@ -113,8 +122,9 @@ const Home = () => {
 
                     </Typography>
 
-                     <Typography component={Button} 
+                     <Typography  component={Button} 
                     onClick={() => {
+
                   return dispatch(type({ type: 'Volvo' }));
                 }}
                     >
@@ -341,7 +351,7 @@ const Home = () => {
         
             {/* offers section */}
             <section>
-                <CarsSection  dataAmount={50} />
+                <CarsSection setClickedColor={setClickedColor}  dataAmount={50} />
                 <Box sx={{ textAlign: 'center', my: 6 }}>
                     <NavLink to="/cars"
                         style={{ textDecoration: 'none' }}>
