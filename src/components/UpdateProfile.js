@@ -56,7 +56,7 @@ return setError(`passwords do not match`)
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container sx={{marginTop:{xs:'200px',sm:'200px'}}}  component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
@@ -74,7 +74,7 @@ return setError(`passwords do not match`)
           </Typography>
           {error && <Alert severity="error">{error}</Alert>}
 
-          <Box sx={{marginTop:{xs:'200px',sm:'200px'}}} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box  component="form" noValidate onSubmit={handleSubmit}>
             <Grid container spacing={2}>
              
               <Grid item xs={12}>
