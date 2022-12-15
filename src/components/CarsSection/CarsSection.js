@@ -31,7 +31,7 @@ const {type}= useSelector((state)=>state.type)
         setCars(data)
      window.scrollTo({
   top: 1000,
-  left: 100,
+  left: 10,
   behavior: 'smooth'
 });
     }
