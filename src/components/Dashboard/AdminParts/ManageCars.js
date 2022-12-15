@@ -48,7 +48,7 @@ fetchCars()
     <TableContainer sx={{position:'absolute', top:'100px'}}  component={Paper}>
       {success && <Alert severity='success'>{success}</Alert>}
       <Table sx={{width:'60',maxWidth:'50vw' }} aria-label="simple table">
-        <TableHead sx={{width:"100vw"}}>
+        <TableHead sx={{width:"50vw"}}>
           <TableRow  >
             <TableCell sx={{width:"15vw"}}>Car Name</TableCell>
             <TableCell sx={{width:"15vw"}} >Unique ID</TableCell>
