@@ -45,11 +45,11 @@ fetchCars()
     
   return (
     
-    <TableContainer  component={Paper}>
+    <TableContainer sx={{marginTop:{xs:'200px',sm:'200px'}}}  component={Paper}>
       {success && <Alert severity='success'>{success}</Alert>}
       <Table sx={{width:'60',maxWidth:'60vw' }} aria-label="simple table">
         <TableHead sx={{width:"100vw"}}>
-          <TableRow  sx={{marginTop:{xs:'200px',sm:'200px'}}}>
+          <TableRow  >
             <TableCell sx={{width:"15vw"}}>Car Name</TableCell>
             <TableCell sx={{width:"15vw"}} >Unique ID</TableCell>
             <TableCell sx={{width:"10vw"}} >Action</TableCell>
@@ -57,7 +57,7 @@ fetchCars()
      
           </TableRow>
         </TableHead>
-        <TableBody sx={{marginTop:{xs:'200px',sm:'200px'}}}>
+        <TableBody >
           {cars.map(({ _id, carImg, carName, carType, transmission, fuel, color, mileage, price, engine }) => (
             <TableRow
               key={_id}
