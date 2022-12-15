@@ -102,6 +102,7 @@ function App() {
                   <>
                        <Navbar   />   {/* navigation bar */}
                    <Home  />
+                   <Footer/>
                   </>
                  
                   
@@ -110,18 +111,34 @@ function App() {
                   <>
                    <Navbar   />   {/* navigation bar */}
                    <Cars />
+                    <Footer/>
                   </>
                  
                   
                   </Route>
-                <Route exact path="/about"><About /></Route>
-                <Route exact path="/contact"><Contact/></Route>
+                <Route exact path="/about">
+                  <>
+                         <About />
+                         <Footer/>
+                  </>
+           
+                  
+                  </Route>
+                <Route exact path="/contact">
+                  <Contact/>
+                  <Footer/>
+                  </Route>
                  
 
                   
                     
-                     <Route exact path="/register"><SignUp/></Route>
-                        <Route exact path="/login"><Login/></Route>
+                     <Route exact path="/register">
+                      <SignUp/>
+                      
+                      </Route>
+                        <Route exact path="/login">
+                          <Login/>
+                          </Route>
                            <Route exact path="/reset"><Reset/></Route>
                 
               {/* <PrivateRoute exact path="/profile" component={AddNewCar}/>*/}
@@ -139,11 +156,19 @@ function App() {
                   <>
                   <Navbar   />   {/* navigation bar */}
                   <CarDetails />
+                  <Footer/>
                   </>
                   
                   
                   </Route>
-                <Route  path="/seller/:userId"><Seller/></Route>
+                <Route  path="/seller/:userId">
+                  <>
+                  <Seller/>
+                  <Footer/>
+                  </>
+                  
+                  
+                  </Route>
             
              
 
@@ -155,7 +180,7 @@ function App() {
 
             {/* <SocialFlow/>*/}
 
-            <Footer />
+            
            
           </Box>
         </Router>
