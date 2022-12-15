@@ -37,7 +37,7 @@ import image26 from '../images/image26.jpg'
 import image27 from '../images/image27.jpg'
 import image29 from '../images/image29.jpg'
 
-const Home = ({clickedColor,setClickedColor}) => {
+const Home = () => {
       const dispatch = useDispatch();
      
     return (
@@ -54,18 +54,18 @@ const Home = ({clickedColor,setClickedColor}) => {
                  <Typography  variant="h6"   sx={{ textAlign: "center"}}>
 
                     <Typography component={Button} 
-                    sx={{backgroundColor:clickedColor}}
+                    
                     onClick={() => {
-                      setClickedColor('gray')
+                      
                   return dispatch(type({ type: 'Porsche' }));
                 }}
                     >
 <img src={image1} alt="Cars_Logos" height="10%" width="70" />
                     </Typography>
                      <Typography component={Button} 
-                      sx={{backgroundColor:clickedColor}}
+                      
                     onClick={() => {
-                            setClickedColor('gray')
+                            
                   return dispatch(type({ type: 'Renault' }));
                 }}
                     >
@@ -73,9 +73,9 @@ const Home = ({clickedColor,setClickedColor}) => {
                     </Typography>
 
                      <Typography component={Button} 
-                     sx={{backgroundColor:clickedColor}}
+                    
                     onClick={() => {
-                      setClickedColor('gray')
+                      
                   return dispatch(type({ type: 'Saab' }));
                 }}
                     >
@@ -84,9 +84,9 @@ const Home = ({clickedColor,setClickedColor}) => {
                     </Typography>
 
                      <Typography component={Button} 
-                     sx={{backgroundColor:clickedColor}}
+                    
                     onClick={() => {
-                      setClickedColor('gray')
+                      
                   return dispatch(type({ type: 'Subaru' }));
                 }}
                     >
@@ -351,7 +351,7 @@ const Home = ({clickedColor,setClickedColor}) => {
         
             {/* offers section */}
             <section>
-                <CarsSection setClickedColor={setClickedColor}  dataAmount={50} />
+                <CarsSection   dataAmount={50} />
                 <Box sx={{ textAlign: 'center', my: 6 }}>
                     <NavLink to="/cars"
                         style={{ textDecoration: 'none' }}>

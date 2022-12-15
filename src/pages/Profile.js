@@ -6,7 +6,7 @@ import Delete from "../components/Dashboard/AdminParts/ManageCars"
 import Update from '../components/Update'
 import ShareProfile from '../components/ShareProfile'
 import MenuIcon from "@mui/icons-material/Menu"
-import {Stack,IconButton,Box} from "@mui/material"
+import {Stack,IconButton} from "@mui/material"
 
 const Profile = () => {
       const[open,setOpen]=React.useState(false)

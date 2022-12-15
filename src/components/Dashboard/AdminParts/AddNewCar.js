@@ -2,9 +2,9 @@ import { Button,Alert, FormControl, Grid, InputAdornment, InputLabel, MenuItem, 
 import { Box, styled } from '@mui/system';
 import axios from 'axios';
 import React from 'react';
-import {Link} from "react-router-dom"
+
 import useAuth from "../AdminParts/../../../others/useAuthContext"
-import {useHistory} from 'react-router-dom'
+
 
 
 
@@ -17,21 +17,10 @@ const Icon = styled('i')(({ theme }) => ({
 
 const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
     const[status,setStatus]=React.useState("")
-    const[failed,setFailed]=React.useState("")
-    const history=useHistory()
-  const {currentUser,logout}=useAuth()
-  const[error,setError]=React.useState('')
-  async function handleLogout(){
-   setError('')
-   try{
-await logout()
-history.push("/login")
-   }
-   catch(e){
-    setFailed(`failed to logout!`)
-   }
 
-  }
+  const {currentUser}=useAuth()
+ 
+  
 
  
    
@@ -45,8 +34,7 @@ history.push("/login")
     // handle changing value in form
 const[userName,setUserName]=React.useState('')
 
-const[id,setId]=React.useState('')
-const[copied,setCopied]=React.useState(false)
+
     
       React.useEffect(()=>{
         const getUser= async ()=>{
@@ -57,7 +45,7 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 
 
 setUserName(data.name)
-setId(data._id)
+
 
   }
 
@@ -91,9 +79,9 @@ setUser(currentUser.email)
     }
     return (
         <Box sx={{marginTop:{xs:'5px',sm:'0px'}}}>
-            {error&& <Alert severity="error">{error}</Alert>}
+           
              {status && <Alert severity="success">{status}</Alert>}
-              {failed&& <Alert severity="error">{failed}</Alert>}
+             
                         <Typography variant="h6" align="center" color="black" >{` Welcome ${userName}`}</Typography>
                         
                        

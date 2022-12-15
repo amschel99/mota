@@ -8,7 +8,7 @@ import PriceSlider from '../CarsSection/../../components/Slider'
 import {   useSelector} from 'react-redux'
 
 
-const CarsSection = ({ dataAmount ,setClickedColor}) => {
+const CarsSection = ({ dataAmount }) => {
       
 const {search}= useSelector((state)=>state.query)
 const {type}= useSelector((state)=>state.type)
@@ -30,7 +30,7 @@ const {type}= useSelector((state)=>state.type)
         })
        
         setCars(data)
-       setClickedColor("white")
+      
      window.scrollTo({
   top: 1000,
   left: 10,

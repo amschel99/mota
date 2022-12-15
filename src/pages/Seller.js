@@ -1,14 +1,14 @@
 import { Grid, Typography } from '@mui/material';
 import Location from "@mui/icons-material/LocationCity"
 import Phone from "@mui/icons-material/Call"
-import Whatsapp from "@mui/icons-material/WhatsApp"
+
 import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LoadingSpinner from '../components/Common/LoadingSpinner/LoadingSpinner';
 import SingleCar from '../components/CarsSection/SingleCar/SingleCar';
 import {   useSelector} from 'react-redux'
-import {useParams,Link } from "react-router-dom";
+import {useParams} from "react-router-dom";
 import SocialFlow from "../components/Common/socialFlow/socialFlow";
 
 const Seller = ({ dataAmount }) => {

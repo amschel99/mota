@@ -76,7 +76,7 @@ return <>
 </>
 }
 function App() {
-   const[clickedColor,setClickedColor]=React.useState('white')
+  
 
 
 
@@ -98,7 +98,7 @@ function App() {
               <ScrollToTop>
               <Switch>
                 {/* routes */}
-                <Route exact path="/"><Home clickedColor={clickedColor} setClickedColor={setClickedColor} /></Route>
+                <Route exact path="/"><Home  /></Route>
                 <Route exact path="/cars"><Cars /></Route>
                 <Route exact path="/about"><About /></Route>
                 <Route exact path="/contact"><Contact/></Route>

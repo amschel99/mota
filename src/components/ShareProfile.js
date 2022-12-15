@@ -1,6 +1,6 @@
 import React from 'react'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
-import {Typography,Box,Stack} from '@mui/material'
+import {Typography,Stack} from '@mui/material'
 import useAuth from "../others/useAuthContext"
 import axios from 'axios'
 import Whatsapp from '@mui/icons-material/WhatsApp'
