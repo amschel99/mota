@@ -78,7 +78,7 @@ setUser(currentUser.email)
         event.preventDefault()
     }
     return (
-        <Box sx={{marginTop:{xs:'200px',sm:'200px'}}}>
+        <Box sx={{marginTop:{xs:'500px',sm:'500px'}}}>
            
              {status && <Alert severity="success">{status}</Alert>}
              
