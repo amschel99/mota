@@ -57,7 +57,7 @@ fetchCars()
      
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody sx={{marginTop:{xs:'200px',sm:'200px'}}}>
           {cars.map(({ _id, carImg, carName, carType, transmission, fuel, color, mileage, price, engine }) => (
             <TableRow
               key={_id}
