@@ -41,7 +41,7 @@ const Navbar2= ({setOpen})=>{
            
         sx={{
           background: "white",
-         height:'10px',
+         height:'100px',
           maxHeight: "10px",
          
         }}>

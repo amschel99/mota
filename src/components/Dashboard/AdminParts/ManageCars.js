@@ -49,7 +49,7 @@ fetchCars()
       {success && <Alert severity='success'>{success}</Alert>}
       <Table sx={{width:'60',maxWidth:'60vw' }} aria-label="simple table">
         <TableHead sx={{width:"100vw"}}>
-          <TableRow  sx={{marginTop:{xs:'100px',sm:'100px'}}}>
+          <TableRow  sx={{marginTop:{xs:'200px',sm:'200px'}}}>
             <TableCell sx={{width:"15vw"}}>Car Name</TableCell>
             <TableCell sx={{width:"15vw"}} >Unique ID</TableCell>
             <TableCell sx={{width:"10vw"}} >Action</TableCell>

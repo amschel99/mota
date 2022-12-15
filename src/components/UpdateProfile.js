@@ -69,7 +69,7 @@ return setError(`passwords do not match`)
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography sx={{marginTop:{xs:'100px',sm:'100px'}}} component="h1" variant="h5">
+          <Typography sx={{marginTop:{xs:'200px',sm:'200px'}}} component="h1" variant="h5">
            Update Profile
           </Typography>
           {error && <Alert severity="error">{error}</Alert>}
