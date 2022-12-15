@@ -41,11 +41,15 @@ const Navbar2= ({setOpen})=>{
            
         sx={{
           background: "white",
-         height:'100px',
-          maxHeight: "100px",
+         height:'10px',
+          maxHeight: "10px",
          
         }}>
-            <Toolbar>
+            <Toolbar sx={{
+            width: "100vw",
+            maxWidth: "100vw",
+            margin: "auto",
+          }}>
                 <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
                 aria-label="Menu"
