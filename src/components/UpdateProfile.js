@@ -75,7 +75,7 @@ return setError(`passwords do not match`)
           </Typography>
           {error && <Alert severity="error">{error}</Alert>}
 
-          <Box  component="form" noValidate onSubmit={handleSubmit}>
+          <Box sx={{position:'absolute',top:'100px'}}  component="form" noValidate onSubmit={handleSubmit}>
             <Grid container spacing={2}>
              
               <Grid item xs={12}>
