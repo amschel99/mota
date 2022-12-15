@@ -40,8 +40,8 @@ const Navbar2= ({setOpen})=>{
           sx={{
           background: "white",
           boxShadow: "initial",
-          maxHeight: "200px",
-          overflow: "hidden",transition: "500ms ease",
+          maxHeight: "150px",
+      
         }}
           position="fixed">
             <Toolbar>
