@@ -61,7 +61,7 @@ return setError(`passwords do not match`)
         <Box
           sx={{
            position:'absolute',
-           top:'200px'
+           top:'200px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
