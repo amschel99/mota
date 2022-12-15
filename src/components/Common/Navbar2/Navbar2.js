@@ -36,13 +36,13 @@ const Navbar2= ({setOpen})=>{
     return (
         <div   >
             <Slide in={!scrolling}>
-         <AppBar sx={{backgroundColor:'white'}}
+         <AppBar sx={{backgroundColor:'red',width:'100px'}}
           position="fixed">
             <Toolbar>
                 <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
                 aria-label="Menu"
-                sx={{display:{xs:"block",sm:"none"},color:'red'}}
+                sx={{display:{xs:"block",sm:"none"},color:'white'}}
                 >
                     <MenuIcon/>
                 </IconButton>
