@@ -93,13 +93,27 @@ function App() {
 
         <Router>
           <Box className="App" sx={{ position: 'relative' }}>
-            <Navbar   />   {/* navigation bar */}
+       
             <Box sx={{ position: 'relative' }}>
               <ScrollToTop>
               <Switch>
                 {/* routes */}
-                <Route exact path="/"><Home  /></Route>
-                <Route exact path="/cars"><Cars /></Route>
+                <Route exact path="/">
+                  <>
+                       <Navbar   />   {/* navigation bar */}
+                   <Home  />
+                  </>
+                 
+                  
+                  </Route>
+                <Route exact path="/cars">
+                  <>
+                   <Navbar   />   {/* navigation bar */}
+                   <Cars />
+                  </>
+                 
+                  
+                  </Route>
                 <Route exact path="/about"><About /></Route>
                 <Route exact path="/contact"><Contact/></Route>
                  
@@ -121,7 +135,14 @@ function App() {
 
                 {/* private routes */}
           
-                <Route path="/cars/details/:_id"><CarDetails /></Route>
+                <Route path="/cars/details/:_id">
+                  <>
+                  <Navbar   />   {/* navigation bar */}
+                  <CarDetails />
+                  </>
+                  
+                  
+                  </Route>
                 <Route  path="/seller/:userId"><Seller/></Route>
             
              
@@ -135,6 +156,7 @@ function App() {
             {/* <SocialFlow/>*/}
 
             <Footer />
+           
           </Box>
         </Router>
       

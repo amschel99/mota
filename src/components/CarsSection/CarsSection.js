@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LoadingSpinner from '../Common/LoadingSpinner/LoadingSpinner';
 import SingleCar from './SingleCar/SingleCar';
-import PriceSlider from '../CarsSection/../../components/Slider'
+//import PriceSlider from '../CarsSection/../../components/Slider'
 import {   useSelector} from 'react-redux'
 
 
@@ -46,7 +46,7 @@ const {type}= useSelector((state)=>state.type)
         <Box sx={{ maxWidth: 'xl', mx: 'auto', p: 2, justifyContent: "center" }}>
 
           {/** <PriceSlider price={price} setPrice={setPrice}/> */}
-          
+
             <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars</Typography>
             <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
