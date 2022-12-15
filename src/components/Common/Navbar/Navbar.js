@@ -101,62 +101,7 @@ const Navbar = () => {
                 sx={{ width: "100%" }}
               />
 
-           {
-            /** 
-            <button
-                style={{
-                  height: "40px",
-                  width: "30px",
-                  backgroundColor: "red",
-                  border: "none",
-                  borderRadius: "3px",
-                  outline: "none",
-                  position: "relative",
-                  right: "25px",
-                  cursor: "pointer",
-                }}
-                onClick={() => {
-                  return dispatch(search({ search: value }));
-                }}
-              >
-                
-
-              <FontAwesomeIcon icon={faSearch} />
-              
-              </button>
-           
-              <select
-                onChange={(e) => {
-                  return dispatch(type({ type: e.target.value }));
-                }}
-                style={{
-                  position: "relative",
-                  right: "1vw",
-                  height: "34px",
-                  border: "none",
-                  outline: "none",
-                  marginTop: "3px",
-                  marginBottom: "2px",
-                  width: "55px",
-                }}
-              >
-                <option>sort</option>
-                <option value="Bmw">BMW</option>
-                <option value="Ford">Ford</option>
-                <option value="Porsche">Porsche</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Audi">Audi</option>
-                <option value="Subaru">Subaru</option>
-                <option value="Mazda">Mazda</option>
-                <option value="Nissan">Nissan</option>
-                <option value="Suzuki">Suzuki</option>
-                <option value="Volkswagen">Volkswagen</option>
-                  <option value="Honda">Honda</option>
-                  <option value="Mitsubishi">Mitsubishi</option>
-                
-                <option></option>
-              </select>
-                  */} 
+          
             </Box>
 
             <Box flex={2}>

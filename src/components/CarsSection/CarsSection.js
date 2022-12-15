@@ -52,8 +52,13 @@ const[price,setPrice]=React.useState(20000000)
             }
         })
         setCars(data)
-        console.log("dataNumber", data)
+     window.scrollTo({
+  top: 300,
+  left: 100,
+  behavior: 'smooth'
+});
     }
+
         FetchCars()   
     }, [dataAmount,search,type,price])
 
