@@ -30,9 +30,9 @@ const PriceSlider = ({price,setPrice}) => {
 ];
 const getText=(value)=>`${value}`
   return (
-    <Box>
+    <Box sx={{width:'100vw',display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
      <Typography variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Filter by price</Typography>
-             <Box sx={{ width: {md:'80vw'} }}>
+             <Box sx={{ width: {md:'45vw'} }}>
       <Slider
         aria-label="Price Range"
         
