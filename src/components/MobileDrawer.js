@@ -42,12 +42,14 @@ history.push("/login")
                 setUpdate(false)
                 setDelete(false)
                 setShare(false)
+                setOpen(false)
                 return setAdd(true)
               }
                if(i===1){
                  setAdd(false)
                 setDelete(false)
                 setShare(false)
+                setOpen(false)
                 return setUpdate(true)
 
               }
@@ -55,12 +57,14 @@ history.push("/login")
                  setAdd(false)
                 setUpdate(false)
                 setShare(false)
+                setOpen(false)
                 return setDelete(true)
               }
                if(i===3){
                  setAdd(false)
                 setUpdate(false)
                 setDelete(false)
+                setOpen(false)
                 return setShare(true)
               }
                if(i===4){
