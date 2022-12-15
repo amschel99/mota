@@ -34,9 +34,10 @@ const Navbar2= ({setOpen})=>{
 
 
     return (
-        <div style={{backgroundColor:'white',height:'150px'}}  >
+        <div   >
             <Slide in={!scrolling}>
          <AppBar 
+         style={{backgroundColor:'white',height:'150px'}}
           position="fixed">
             <Toolbar>
                 <IconButton
