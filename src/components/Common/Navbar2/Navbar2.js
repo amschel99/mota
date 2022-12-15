@@ -38,13 +38,12 @@ const Navbar2= ({setOpen})=>{
             <Slide in={!scrolling}>
          <AppBar 
          
-           position="sticky"
+           position="fixed"
         sx={{
           background: "white",
-          boxShadow: "initial",
-          maxHeight: "200px",
-          overflow: "hidden",
-          transition: "500ms ease",
+         
+          maxHeight: "100px",
+         
         }}>
             <Toolbar>
                 <IconButton
