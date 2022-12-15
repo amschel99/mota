@@ -41,8 +41,8 @@ const Navbar3= ({setOpen})=>{
            
         sx={{
           background: "white",
-         height:'50px',
-          maxHeight: "50px",
+         height:'70px',
+          maxHeight: "70px",
           'z-index':1
          
         }}>
