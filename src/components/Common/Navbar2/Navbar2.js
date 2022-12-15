@@ -34,7 +34,7 @@ const Navbar2= ({setOpen})=>{
 
 
     return (
-        <div   >
+        
             <Slide in={!scrolling}>
          <AppBar 
          style={{backgroundColor:'white',height:'150px'}}
@@ -69,7 +69,7 @@ const Navbar2= ({setOpen})=>{
 
 
 
-        </div>
+  
     )
 }
 export default Navbar2
