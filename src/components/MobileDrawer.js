@@ -85,7 +85,7 @@ history.push("/login")
       width:{xs:'200',sm:'300'},
       marginTop:{xs:'70px',sm:'125px'},
        backgroundColor:'white',
-       
+       'z-index':5,
        height:'100vh'
     }
   }}

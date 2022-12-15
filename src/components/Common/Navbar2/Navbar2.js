@@ -43,6 +43,7 @@ const Navbar2= ({setOpen})=>{
           background: "white",
          height:'70px',
           maxHeight: "70px",
+          'z-index':1
          
         }}>
             <Toolbar sx={{
