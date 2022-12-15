@@ -36,7 +36,7 @@ return null
   return (
    
     <Stack direction="column" gap="10"  sx={{width:'90vw',marginTop:{xs:'20px',sm:'200px'}}}>
-     <Typography sx={{fontStyle:'italic'}} variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile and  let others discover you</Typography>
+     <Typography sx={{fontStyle:'italic',marginTop:{xs:'100px',sm:'100px'}}}  variant="h6" align="center" color="primary" fontWeight="bold" >Share your profile and  let others discover you</Typography>
                         {userName?
                         
 
