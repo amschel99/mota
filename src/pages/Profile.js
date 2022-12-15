@@ -5,7 +5,8 @@ import AddNewCar from '../components/Dashboard/AdminParts/AddNewCar'
 import Delete from "../components/Dashboard/AdminParts/ManageCars"
 import Update from '../components/Update'
 import ShareProfile from '../components/ShareProfile'
-import MenuIcon from "@mui/icons-material/Menu"
+//import MenuIcon from "@mui/icons-material/Menu"
+import Navbar2 from '../components/Common/Navbar2/Navbar2'
 import {Stack,IconButton} from "@mui/material"
 
 const Profile = () => {
@@ -17,13 +18,15 @@ const Profile = () => {
 
   return (
   <Stack  direction="row" spacing={{xs:'6',sm:20}} p={2}>
-    <IconButton
+    <Navbar2 setOpen={setOpen}/>
+   {/**  <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
                 aria-label="Menu"
                 sx={{display:{xs:"block",sm:"none"},color:'red',position:'absolute',top:'0vw',marginBottom:'5px',left:'0vw'}}
                 >
                     <MenuIcon/>
                 </IconButton>
+                */}
 <Drawer  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
 <MobileDrawer open={open} setOpen={setOpen}  setUpdate={setUpdate} setAdd={setAdd} setDelete={setDelete} setShare={setShare}/>
 
