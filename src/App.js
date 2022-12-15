@@ -14,6 +14,7 @@ import UpdateProfile from './components/UpdateProfile'
 import CarDetails from "./pages/CarDetails";
 import Page404 from "./pages/404";
 import Seller from './pages/Seller';
+import Navbar3 from './components/Common/Nav3/Navbar3';
 
 import Footer from "./components/Common/Footer/Footer";
 //import SocialFlow from "./components/Common/socialFlow/socialFlow";
@@ -118,6 +119,7 @@ function App() {
                   </Route>
                 <Route exact path="/about">
                   <>
+                  <Navbar3/>
                          <About />
                          <Footer/>
                   </>
@@ -125,6 +127,7 @@ function App() {
                   
                   </Route>
                 <Route exact path="/contact">
+                  <Navbar3/>
                   <Contact/>
                   <Footer/>
                   </Route>
@@ -133,20 +136,32 @@ function App() {
                   
                     
                      <Route exact path="/register">
-                      <SignUp/>
+                      <>
+                      <Navbar3/>
+                        <SignUp/>
+                        <Footer/>
+                      </>
+                    
                       
                       </Route>
                         <Route exact path="/login">
+                          <>
+                          <Navbar3/>
                           <Login/>
+                          </>
+                          
                           </Route>
-                           <Route exact path="/reset"><Reset/></Route>
+                           <Route exact path="/reset">
+                             <>
+                          <Navbar3/>
+                          <Reset/>
+                          </>
+                           </Route>
                 
               {/* <PrivateRoute exact path="/profile" component={AddNewCar}/>*/}
 
               <PrivateRoute exact path="/profile" component={Profile}/>
-                <PrivateRoute exact path="/manage" component={ManageCars}/>
-                 <PrivateRoute exact path="/update" component={UpdateProfile}/>
-                    <PrivateRoute exact path="/add" component={AddNewCar}/>
+           
 
                  
 
@@ -163,6 +178,7 @@ function App() {
                   </Route>
                 <Route  path="/seller/:userId">
                   <>
+                  <Navbar3/>
                   <Seller/>
                   <Footer/>
                   </>
@@ -173,7 +189,13 @@ function App() {
              
 
                 {/* not found page */}
-                <Route path="*"><Page404 /></Route>
+                <Route path="*">
+
+                  <>
+                  <Navbar3/>
+                  <Page404 />
+                  </>
+                </Route>
               </Switch>
               </ScrollToTop>
             </Box>
