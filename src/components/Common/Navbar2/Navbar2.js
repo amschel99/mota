@@ -35,7 +35,7 @@ const Navbar2= ({setOpen})=>{
 
     return (
         
-            <Slide in={!scrolling}>
+          
          <AppBar 
          
            position="fixed"
@@ -71,7 +71,7 @@ const Navbar2= ({setOpen})=>{
 
 
          </AppBar>
-          </Slide>
+      
 
 
 
