@@ -38,7 +38,7 @@ const Navbar2= ({setOpen})=>{
           
          <AppBar 
          
-           position="fixed"
+           
         sx={{
           background: "white",
          
