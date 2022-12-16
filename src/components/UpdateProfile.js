@@ -55,13 +55,13 @@ return setError(`passwords do not match`)
  
 
   return (
-    <div style={{marginTop:'200px'}}>
-    <ThemeProvider sx={{marginTop:'150px',position:'absolute',top:'150px'}} theme={theme}>
-      <Container sx={{marginTop:'150px',position:'absolute',top:'150px'}}   component="main" maxWidth="xs">
+ 
+     <ThemeProvider sx={{marginTop:'150px'}} theme={theme}>
+      <Container sx={{marginTop:'150px'}} component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-        marginTop:'150px',
+            marginTop:'150px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -136,6 +136,6 @@ return setError(`passwords do not match`)
        
       </Container>
     </ThemeProvider>
-    </div>
+
   );
         }
