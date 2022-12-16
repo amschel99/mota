@@ -132,12 +132,12 @@ setError(`failed to Update Profile!${error}`)
    
 
   return (
-    <ThemeProvider sx={{marginTop:'150px'}} theme={theme}>
-      <Container sx={{marginTop:'150px'}} component="main" maxWidth="xs">
+    <ThemeProvider sx={{marginTop:'120px'}} theme={theme}>
+      <Container sx={{marginTop:'120px'}} component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-           marginTop:'150px',
+           marginTop:'120px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
