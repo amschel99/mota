@@ -17,9 +17,10 @@ const Profile = () => {
           const[share,setShare]=React.useState(false)
 
   return (
- 
-  <Stack  direction="row" spacing={{xs:'6',sm:20}} p={2}>
-<Navbar2 setOpen={setOpen}/>
+    <>
+ <Navbar2 setOpen={setOpen}/>
+  <Stack sx={{marginTop:'50px'}} direction="row" spacing={{xs:'6',sm:20}} p={2}>
+
    {/**  <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
                 aria-label="Menu"
@@ -40,7 +41,7 @@ const Profile = () => {
 {deleteComponent &&<Delete/> }
 </Stack>
   
-  
+  </>
   )
 }
 
