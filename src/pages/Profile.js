@@ -19,7 +19,7 @@ const Profile = () => {
   return (
     <>
  <Navbar2 setOpen={setOpen}/>
-  <Stack sx={{marginTop:'50px'}} direction="row" spacing={{xs:'6',sm:20}} p={2}>
+  <Stack sx={{marginTop:'10px'}} direction="row" spacing={{xs:'6',sm:20}} p={2}>
 
    {/**  <IconButton
                onClick={()=>setOpen((prev)=>!prev)}
