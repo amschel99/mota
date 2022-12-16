@@ -55,13 +55,12 @@ return setError(`passwords do not match`)
  
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container   component="main" maxWidth="xs">
+    <ThemeProvider sx={{marginTop:'150px'}} theme={theme}>
+      <Container sx={{marginTop:'150px'}}   component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-           position:'absolute',
-           top:'200px',
+        marginTop:'150px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
