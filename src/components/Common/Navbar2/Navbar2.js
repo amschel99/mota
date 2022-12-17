@@ -66,7 +66,7 @@ const Navbar2= ({setOpen})=>{
               >
                 <Box
                   component="img"
-                  src="/images/logo.jpg"
+                  src="/images/logo.png"
                   sx={{ width: { xs: "25vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'} }}
                 />
 

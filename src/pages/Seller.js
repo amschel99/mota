@@ -40,7 +40,7 @@ setTwitter(data.twitter)
 setInstagram(data.instagram)
     }
     catch(e){
-
+return null;
     }
 }
 getUser()
@@ -56,7 +56,7 @@ getUser()
             }
         })
         setCars(data)
-        console.log("dataNumber", data)
+       
     }
         FetchCars()   
     }, [dataAmount,search,type,userEmail])
