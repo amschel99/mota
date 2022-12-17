@@ -293,11 +293,11 @@ setUser(currentUser.email)
 for(let i=0;i<files.length;i++){
     
     const reader=new FileReader();
-    reader.addEventListener('load',(readerEvent)=>{
-console.log(readerEvent.target.result)
+   reader.onload= function (readerEvent){
+    console.log(readerEvent)
     setImages((prev)=>[...prev,readerEvent.target.result])
-  
-    })
+   }
+   reader.readAsDataURL(files[i])
 }
     }
                               }}
