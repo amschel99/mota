@@ -293,12 +293,13 @@ setUser(currentUser.email)
    
 for(let i=0;i<files.length;i++){
     
-   
+    reader.readAsDataURL(files[i])
    reader.onload= function (readerEvent){
     console.log(readerEvent.target.result)
     setImages((prev)=>[...prev,readerEvent.target.result])
+    console.log(images)
    }
-   reader.readAsDataURL(files[i])
+  
 }
     }
                               }}
