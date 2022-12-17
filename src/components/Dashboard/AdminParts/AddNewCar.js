@@ -296,8 +296,8 @@ for(let i=0;i<files.length;i++){
     reader.readAsDataURL(files[i])
    reader.onload= function (readerEvent){
     console.log(readerEvent.target.result)
-    setImages((prev)=>[...prev,readerEvent.target.result])
-    console.log(images)
+    return <image src={`${readerEvent.target.result}`} alt={`${files[i].name}`}/>
+    
    }
   
 }
@@ -306,12 +306,7 @@ for(let i=0;i<files.length;i++){
                               />
                             </Box>
                         </Grid>
-                        <Grid item xs={12}></Grid>
-
-                        {images.map((image)=>{
-                            return <image src={`image`} alt="a car"/>
-                            
-                        })}
+                       
 
                             {/* car description textarea */}
                             <TextField fullWidth multiline
