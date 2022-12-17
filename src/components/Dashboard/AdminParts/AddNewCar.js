@@ -45,6 +45,7 @@ for(let i=0;i<files.length;i++){
     reader.addEventListener('load',(readerEvent)=>{
 
     setImages((prev)=>[...prev,readerEvent.target.result])
+    alert(readerEvent.target.result)
     })
 }
     }
@@ -295,16 +296,15 @@ setUser(currentUser.email)
                             {/* car image url */}
                             <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                               <input ref={inputRef} type="file" multiple="multiple" accept="image/*" 
-                              onChange={showFile()}
+                              onChange={showFile}
                               />
                             </Box>
                         </Grid>
                         <Grid item xs={12}></Grid>
 
                         {images.map((image)=>{
-                            return <Box>
-                                <image src={`image`} alt="a car"/>
-                            </Box>
+                            return <image src={`image`} alt="a car"/>
+                            
                         })}
 
                             {/* car description textarea */}
