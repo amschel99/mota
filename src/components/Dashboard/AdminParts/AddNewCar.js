@@ -284,12 +284,14 @@ setUser(currentUser.email)
                               <input ref={inputRef} type="file" multiple="multiple" accept="image/*" 
                               onChange={(e)=>{
                                 const files=e.target?.files
-                                  console.log(files)
+                                  console.log(typeof files)
+
     
     if(files){
 
    
 for(let i=0;i<files.length;i++){
+    console.log(files[i].name)
     const reader=new FileReader();
     reader.addEventListener('load',(readerEvent)=>{
 
