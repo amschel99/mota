@@ -35,21 +35,7 @@ const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
     // handle changing value in form
 const[userName,setUserName]=React.useState('')
 
-const showFile=()=>{
-    const files=inputRef.current?.files
-    if(files){
 
-   
-for(let i=0;i<files.length;i++){
-    const reader=new FileReader();
-    reader.addEventListener('load',(readerEvent)=>{
-
-    setImages((prev)=>[...prev,readerEvent.target.result])
-    alert(readerEvent.target.result)
-    })
-}
-    }
-}
     
       React.useEffect(()=>{
         const getUser= async ()=>{
@@ -296,7 +282,22 @@ setUser(currentUser.email)
                             {/* car image url */}
                             <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                               <input ref={inputRef} type="file" multiple="multiple" accept="image/*" 
-                              onChange={showFile}
+                              onChange={(e)=>{
+                                const files=e.target?.files
+    if(files){
+
+   
+for(let i=0;i<files.length;i++){
+    const reader=new FileReader();
+    reader.addEventListener('load',(readerEvent)=>{
+
+    setImages((prev)=>[...prev,readerEvent.target.result])
+    console.log(images)
+    
+    })
+}
+    }
+                              }}
                               />
                             </Box>
                         </Grid>
