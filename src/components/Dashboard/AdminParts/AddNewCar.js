@@ -29,7 +29,11 @@ const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
     const[user,setUser]=React.useState(currentUser.email)
-    const [images,setImages]=React.useState([])
+    const[carImg,setCarImage]=React.useState()
+     const[image2,setImage2]=React.useState()
+     const[image3,setImage3]=React.useState()
+     const[image4,setImage4]=React.useState()
+     const[image5,setImage5]=React.useState()
    
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
@@ -64,7 +68,9 @@ setUser(currentUser.email)
     // add new car in database
   
     const handleSubmit = (event) => {
-        const newCarInfo = { ...values, carType, fuel,user }
+
+        const newCarInfo = { ...values, carType, fuel,user,carImg,image2,image3,image4,image5}
+
         axios.post('https://milesmotors.onrender.com/car', newCarInfo)
             .then(({ data }) => {
                 if (data.code===1) {
@@ -238,7 +244,7 @@ setUser(currentUser.email)
                                 <Icon className="fas fa-image"></Icon>
                                 <TextField fullWidth label="Img URL"
                                     variant="standard" required type="url"
-                                    onChange={handleValueChange('carImg')} />
+                                    />
                             </Box>
                         </Grid>
                         <Grid item xs={12}>
@@ -247,7 +253,7 @@ setUser(currentUser.email)
                                 <Icon className="fas fa-image"></Icon>
                                 <TextField fullWidth label="Image 2 URL"
                                     variant="standard" required type="url"
-                                    onChange={handleValueChange('image2')} />
+                                     />
                             </Box>
                         </Grid>
                         <Grid item xs={12}>
@@ -256,7 +262,7 @@ setUser(currentUser.email)
                                 <Icon className="fas fa-image"></Icon>
                                 <TextField fullWidth label="Image 3 URL"
                                     variant="standard" required type="url"
-                                    onChange={handleValueChange('image3')} />
+                                  />
                             </Box>
                         </Grid>
                         <Grid item xs={12}>
@@ -265,7 +271,7 @@ setUser(currentUser.email)
                                 <Icon className="fas fa-image"></Icon>
                                 <TextField fullWidth label="Image 4 URL"
                                     variant="standard" required type="url"
-                                    onChange={handleValueChange('image4')} />
+                                     />
                             </Box>
                         </Grid>
                         <Grid item xs={12}>
@@ -274,7 +280,7 @@ setUser(currentUser.email)
                                 <Icon className="fas fa-image"></Icon>
                                 <TextField fullWidth label="Image 5 URL"
                                     variant="standard" required type="url"
-                                    onChange={handleValueChange('image5')} />
+                                    />
                             </Box>
                         </Grid>
                         <Grid item xs={12}>
@@ -295,8 +301,24 @@ for(let i=0;i<files.length;i++){
     
     reader.readAsDataURL(files[i])
    reader.onload= function (readerEvent){
-    console.log(readerEvent.target.result)
-    return <image src={`${readerEvent.target.result}`} alt={`${files[i].name}`}/>
+  
+  const data=readerEvent.target.result
+//do sth with this data e.g store it in a database
+if(i===0){
+   setCarImage(data)
+}
+if(i===1){
+   setImage2(data)
+}
+if(i===2){
+   setImage3(data)
+}
+if(i===3){
+   setImage4(data)
+}
+if(i===4){
+   setImage5(data)
+}
     
    }
   
