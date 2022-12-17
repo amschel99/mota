@@ -276,6 +276,15 @@ setUser(currentUser.email)
                             </Box>
                         </Grid>
                         <Grid item xs={12}>
+
+<Grid item xs={12}>
+                            {/* car image url */}
+                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                              <input type="file" multiple="multiple" accept="image/*"/>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12}></Grid>
+
                             {/* car description textarea */}
                             <TextField fullWidth multiline
                                 rows={4} sx={{ my: 2 }}
