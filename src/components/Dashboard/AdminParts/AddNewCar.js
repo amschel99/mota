@@ -20,7 +20,7 @@ const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
 
   const {currentUser}=useAuth()
  
-  
+  const inputRef=React.useRef()
 
  
    
@@ -28,13 +28,22 @@ const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
     const[user,setUser]=React.useState(currentUser.email)
+    const [images,setImages]=React.useState([])
    
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
 const[userName,setUserName]=React.useState('')
 
+const showFile=()=>{
+for(let i=0;i<inputRef.current.files.length;i++){
+    const reader=new FileReader();
+    reader.addEventListener('load',(readerEvent)=>{
 
+    setImages((prev)=>[...prev,readerEvent.target.result])
+    })
+}
+}
     
       React.useEffect(()=>{
         const getUser= async ()=>{
@@ -280,10 +289,18 @@ setUser(currentUser.email)
 <Grid item xs={12}>
                             {/* car image url */}
                             <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                              <input type="file" multiple="multiple" accept="image/*"/>
+                              <input ref={inputRef} type="file" multiple="multiple" accept="image/*" 
+                              onChange={showFile()}
+                              />
                             </Box>
                         </Grid>
                         <Grid item xs={12}></Grid>
+
+                        { images.length>0 && images.map((image)=>{
+                            return <Box>
+                                <image src={`image`} alt="a car"/>
+                            </Box>
+                        })}
 
                             {/* car description textarea */}
                             <TextField fullWidth multiline
