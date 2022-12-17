@@ -291,7 +291,7 @@ setUser(currentUser.email)
 
    
 for(let i=0;i<files.length;i++){
-    console.log(files[i].name)
+    
     const reader=new FileReader();
     reader.addEventListener('load',(readerEvent)=>{
 console.log(readerEvent.target.result)
