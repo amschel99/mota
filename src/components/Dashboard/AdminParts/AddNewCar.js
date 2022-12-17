@@ -16,7 +16,7 @@ const Icon = styled('i')(({ theme }) => ({
 
 
 const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
-    let reader=new FileReader()
+   
     const[status,setStatus]=React.useState("")
 
   const {currentUser}=useAuth()
@@ -298,7 +298,7 @@ setUser(currentUser.email)
 
    
 for(let i=0;i<files.length;i++){
-    
+     let reader=new FileReader()
     reader.readAsDataURL(files[i])
    reader.onload= function (readerEvent){
   
