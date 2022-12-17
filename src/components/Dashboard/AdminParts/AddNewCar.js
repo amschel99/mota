@@ -295,7 +295,7 @@ for(let i=0;i<files.length;i++){
     
    
    reader.onload= function (readerEvent){
-    console.log(readerEvent)
+    console.log(readerEvent.target.result)
     setImages((prev)=>[...prev,readerEvent.target.result])
    }
    reader.readAsDataURL(files[i])
