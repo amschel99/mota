@@ -20,7 +20,7 @@ const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
 
   const {currentUser}=useAuth()
  
-  const inputRef=React.useRef()
+
 
  
    
@@ -35,8 +35,8 @@ const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
     // handle changing value in form
 const[userName,setUserName]=React.useState('')
 
-const showFile=()=>{
-for(let i=0;i<inputRef.current.files.length;i++){
+const showFile=(e)=>{
+for(let i=0;i<e.target.files.length;i++){
     const reader=new FileReader();
     reader.addEventListener('load',(readerEvent)=>{
 
@@ -289,7 +289,7 @@ setUser(currentUser.email)
 <Grid item xs={12}>
                             {/* car image url */}
                             <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                              <input ref={inputRef} type="file" multiple="multiple" accept="image/*" 
+                              <input type="file" multiple="multiple" accept="image/*" 
                               onChange={showFile()}
                               />
                             </Box>
