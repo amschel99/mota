@@ -305,19 +305,19 @@ for(let i=0;i<files.length;i++){
   const data=readerEvent.target.result
 //do sth with this data e.g store it in a database
 if(i===0){
-   setCarImage(data)
+  return setCarImage(data)
 }
 if(i===1){
-   setImage2(data)
+ return  setImage2(data)
 }
 if(i===2){
-   setImage3(data)
+ return  setImage3(data)
 }
 if(i===3){
-   setImage4(data)
+  return setImage4(data)
 }
 if(i===4){
-   setImage5(data)
+   return setImage5(data)
 }
     
    }
