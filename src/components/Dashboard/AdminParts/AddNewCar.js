@@ -82,7 +82,7 @@ setUser(currentUser.email)
                 }
             })
             .catch(err => {
-          setStatus(`car not added, there was an error`)
+          setStatus(`${err}`)
                // showSnackbar() // show notification popup containing status
             })
         event.preventDefault()
