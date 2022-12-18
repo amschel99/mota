@@ -49,23 +49,23 @@ const ImageBanner = () => {
   const imageSlides = [
     {
       id: 1,
-      imgPath: carImg.toString(),
+      imgPath: carImg
     },
     {
       id: 2,
-      imgPath: image2.toString(),
+      imgPath: image2
     },
     {
       id: 3,
-      imgPath: image3.toString(),
+      imgPath: image3
     },
     {
       id: 4,
-      imgPath: image4.toString(),
+      imgPath: image4
     },
     {
       id: 5,
-      imgPath: image5.toString(),
+      imgPath: image5
     },
   ];
   return (

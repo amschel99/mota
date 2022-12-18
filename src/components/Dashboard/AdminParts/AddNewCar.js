@@ -299,7 +299,7 @@ setUser(currentUser.email)
    
 for(let i=0;i<files.length;i++){
      let reader=new FileReader()
-    reader.readAsArrayBuffer(files[i])
+    reader.readAsDataURL(files[i])
     
    reader.onload= function (readerEvent){
   
