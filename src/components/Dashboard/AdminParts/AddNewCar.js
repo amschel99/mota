@@ -304,7 +304,7 @@ if(i===4){
                                 onChange={handleValueChange('description')} />
                         </Grid>
                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
-                            <Button disabled={filesEnough} type="submit" variant="outlined"
+                            <Button disabled={!filesEnough} type="submit" variant="outlined"
                                 >Add to Database</Button>
                                 {!filesEnough &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
                                 {status && <Alert severity="success">{status}</Alert>}
