@@ -15,7 +15,7 @@ const Icon = styled('i')(({ theme }) => ({
 }));
 
 
-const AddNewCar = ({ setProcessStatus, showSnackbar }) => {
+const AddNewCar = ({ setProcessStatus }) => {
    
     const[status,setStatus]=React.useState("")
 
@@ -75,20 +75,20 @@ setUser(currentUser.email)
             .then(({ data }) => {
                 if (data.code===1) {
                   setStatus(`car added succesfully`)
-                    showSnackbar()
+                  // showSnackbar()
                     event.target.reset()
                 }
             })
             .catch(err => {
           setStatus(`car not added, there was an error`)
-                showSnackbar() // show notification popup containing status
+               // showSnackbar() // show notification popup containing status
             })
         event.preventDefault()
     }
     return (
         <Box >
            
-             {status && <Alert severity="success">{status}</Alert>}
+             
              
                         <Typography sx={{marginTop:{xs:'100px',sm:'100px'}}} variant="h6" align="center" color="black" >{` Welcome ${userName}`}</Typography>
                         
@@ -100,7 +100,7 @@ setUser(currentUser.email)
                                   
             <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
-
+{status && <Alert severity="success">{status}</Alert>}
                 {/* new car information form */}
                 <form onSubmit={handleSubmit}>
                     <Grid container rowSpacing={3.5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -299,7 +299,8 @@ setUser(currentUser.email)
    
 for(let i=0;i<files.length;i++){
      let reader=new FileReader()
-    reader.readAsDataURL(files[i])
+    reader.readAsArrayBuffer(files[i])
+    
    reader.onload= function (readerEvent){
   
   const data=readerEvent.target.result

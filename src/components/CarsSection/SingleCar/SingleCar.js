@@ -64,7 +64,7 @@ setUserName(`error fetching user`)
             <CardMedia
               component="img"
               height="140"
-              image={carImg}
+              image={carImg.toString()}
               alt="green iguana"
             />
             <CardContent>

@@ -38,7 +38,7 @@ const ImageBanner = () => {
 
   const [carImages, setCarImages] = useState(null);
   // destructure car details
-  const { carImg, img2, img3, img4, img5 } = carImages ? carImages : {};
+  const { carImg, image2, image3, image4, image5 } = carImages ? carImages : {};
 
   useEffect(() => {
     axios
@@ -49,23 +49,23 @@ const ImageBanner = () => {
   const imageSlides = [
     {
       id: 1,
-      imgPath: carImg,
+      imgPath: carImg.toString(),
     },
     {
       id: 2,
-      imgPath: img2,
+      imgPath: image2.toString(),
     },
     {
       id: 3,
-      imgPath: img3,
+      imgPath: image3.toString(),
     },
     {
       id: 4,
-      imgPath: img4,
+      imgPath: image4.toString(),
     },
     {
       id: 5,
-      imgPath: img5,
+      imgPath: image5.toString(),
     },
   ];
   return (
