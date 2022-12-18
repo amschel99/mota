@@ -5,7 +5,7 @@ import React from 'react';
 
 import useAuth from "../AdminParts/../../../others/useAuthContext"
 
-
+import LoadingSpinner from '../../Common/LoadingSpinner/LoadingSpinner';
 
 
 // styled component for font awesome icon
@@ -16,7 +16,7 @@ const Icon = styled('i')(({ theme }) => ({
 
 
 const AddNewCar = ({ setProcessStatus }) => {
-   
+   const[filesEnough,setFilesEnough]=React.useState(false)
     const[status,setStatus]=React.useState("")
 
   const {currentUser}=useAuth()
@@ -41,6 +41,7 @@ const AddNewCar = ({ setProcessStatus }) => {
 const[userName,setUserName]=React.useState('')
 
 
+
     
       React.useEffect(()=>{
         const getUser= async ()=>{
@@ -53,10 +54,11 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
 setUserName(data.name)
 
 
+
   }
 
   catch(e){
-setUserName(`error fetching user`)
+return null
   }
  }
  getUser()
@@ -86,11 +88,12 @@ setUser(currentUser.email)
         event.preventDefault()
     }
     return (
-        <Box >
+      
+ <Box >
            
+            
              
-             
-                        <Typography sx={{marginTop:{xs:'100px',sm:'100px'}}} variant="h6" align="center" color="black" >{` Welcome ${userName}`}</Typography>
+                      {userName ?<Typography sx={{marginTop:{xs:'100px',sm:'100px'}}} variant="h6" align="center" color="black" >{` Welcome ${userName}`}</Typography>:null}
                         
                        
 
@@ -98,11 +101,11 @@ setUser(currentUser.email)
                                   
 
                                   
-            <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>
+           {userName ? <Typography variant="h6" align="center" color="black" fontWeight="bold">Add New Car In Shop</Typography>: <Typography variant="h6" align="center" color="black" fontWeight="bold">Just a moment ...</Typography>}
             <Box maxWidth="sm" sx={{ my: 4, mx: 'auto' }}>
-{status && <Alert severity="success">{status}</Alert>}
+
                 {/* new car information form */}
-                <form onSubmit={handleSubmit}>
+             {userName ? <form onSubmit={handleSubmit}>
                     <Grid container rowSpacing={3.5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={12}>
                             {/* car name */}
@@ -238,63 +241,25 @@ setUser(currentUser.email)
                                     onChange={handleValueChange('price')} />
                             </Box>
                         </Grid>
-                        <Grid item xs={12}>
-                            {/* car image url */}
-                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <Icon className="fas fa-image"></Icon>
-                                <TextField fullWidth label="Img URL"
-                                    variant="standard" required type="url"
-                                    />
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12}>
-                            {/* car image url */}
-                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <Icon className="fas fa-image"></Icon>
-                                <TextField fullWidth label="Image 2 URL"
-                                    variant="standard" required type="url"
-                                     />
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12}>
-                            {/* car image url */}
-                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <Icon className="fas fa-image"></Icon>
-                                <TextField fullWidth label="Image 3 URL"
-                                    variant="standard" required type="url"
-                                  />
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12}>
-                            {/* car image url */}
-                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <Icon className="fas fa-image"></Icon>
-                                <TextField fullWidth label="Image 4 URL"
-                                    variant="standard" required type="url"
-                                     />
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12}>
-                            {/* car image url */}
-                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <Icon className="fas fa-image"></Icon>
-                                <TextField fullWidth label="Image 5 URL"
-                                    variant="standard" required type="url"
-                                    />
-                            </Box>
-                        </Grid>
+                       
+                       
+                       
                         <Grid item xs={12}>
 
 <Grid item xs={12}>
                             {/* car image url */}
                             <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                              <input ref={inputRef} type="file" multiple="multiple" accept="image/*" 
+                                <label for="files">Choose A minimum of 5 photos</label>
+                              <input id="files" ref={inputRef} type="file" multiple="multiple" accept="image/*" 
                               onChange={(e)=>{
                                 const files=e.target?.files
                               
 
     
     if(files){
+if(files.length>5){
+setFilesEnough(true)
+}
 
    
 for(let i=0;i<files.length;i++){
@@ -339,9 +304,11 @@ if(i===4){
                                 onChange={handleValueChange('description')} />
                         </Grid>
                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
-                            <Button type="submit" variant="outlined"
+                            <Button disabled={filesEnough} type="submit" variant="outlined"
                                 >Add to Database</Button>
-                                {/**disabled={currentUser?.email !== 'kariukiamschel9@gmail.com'} */}
+                                {!filesEnough &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
+                                {status && <Alert severity="success">{status}</Alert>}
+                               
                         </Grid>
 
                         
@@ -349,11 +316,15 @@ if(i===4){
 
 
                     </Grid>
-                </form>
+                </form>: <LoadingSpinner/>}
             </Box>
 
-        </Box>
+            </Box>
+
+       
+      
     );
+      
 };
 
 export default AddNewCar;

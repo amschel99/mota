@@ -34,7 +34,7 @@ const Profile = () => {
 
 
              
-{add && <AddNewCar/>}
+{add  && <AddNewCar/>}
 {update && <Update/> }
 {share && <ShareProfile/> }
 
