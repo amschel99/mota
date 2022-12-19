@@ -4,19 +4,21 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LoadingSpinner from '../Common/LoadingSpinner/LoadingSpinner';
 import SingleCar from './SingleCar/SingleCar';
-import PriceSlider from '../CarsSection/../../components/Slider'
-import {   useSelector} from 'react-redux'
 
+import {   useSelector,useDispatch} from 'react-redux'
+//import { search } from "../../../../src/features/query.js";
+import { cars as car} from '../../features/cars';
 
 const CarsSection = ({ dataAmount }) => {
-      
+   const dispatch = useDispatch();    
 const {search}= useSelector((state)=>state.query)
 const {type}= useSelector((state)=>state.type)
+const {cars}= useSelector((state)=>state.cars)
 
-    const [cars, setCars] = useState(null);
+    //const [cars, setCars] = useState(null);
 
 
-    const[price,setPrice]=React.useState(20000000)
+    
 
     useEffect(() => {
          const FetchCars = async () => {
@@ -28,8 +30,10 @@ const {type}= useSelector((state)=>state.type)
                
             }
         })
+
+         dispatch(car({ cars: data}));
        
-        setCars(data)
+       // setCars(data)
       
      window.scrollTo({
   top: 1000,
@@ -39,7 +43,7 @@ const {type}= useSelector((state)=>state.type)
     }
 
         FetchCars()   
-    }, [dataAmount,search,type,price])
+    }, [dataAmount,search,type,dispatch])
 
 
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
