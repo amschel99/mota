@@ -87,12 +87,12 @@ getUser()
             
 
             <Typography sx={{marginTop:'10px'}} variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
-            <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
+         {userEmail?   <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
                 {
                     cars.map(carInfo => <SingleCar carInfo={carInfo} key={carInfo.carID} />)
                 }
-            </Grid>
+            </Grid>:<div>Failed to load cars</div>}
             <SocialFlow facebook={facebook} twitter={twitter} instagram={instagram} mobile={mobile}/>
         </Box>
     );
