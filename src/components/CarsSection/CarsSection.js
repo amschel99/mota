@@ -25,7 +25,7 @@ const {cars}= useSelector((state)=>state.cars)
             
         const {data} =  await axios.get(`https://milesmotors.onrender.com/cars/all`,{
             params:{
-                name:search,
+              // name:search,
                 brand:type
                
             }

@@ -1,8 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-//import axios from "axios";
-//import React, { useEffect, useState } from "react";
+
 import { useParams } from "react-router-dom";
 import { useRef } from "react";
 import "./Image.css";
@@ -11,16 +10,10 @@ export default function ImageCarousel() {
   const { _id} = useParams(); // get car id from url parameter
  const {cars}= useSelector((state)=>state.cars)
    const carImages= cars.find((car)=>car._id===_id)
-  //const [carImages, setCarImages] = useState(null);
-  // destructure car details
+ 
   const { carImg, image2, image3, image4, image5 ,carName} = carImages ? carImages : {};
 
- // useEffect(() => {
-   // axios
-   //   .get(`https://milesmotors.onrender.com/car/${_id}`)
-    //  .then(({ data }) => setCarImages(data.data))
-    //  .catch((err) => console.log(err));
- // }, [_id]);
+ 
 
   const images = [
     {
