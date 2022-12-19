@@ -1,7 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import {  useParams,Link } from "react-router-dom";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -44,10 +44,7 @@ const[id,setId]=React.useState('')
   } = carDetails ? carDetails : {};
 
   useEffect(() => {
-    //axios
-      //.get(`https://milesmotors.onrender.com/car/${_id}`)
-      //.then(({ data }) => setCarDetails(data.data))
-      //.catch((err) => console.log(err));
+   
       const getUser= async ()=>{
   const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
     email:user
