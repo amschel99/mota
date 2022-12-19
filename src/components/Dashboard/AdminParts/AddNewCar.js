@@ -24,7 +24,7 @@ const AddNewCar = ({ setProcessStatus }) => {
 
   const {currentUser}=useAuth()
  
-  const inputRef=React.useRef()
+ 
 
  
    
@@ -37,7 +37,7 @@ const AddNewCar = ({ setProcessStatus }) => {
      const[image3,setImage3]=React.useState("image")
      const[image4,setImage4]=React.useState("image")
      const[image5,setImage5]=React.useState("image")
-   
+   const[largeImage,setLargeImage]=React.useState('')
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
@@ -264,10 +264,58 @@ setUser(currentUser.email)
                                 type="text" required
                                 onChange={handleValueChange('description')} />
                         </Grid>
+                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
+                         <label for="images">Choose upto 5 pictures</label>
+                            <input type="file" multiple required name="images" id="images" accept='image/*'
+                            onChange={
+                                (e)=>{
+                                    const files=e.target?.files
+                                    if(files){
+                                        if(files.length<5){
+                                    return;
+                                        }
+                                        
+                                        for(let i=0;i<files.length;i++){
+                                            if(files[i].size>2800000){
+                                                setLargeImage(`images that exceed 2.8mbs are not allowed,choose again!`)
+return;
+                                            }
+                                            setFilesEnough(true)
+                                            const reader=new FileReader()
+                                            reader.addEventListener('load',(readerEvent)=>{
+const data=readerEvent.target.result
+if(i===0){
+    setCarImage(data)
+}
+if(i===1){
+    setImage2(data)
+}
+if(i===2){
+    setImage3(data)
+}
+if(i===3){
+    setImage4(data)
+}
+if(i===4){
+    setImage5(data)
+}
+
+                                            })
+                                            reader.readAsDataURL(files[i])
+                                        }
+                                    }
+
+                                }
+                            }
+                            />
+                               
+                        </Grid>
+
                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
-                            <Button type="submit" variant="outlined"
+                            <Button disabled={!filesEnough} type="submit" variant="outlined"
                                 >Add to Database</Button>
-                                {!filesEnough &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
+                                {!filesEnough &!largeImage &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
+                                {largeImage && <Alert severity="error">{largeImage}</Alert>}
                                 {status && <Alert severity="success">{status}</Alert>}
                                
                         </Grid>
