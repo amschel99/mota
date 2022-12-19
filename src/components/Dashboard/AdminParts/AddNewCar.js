@@ -15,22 +15,7 @@ const Icon = styled('i')(({ theme }) => ({
 }));
 
 
-{/*
 
- axios.post('https://milesmotors.onrender.com/car', newCarInfo)
-         .then(({ data }) => {
-                if (data.code===1) {
-                    
-                  setStatus(`car added succesfully`)
-                  // showSnackbar()
-                    event.target.reset()
-                }
-            })
-            .catch(err => {
-          setStatus(`${err}`)
-               // showSnackbar() // show notification popup containing status
-            })
-**/}
 
 
 const AddNewCar = ({ setProcessStatus }) => {
@@ -47,11 +32,11 @@ const AddNewCar = ({ setProcessStatus }) => {
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
     const[user,setUser]=React.useState(currentUser.email)
-    const[carImg,setCarImage]=React.useState()
-     const[image2,setImage2]=React.useState()
-     const[image3,setImage3]=React.useState()
-     const[image4,setImage4]=React.useState()
-     const[image5,setImage5]=React.useState()
+    const[carImg,setCarImage]=React.useState("image")
+     const[image2,setImage2]=React.useState("image")
+     const[image3,setImage3]=React.useState("image")
+     const[image4,setImage4]=React.useState("image")
+     const[image5,setImage5]=React.useState("image")
    
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
@@ -87,16 +72,24 @@ setUser(currentUser.email)
     }
     // add new car in database
   
-    const handleSubmit = async (event) => {
+    const handleSubmit =  (event) => {
 
         const newCarInfo = { ...values, carType, fuel,user,carImg,image2,image3,image4,image5}
 
-   try{
-//do sth
-   }
-   catch(error){
-// do another thing
-   }
+
+ axios.post('https://milesmotors.onrender.com/car', newCarInfo)
+         .then(({ data }) => {
+                if (data.code===1) {
+                    
+                  setStatus(`car added succesfully`)
+                  // showSnackbar()
+                    event.target.reset()
+                }
+            })
+            .catch(err => {
+          setStatus(`${err}`)
+               // showSnackbar() // show notification popup containing status
+            })
         event.preventDefault()
     }
     return (
@@ -287,12 +280,7 @@ setUser(currentUser.email)
                 </form>: <LoadingSpinner/>}
             </Box>
 
-            <form action="https://milesmotors.onrender.com/upload" method='POST' enctype='multipart/form-data'>
-
-<label for="image">Choose 5 photos</label>
-<input type="file" id="image" name="file" multiple required />
-<input type="submit" value="Submit">submit</input>
-            </form>
+           
 
             </Box>
 
