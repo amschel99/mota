@@ -61,8 +61,8 @@ setUserName(`error fetching user`)
         <Box sx={{ display: "flex", flexDirection: "column"}}>
         <Card sx={{ maxWidth: 300, minWidth: 300}}>
           <CardActionArea>
-            
-            <img src={carImg} height='140' alt={carName}/>
+
+            <img src={carImg} height='150' width="100%" alt={carName}/>
            
             <CardContent>
               <Typography gutterBottom variant="h5" component="div" color="red">
