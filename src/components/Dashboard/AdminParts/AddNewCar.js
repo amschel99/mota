@@ -154,7 +154,7 @@ setUser(currentUser.email)
                                         <MenuItem value={'Audi'}>Audi</MenuItem>
                                         <MenuItem value={'Mazda'}>Mazda</MenuItem>
                                         <MenuItem value={'Ford'}>Ford</MenuItem>
-                                           <MenuItem value={'Nissan'}>Ford</MenuItem>
+                                           <MenuItem value={'Nissan'}>Nissan</MenuItem>
                                             <MenuItem value={'Suzuki'}>Suzuki</MenuItem>
                                             <MenuItem value={"Volkswagen"}>Volks Wagen</MenuItem>
                                             <MenuItem value={"Honda"}>Honda</MenuItem>
@@ -266,7 +266,7 @@ setUser(currentUser.email)
                         </Grid>
                          <Grid item xs={12} sx={{ textAlign: 'right' }}>
                          <label for="images">Choose upto 5 pictures</label>
-                            <input type="file" multiple required name="images" id="images" accept='image/*'
+                            <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                             onChange={
                                 (e)=>{
                                     const files=e.target?.files
@@ -325,7 +325,7 @@ if(i===4){
 
 
                     </Grid>
-                </form>: <LoadingSpinner/>}
+                </form>:<div style={{marginTop:'200px',marginLeft:'100px'}}> <LoadingSpinner/></div>}
             </Box>
 
            

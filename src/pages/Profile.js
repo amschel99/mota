@@ -8,8 +8,10 @@ import ShareProfile from '../components/ShareProfile'
 //import MenuIcon from "@mui/icons-material/Menu"
 import Navbar2 from '../components/Common/Navbar2/Navbar2'
 import {Stack} from "@mui/material"
+import useAuthContext from '../others/useAuthContext'
 
 const Profile = () => {
+
       const[open,setOpen]=React.useState(false)
     const[update,setUpdate]=React.useState(false)
       const[add,setAdd]=React.useState(true)
