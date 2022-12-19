@@ -290,8 +290,8 @@ setUser(currentUser.email)
             <form action="https://milesmotors.onrender.com/upload" method='POST' encType='multipart/form-data'>
 
 <label for="image">Choose 5 photos</label>
-<input type="file" id="image" names="file" multiple required />
-<button type="submit">Submit</button>
+<input type="file" id="image" name="file" multiple required />
+<button type="submit">Submit now</button>
             </form>
 
             </Box>
