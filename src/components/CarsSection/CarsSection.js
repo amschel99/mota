@@ -21,11 +21,11 @@ const {type}= useSelector((state)=>state.type)
     useEffect(() => {
          const FetchCars = async () => {
             
-        const {data} =  await axios.get(`https://milesmotors.onrender.com/cars/${dataAmount ? dataAmount : 'all'}`,{
+        const {data} =  await axios.get(`https://milesmotors.onrender.com/cars/all`,{
             params:{
                 name:search,
-                brand:type,
-                numericFilters:`price<=${price}`
+                brand:type
+               
             }
         })
        
