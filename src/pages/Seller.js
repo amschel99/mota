@@ -22,7 +22,7 @@ const Seller = ({ dataAmount }) => {
       const[facebook,setFacebook]=React.useState('')
       const[ twitter,setTwitter]=React.useState('')
       const[instagram,setInstagram]=React.useState('')
-      
+      const[carDetails,setCarDetails]=React.useState([]) 
 //const {search}= useSelector((state)=>state.query)
 //const {type}= useSelector((state)=>state.type)
 
@@ -39,16 +39,18 @@ setDescription(data.description)
 setFacebook(data.facebook)
 setTwitter(data.twitter)
 setInstagram(data.instagram)
+ const carDetails= cars.find((car)=>car.user===userEmail)
+ setCarDetails(carDetails)
     }
     catch(e){
 return null;
     }
 }
 getUser()
-},[userId])
+},[userId,cars,userEmail])
 
 
-  const carDetails= cars.find((car)=>car.user===userEmail)
+
     //useEffect(() => {
         // const FetchCars = async () => {
             
