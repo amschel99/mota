@@ -52,14 +52,14 @@ export default function ImageCarousel() {
     infinite: true,
     customPaging: function (i) {
       return (
-        <a className="image-page">
+      
           <img
             src={images[i].src}
             height="100%"
             width="97%"
             alt={images[i].alt}
           />
-        </a>
+      
       );
     },
     autoplay: true,

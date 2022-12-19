@@ -61,12 +61,9 @@ setUserName(`error fetching user`)
         <Box sx={{ display: "flex", flexDirection: "column"}}>
         <Card sx={{ maxWidth: 300, minWidth: 300}}>
           <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              src={carImg}
-              alt="green iguana"
-            />
+            
+            <img src={carImg} height='140' alt={carName}/>
+           
             <CardContent>
               <Typography gutterBottom variant="h5" component="div" color="red">
                Ksh {numberWithCommas(price)}
