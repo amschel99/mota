@@ -15,6 +15,24 @@ const Icon = styled('i')(({ theme }) => ({
 }));
 
 
+{/*
+
+ axios.post('https://milesmotors.onrender.com/car', newCarInfo)
+         .then(({ data }) => {
+                if (data.code===1) {
+                    
+                  setStatus(`car added succesfully`)
+                  // showSnackbar()
+                    event.target.reset()
+                }
+            })
+            .catch(err => {
+          setStatus(`${err}`)
+               // showSnackbar() // show notification popup containing status
+            })
+**/}
+
+
 const AddNewCar = ({ setProcessStatus }) => {
    const[filesEnough,setFilesEnough]=React.useState(false)
     const[status,setStatus]=React.useState("")
@@ -50,7 +68,7 @@ const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
   email:currentUser.email
 })
 
-
+console.log(data)
 setUserName(data.name)
 
 
@@ -69,22 +87,16 @@ setUser(currentUser.email)
     }
     // add new car in database
   
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
 
         const newCarInfo = { ...values, carType, fuel,user,carImg,image2,image3,image4,image5}
 
-        axios.post('https://milesmotors.onrender.com/car', newCarInfo)
-            .then(({ data }) => {
-                if (data.code===1) {
-                  setStatus(`car added succesfully`)
-                  // showSnackbar()
-                    event.target.reset()
-                }
-            })
-            .catch(err => {
-          setStatus(`${err}`)
-               // showSnackbar() // show notification popup containing status
-            })
+   try{
+//do sth
+   }
+   catch(error){
+// do another thing
+   }
         event.preventDefault()
     }
     return (
@@ -248,51 +260,7 @@ setUser(currentUser.email)
 
 <Grid item xs={12}>
                             {/* car image url */}
-                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <label for="files">Choose A minimum of 5 photos</label>
-                              <input id="files" ref={inputRef} type="file" multiple="multiple" accept="image/*" 
-                              onChange={(e)=>{
-                                const files=e.target?.files
-                              
-
-    
-    if(files){
-if(files.length>5){
-setFilesEnough(true)
-}
-
-   
-for(let i=0;i<files.length;i++){
-     let reader=new FileReader()
-    reader.readAsDataURL(files[i])
-    
-   reader.onload= function (readerEvent){
-  
-  const data=readerEvent.target.result
-//do sth with this data e.g store it in a database
-if(i===0){
-  return setCarImage(data)
-}
-if(i===1){
- return  setImage2(data)
-}
-if(i===2){
- return  setImage3(data)
-}
-if(i===3){
-  return setImage4(data)
-}
-if(i===4){
-   return setImage5(data)
-}
-    
-   }
-  
-}
-    }
-                              }}
-                              />
-                            </Box>
+                            
                         </Grid>
                        
 
@@ -319,6 +287,13 @@ if(i===4){
                 </form>: <LoadingSpinner/>}
             </Box>
 
+            <form action="https://milesmotors.onrender.com/upload" method='POST' encType='multipart/form-data'>
+
+<label for="image">Choose 5 photos</label>
+<input type="file" id="image" names="file" multiple required />
+<button type="submit">Submit</button>
+            </form>
+
             </Box>
 
        
@@ -328,3 +303,5 @@ if(i===4){
 };
 
 export default AddNewCar;
+
+
