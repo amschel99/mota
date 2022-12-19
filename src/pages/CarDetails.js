@@ -10,6 +10,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import LoadingSpinner from "../components/Common/LoadingSpinner/LoadingSpinner";
 
+import {   useSelector} from 'react-redux'
 import ImageCarousel from "../components/CarsSection/Courosel/ImageCourosel";
 //import CarsSection from "../components/CarsSection/CarsSection";
 
@@ -21,10 +22,13 @@ const DetailsContainer = styled(Grid)(({ theme }) => ({
 }));
 
 const CarDetails = () => {
+ const {cars}= useSelector((state)=>state.cars)
+
   const {_id} = useParams(); // get car id from url parameter
 const [mobile,setMobile]=React.useState('')
 const[id,setId]=React.useState('')
-  const [carDetails, setCarDetails] = useState(null);
+  //const [carDetails, setCarDetails] = useState(null);
+  const carDetails= cars.find((car)=>car._id===_id)
   // destructure car details
   const {
     carName,
@@ -40,10 +44,10 @@ const[id,setId]=React.useState('')
   } = carDetails ? carDetails : {};
 
   useEffect(() => {
-    axios
-      .get(`https://milesmotors.onrender.com/car/${_id}`)
-      .then(({ data }) => setCarDetails(data.data))
-      .catch((err) => console.log(err));
+    //axios
+      //.get(`https://milesmotors.onrender.com/car/${_id}`)
+      //.then(({ data }) => setCarDetails(data.data))
+      //.catch((err) => console.log(err));
       const getUser= async ()=>{
   const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
     email:user
