@@ -15,7 +15,7 @@ const {search}= useSelector((state)=>state.query)
 const {type}= useSelector((state)=>state.type)
 const {cars}= useSelector((state)=>state.cars)
 
-    //const [cars, setCars] = useState(null);
+ 
 
 
     
@@ -25,7 +25,7 @@ const {cars}= useSelector((state)=>state.cars)
             
         const {data} =  await axios.get(`https://milesmotors.onrender.com/cars/all`,{
             params:{
-              // name:search,
+               name:search,
                 brand:type
                
             }

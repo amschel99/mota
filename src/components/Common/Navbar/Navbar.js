@@ -8,9 +8,9 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Menu, MenuItem, TextField } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import { useDispatch ,useSelector} from "react-redux";
+import { useDispatch } from "react-redux";
 import { search } from "../../../../src/features/query.js";
-import { cars } from "../../../../src/features/cars.js";
+
 
 const toggleHeaderVisibility = () => {
   document.getElementById("header-links").classList.toggle("show");
@@ -26,7 +26,7 @@ function changeHeaderOnScroll() {
 }
 
 const Navbar = () => {
-  const {cars}= useSelector((state)=>state.cars)
+
   
   const dispatch = useDispatch();
   const [value, setValue] = React.useState("");
@@ -88,18 +88,14 @@ const Navbar = () => {
               <TextField
                 onChange={(e) => {
                    setValue(e.target.value);
-                 let newCars=[]
-                newCars=  cars.filter((car)=>car.carName.includes(e.target.value))
-              return dispatch(cars({cars:newCars}))
+               return;
                 
                    
                 }}
                 onKeyPress={(e) => {
                   if (e.key === "Enter") {
-                                     let newCars=[]
-                newCars=  cars.filter((car)=>car.carName.includes(value))
-             return dispatch(cars({cars:newCars}))
-                   // return dispatch(search({ search: value }));
+                     
+                    return dispatch(search({ search: value }));
                   }
                 }}
                 id="outlined-basic"
