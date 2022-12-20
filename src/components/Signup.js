@@ -16,10 +16,58 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
+//googlemaps api
+
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  Autocomplete,
+  DirectionsRenderer,
+} from '@react-google-maps/api'
 
 const theme = createTheme();
 
 export default function SignUp() {
+ /*
+  * googlemaps api
+  */
+ const { isLoaded } = useJsApiLoader({
+  googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+  libraries: ['places'],
+})
+const [map, setMap] =React.useState(/** @type google.maps.Map */ (null))
+const [long,setLong]=React.useState(null);
+const [lat,setLat]=React.useState(null);
+const getLocation= async ()=>{
+  try{
+    const location= await  navigator.geolocation
+    if(!location){
+         alert('your brouser does not support geolocation')
+    }
+    location.getCurrentPosition((position)=>{
+     const{coords}=position;
+      setLat(coords.latitude)
+      setLong(coords.longitude);
+   },(err)=>{
+     console.log(err);
+   })
+  }catch(err){
+    console.error(err);
+  }
+  
+}
+window.onload= async (event)=>{
+   await getLocation();
+   
+}
+const center = { lat:lat, lng:long}
+console.log(lat);
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const areaRef = useRef()
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const directionsService = new google.maps.DirectionsService()
+
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -142,8 +190,28 @@ setError(`failed to create an account!${error}`)
                   type="text"
                   id="location"
                    inputRef={locationRef}
+                   ref={areaRef}
                   autoComplete="Enter your location"
                 />
+                 {/* Google Map Box */}
+       <GoogleMap
+          center={center}
+          zoom={15}
+          mapContainerStyle={{ width: '100%', height: '100%' }}
+          options={{
+            zoomControl: true,
+            streetViewControl:true,
+            mapTypeControl: true,
+            fullscreenControl: true,
+            sateliteView:true,
+          }}
+          onLoad={map => setMap(map)}
+        >
+          <Marker position={center} />
+          {directionsResponse && (
+            <DirectionsRenderer directions={directionsService} />
+          )}
+        </GoogleMap>
               </Grid>
                <Grid item xs={12}>
                 <TextField
