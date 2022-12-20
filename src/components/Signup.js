@@ -15,7 +15,9 @@ import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
-import axios from 'axios'
+import axios from 'axios';
+import { Skeleton} from '@mui/material';
+
 //googlemaps api
 
 import {
@@ -61,11 +63,14 @@ window.onload= async (event)=>{
    await getLocation();
    
 }
+if (!isLoaded) {
+  return <SkeletonText />
+}
+
 const center = { lat:lat, lng:long}
 console.log(lat);
-  /** @type React.MutableRefObject<HTMLInputElement> */
-  const areaRef = useRef()
-  /** @type React.MutableRefObject<HTMLInputElement> */
+
+
   const directionsService = new google.maps.DirectionsService()
 
   const history=useHistory();
@@ -182,6 +187,7 @@ setError(`failed to create an account!${error}`)
                 />
               </Grid>
                 <Grid item xs={12}>
+                <Autocomplete>
                 <TextField
                   required
                   fullWidth
@@ -190,9 +196,9 @@ setError(`failed to create an account!${error}`)
                   type="text"
                   id="location"
                    inputRef={locationRef}
-                   ref={areaRef}
                   autoComplete="Enter your location"
                 />
+                 </Autocomplete>
                  {/* Google Map Box */}
        <GoogleMap
           center={center}
