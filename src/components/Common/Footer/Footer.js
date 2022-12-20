@@ -48,15 +48,9 @@ const Footer = () => {
                     }}>
                         <Typography variant='h6'>Browse cars</Typography>
                         <Link href="/cars">View all cars</Link>
+                        <Link href="/">Browse by category</Link>
                     </Grid>
-                    <Grid item xs={6} sm={4} md={3} xl={2} sx={{
-                        display: 'flex', flexDirection: 'column',
-                        '& > a': { color: '#000000bb' }
-                    }}>
-                        <Typography variant='h6'>Finance</Typography>
-                        <Link href="/finance">How it works</Link>
-                
-                    </Grid>
+                   
                     <Grid item xs={6} sm={4} md={3} xl={2} sx={{
                         display: 'flex', flexDirection: 'column',
                         '& > a': { color: '#000000bb' }
