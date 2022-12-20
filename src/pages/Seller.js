@@ -65,8 +65,8 @@ useEffect(() => {
 
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', marginTop:'100px', mx: 'auto', p: 2, justifyContent: "center" }}>
-            <Typography   variant="h4" align="center" color="black" fontWeight="bold" mb={3}> More Details About {user}</Typography>
-            <Typography  variant="h6" align="center" color="primary" >
+            <Typography   variant="h4" align="center" color="red" fontWeight="bold" mb={3}> More Details About {user}</Typography>
+            <Typography  variant="h6" align="center" color="black" >
              {description}   
             </Typography>
 
@@ -82,12 +82,12 @@ useEffect(() => {
               sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'blue',width:'100vw'}}
                 fontWeight={700}
               >
-              <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> Call {user } {mobile}
+              <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> Call  {mobile}
               </Typography>
              
             
 
-            <Typography sx={{marginTop:'10px'}} variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Popular Cars by {user}</Typography>
+            <Typography sx={{marginTop:'10px'}} variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>All Cars by {user}</Typography>
          {userEmail?   <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
                 {

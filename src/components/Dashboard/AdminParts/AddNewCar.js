@@ -20,7 +20,7 @@ const Icon = styled('i')(({ theme }) => ({
 
 const AddNewCar = ({ setProcessStatus }) => {
    const[filesEnough,setFilesEnough]=React.useState(false)
-    const[status,setStatus]=React.useState("")
+    const[status,setStatus]=React.useState(" ")
 
   const {currentUser}=useAuth()
  
@@ -32,11 +32,11 @@ const AddNewCar = ({ setProcessStatus }) => {
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
     const[user,setUser]=React.useState(currentUser.email)
-    const[carImg,setCarImage]=React.useState("image")
-     const[image2,setImage2]=React.useState("image")
-     const[image3,setImage3]=React.useState("image")
-     const[image4,setImage4]=React.useState("image")
-     const[image5,setImage5]=React.useState("image")
+    const[carImg,setCarImage]=React.useState(" ")
+     const[image2,setImage2]=React.useState(" ")
+     const[image3,setImage3]=React.useState(" ")
+     const[image4,setImage4]=React.useState(" ")
+     const[image5,setImage5]=React.useState(" ")
    const[largeImage,setLargeImage]=React.useState('')
   const[message,setMessage]=React.useState('')
      // form car type state
@@ -76,13 +76,13 @@ setUser(currentUser.email)
     const handleSubmit =  (event) => {
 
         const newCarInfo = { ...values, carType, fuel,user,carImg,image2,image3,image4,image5}
- buttonRef.current.setAttribute("disabled",true)
+ //buttonRef.current.setAttribute("disabled",true)
   setMessage("adding car ....")
  axios.post('https://milesmotors.onrender.com/car', newCarInfo)
          .then(({ data }) => {
                 if (data.code===1) {
                     setMessage('')
-                    buttonRef.current.setAttribute("disabled",false)
+                    //buttonRef.current.setAttribute("disabled",false)
                  
                   setStatus(`car added succesfully`)
                   // showSnackbar()
