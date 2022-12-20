@@ -85,7 +85,7 @@ const Navbar = () => {
             </Box>
 
             {/*logo goes up */}
-            <Box sx={{ display: "flex", width:{xs:'30vw',sm:'auto'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"10px",sm:'15px'} }}>
+            <Box sx={{ display: "flex", width:{xs:'30vw',sm:'auto'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"0px",sm:'15px'} }}>
               <TextField
               sx={{width:{xs:'30vw',sm:'auto'}}}
                 onChange={(e) => {
@@ -111,8 +111,9 @@ const Navbar = () => {
             </Box>
 
             <Box flex={2}>
-              <Box id="header-menu-toggler">
+              <Box sx={{marginRight:'10px'}} id="header-menu-toggler">
                 <IconButton
+                
                   size="large"
                   edge="start"
                   aria-label="open drawer"
