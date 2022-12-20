@@ -78,7 +78,7 @@ const Navbar = () => {
                   component="img"
                   src="/images/logo.png"
                   alt="logo with a car and description"
-                  sx={{ width: { xs: "30vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'},marginRight:{xs:'100px', sm:'0'} }}
+                  sx={{ width: { xs: "20vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'},marginRight:{xs:'100px', sm:'0'} }}
                 />
 
               </Box>
@@ -104,7 +104,7 @@ const Navbar = () => {
                 label="Search"
                 variant="outlined"
                 size="small"
-                sx={{ width: "100%" }}
+               
               />
 
           
