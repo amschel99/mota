@@ -77,14 +77,14 @@ const Navbar = () => {
                 <Box
                   component="img"
                   src="/images/logo.png"
-                  sx={{ width: { xs: "45vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'} }}
+                  sx={{ width: { xs: "35vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'},marginRight:{xs:'50px', sm:'0'} }}
                 />
 
               </Box>
             </Box>
 
             {/*logo goes up */}
-            <Box sx={{ display: "flex", flex: { xs: 6, sm: 3 },marginRight:{xs:"0",sm:'15px'} }}>
+            <Box sx={{ display: "flex", flex: { xs: 6, sm: 3 },marginRight:{xs:"0",sm:'15px'}, width:{xs:'40vw', sm:'auto'} }}>
               <TextField
                 onChange={(e) => {
                    setValue(e.target.value);
