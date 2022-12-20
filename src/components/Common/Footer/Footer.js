@@ -18,15 +18,15 @@ const Footer = () => {
                             display: 'flex', alignItems: 'flex-end'
                         }
                     }}>
-                        <Box component='a' href="#" target="_blank" rel="noopener noreferrer">
+                        <Box component='a' href="https://www.facebook.com/profile.php?id=100088767314776" target="_blank" rel="noopener noreferrer">
                             <FacebookRounded color="primary" />
                         </Box>
-                        <Box component='a' href="#" target="_blank" rel="noopener noreferrer">
+                        <Box component='a' href="https://twitter.com/mota_automobile" target="_blank" rel="noopener noreferrer">
                             <Twitter color="primary" />
                         </Box>
                         <Box component="a" href="tel:+254797168636">
                             <PhoneRounded sx={{ mx: 1 }} />
-                            (+254) 797168636
+                           Call for support
                         </Box>
                     </Box>
                 </Box>
@@ -37,45 +37,45 @@ const Footer = () => {
                         display: 'flex', flexDirection: 'column',
                         '& > a': { color: '#000000bb' }
                     }}>
-                        <Typography variant='h6'>Shop</Typography>
-                        <Link href="#">Browse by category</Link>
-                        <Link href="#">View all inventory</Link>
-                        <Link href="#">Explore all cars</Link>
+                        <Typography variant='h6'>SELL</Typography>
+                        <Link href="/register">Register as a seller</Link>
+                        <Link href="/profile">Login to your account</Link>
+                 
                     </Grid>
                     <Grid item xs={6} sm={4} md={3} xl={2} sx={{
                         display: 'flex', flexDirection: 'column',
                         '& > a': { color: '#000000bb' }
                     }}>
-                        <Typography variant='h6'>Sell/Trade</Typography>
-                        <Link href="#">Get a online offer</Link>
+                        <Typography variant='h6'>Browse cars</Typography>
+                        <Link href="/cars">View all cars</Link>
                     </Grid>
                     <Grid item xs={6} sm={4} md={3} xl={2} sx={{
                         display: 'flex', flexDirection: 'column',
                         '& > a': { color: '#000000bb' }
                     }}>
                         <Typography variant='h6'>Finance</Typography>
-                        <Link href="#">How it works</Link>
-                        <Link href="#">Auto finance</Link>
+                        <Link href="/finance">How it works</Link>
+                
                     </Grid>
                     <Grid item xs={6} sm={4} md={3} xl={2} sx={{
                         display: 'flex', flexDirection: 'column',
                         '& > a': { color: '#000000bb' }
                     }}>
                         <Typography variant='h6'>About</Typography>
-                        <Link href="#">About miles Motors</Link>
-                        <Link href="#">Investor relations</Link>
-                        <Link href="#">Terms & conditions</Link>
-                        <Link href="#">Privacy policy</Link>
+                        <Link href="/about">About Mota automobiles</Link>
+                       
+                        <Link href="/terms">Terms & conditions</Link>
+                        <Link href="/privacy">Privacy policy</Link>
                     </Grid>
                     <Grid item xs={12} sm={4} md={3} xl={2} sx={{
                         display: 'flex', flexDirection: 'column',
                         '& > a': { color: '#000000bb' }
                     }}>
                         <Typography variant='h6'>More</Typography>
-                        <Link href="#">Service & Repairs</Link>
-                        <Link href="#">FAQ & support</Link>
-                        <Link href="#">Research articles</Link>
-                        <Link href="#">Guarantee & warranties</Link>
+                        <Link href="#">Blog</Link>
+                        <Link href="https://twitter.com/mota_automobile">Twitter</Link>
+                        <Link href="https://instagram.com/motaautomobiles">Instagram</Link>
+                       
                     </Grid>
                     <Grid item xs={12} sm={4} md={3} xl={2} sx={{
                         display: 'flex', flexDirection: 'column'
@@ -84,8 +84,8 @@ const Footer = () => {
                         <Typography variant="p">
                             Copyright © 2022 <br />
                             All rights reserved <br />
-                            Programmed, developed & designed by <br />
-                            <Link href="https://amschel.tech" color="primary" fontWeight="bold" target="_blank" rel="noopener noreferrer">Amschel</Link>
+                         Developed by<br />
+                            <Link href="/about" color="primary" fontWeight="bold" target="_blank" rel="noopener noreferrer">Mota automobiles</Link>
                         </Typography>
                     </Grid>
                 </Grid>
