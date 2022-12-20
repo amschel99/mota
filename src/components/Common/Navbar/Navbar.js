@@ -77,6 +77,7 @@ const Navbar = () => {
                 <Box
                   component="img"
                   src="/images/logo.png"
+                  alt="logo with a car and description"
                   sx={{ width: { xs: "35vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'},marginRight:{xs:'50px', sm:'0'} }}
                 />
 

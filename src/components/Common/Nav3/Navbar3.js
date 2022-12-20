@@ -61,6 +61,7 @@ const Navbar3= ({setOpen})=>{
                 <Box
                   component="img"
                   src="/images/logo.png"
+                     alt="logo with a car and description"
                   sx={{ width: { xs: "50vw", sm: "30vw" },marginTop:{xs:'10px',sm:'0'} }}
                 />
 
