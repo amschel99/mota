@@ -64,7 +64,10 @@ window.onload= async (event)=>{
    
 }
 if (!isLoaded) {
-  return <SkeletonText />
+  return <Skeleton variant="text" animation="wave" sx={{ fontSize: '2rem',bgcolor:'grey.900' }} />
+  
+  
+
 }
 
 const center = { lat:lat, lng:long}
