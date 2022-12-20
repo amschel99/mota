@@ -76,13 +76,13 @@ setUser(currentUser.email)
     const handleSubmit =  (event) => {
 
         const newCarInfo = { ...values, carType, fuel,user,carImg,image2,image3,image4,image5}
- buttonRef.current.disabled=true
+ buttonRef.current.setAttribute("disabled",true)
   setMessage("adding car ....")
  axios.post('https://milesmotors.onrender.com/car', newCarInfo)
          .then(({ data }) => {
                 if (data.code===1) {
                     setMessage('')
-                    buttonRef.current.disabled=false
+                    buttonRef.current.setAttribute("disabled",false)
                  
                   setStatus(`car added succesfully`)
                   // showSnackbar()
