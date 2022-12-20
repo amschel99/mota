@@ -87,7 +87,7 @@ const Navbar = () => {
             {/*logo goes up */}
             <Box sx={{ display: "flex", width:{xs:'30vw',sm:'auto'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"0px",sm:'15px'} }}>
               <TextField
-              sx={{width:{xs:'30vw',sm:'auto'}, position:'absolute', right:{xs:'50px',sm:'0'}}}
+              sx={{width:{xs:'30vw',sm:'auto'}, position:'absolute', right:{xs:'20px',sm:'0'}}}
                 onChange={(e) => {
                    setValue(e.target.value);
                return;
