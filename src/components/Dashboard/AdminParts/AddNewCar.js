@@ -38,7 +38,7 @@ const AddNewCar = ({ setProcessStatus }) => {
      const[image4,setImage4]=React.useState("image")
      const[image5,setImage5]=React.useState("image")
    const[largeImage,setLargeImage]=React.useState('')
-  
+  const[message,setMessage]=React.useState('')
      // form car type state
     const [fuel, setFuel] = React.useState('') // form fuel type state
     // handle changing value in form
@@ -77,10 +77,11 @@ setUser(currentUser.email)
 
         const newCarInfo = { ...values, carType, fuel,user,carImg,image2,image3,image4,image5}
  buttonRef.current.disabled=true
-  
+  setMessage("adding car ....")
  axios.post('https://milesmotors.onrender.com/car', newCarInfo)
          .then(({ data }) => {
                 if (data.code===1) {
+                    setMessage('')
                     buttonRef.current.disabled=false
                  
                   setStatus(`car added succesfully`)
@@ -316,7 +317,7 @@ if(i===4){
                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
                             <Button ref={buttonRef}  disabled={!filesEnough & !largeImage } type="submit" variant="outlined"
                                 >Add to Database</Button>
-                           
+                           <div>{message}</div>
                                 {!filesEnough &!largeImage &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
                                 {largeImage && <Alert severity="error">{largeImage}</Alert>}
                                 {status && <Alert severity="success">{status}</Alert>}
