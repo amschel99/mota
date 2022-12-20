@@ -10,7 +10,7 @@ const Footer = () => {
                 <Box sx={{
                     display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'
                 }}>
-                    <Box component="img" src="/images/logo.png" sx={{ width: '200px' }} />
+                    <Link href="/" ><Box component="img" src="/images/logo.png" sx={{ width: '200px' }} /> </Link>
                     <Box sx={{
                         display: 'flex', alignItems: 'flex-end',
                         my: 2, '&>a': {
