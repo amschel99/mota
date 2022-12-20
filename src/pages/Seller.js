@@ -82,7 +82,7 @@ useEffect(() => {
               sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'blue',width:'100vw'}}
                 fontWeight={700}
               >
-              <Phone sx={{marginTop:'2px',marginRight:"5px"}}/> Call  {mobile}
+              <Phone sx={{marginTop:'2px',marginRight:"15px"}}/> Call  {mobile}
               </Typography>
              
             
