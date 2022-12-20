@@ -69,7 +69,7 @@ const Navbar = () => {
           >
             <Box sx={{ display: { xs: "block", sm: "block" } }} flex={2}>
               <Box
-                sx={{ width: { xs: "35vw", sm: "20vw" } }}
+                sx={{ width: { xs: "30vw", sm: "20vw" } }}
                 component={NavLink}
                 to="/"
                 id="header-logo"
@@ -78,14 +78,14 @@ const Navbar = () => {
                   component="img"
                   src="/images/logo.png"
                   alt="logo with a car and description"
-                  sx={{ width: { xs: "20vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'},marginRight:{xs:'100px', sm:'0'} }}
+                  sx={{ width: { xs: "30vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'},marginRight:{xs:'100px', sm:'0'} }}
                 />
 
               </Box>
             </Box>
 
             {/*logo goes up */}
-            <Box sx={{ display: "flex", width:{xs:'30vw',sm:'auto'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"60px",sm:'15px'} }}>
+            <Box sx={{ display: "flex", width:{xs:'30vw',sm:'auto'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"10px",sm:'15px'} }}>
               <TextField
               sx={{width:{xs:'30vw',sm:'auto'}}}
                 onChange={(e) => {
