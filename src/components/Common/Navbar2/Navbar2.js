@@ -59,7 +59,7 @@ const Navbar2= ({setOpen})=>{
                     <MenuIcon/>
                 </IconButton>
                <Box
-                sx={{ width: { xs: "25vw", sm: "20vw" } }}
+                sx={{ width: { xs: "50vw", sm: "30vw" } }}
                 component={NavLink}
                 to="/"
                 id="header-logo"
@@ -67,7 +67,7 @@ const Navbar2= ({setOpen})=>{
                 <Box
                   component="img"
                   src="/images/logo.png"
-                  sx={{ width: { xs: "25vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'} }}
+                  sx={{ width: { xs: "50vw", sm: "30vw" },marginTop:{xs:'10px',sm:'0'} }}
                 />
 
               </Box>

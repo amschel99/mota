@@ -77,7 +77,7 @@ const Navbar = () => {
                 <Box
                   component="img"
                   src="/images/logo.png"
-                  sx={{ width: { xs: "35vw", sm: "20vw" },marginTop:{xs:'0px',sm:'0'} }}
+                  sx={{ width: { xs: "45vw", sm: "20vw" },marginTop:{xs:'10px',sm:'0'} }}
                 />
 
               </Box>
