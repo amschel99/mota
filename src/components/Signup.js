@@ -204,7 +204,7 @@ setError(`failed to create an account!${error}`)
               <GoogleMap
           center={center}
           zoom={15}
-          mapContainerStyle={{ width: '100%', height: '100%' }}
+          mapContainerStyle={{ width: '30%', height: '30%' }}
           options={{
             zoomControl: true,
             streetViewControl:true,
