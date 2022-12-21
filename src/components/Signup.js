@@ -45,7 +45,7 @@ const getLocation= async ()=>{
   try{
     const location= await  navigator.geolocation
     if(!location){
-         alert('your brouser does not support geolocation')
+         alert('your browser does not support geolocation')
     }
     location.getCurrentPosition((position)=>{
      const{coords}=position;
@@ -147,7 +147,9 @@ setError(`failed to create an account!${error}`)
     setLoading(false)
       
     } 
-   
+    if (!isLoaded) {
+    return <Skeleton animation='true' />
+  }
 
   return (
     <ThemeProvider sx={{marginTop:'150px'}} theme={theme}>
