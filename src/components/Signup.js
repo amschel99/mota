@@ -200,11 +200,11 @@ setError(`failed to create an account!${error}`)
                  {/* Google Map Box */}
       
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sx={{height:'60px',width:'60px'}}>
               <GoogleMap
           center={center}
           zoom={15}
-          mapContainerStyle={{ width: '30%', height: '30%' }}
+          mapContainerStyle={{ width: '100%', height: '100%' }}
           options={{
             zoomControl: true,
             streetViewControl:true,
@@ -212,7 +212,7 @@ setError(`failed to create an account!${error}`)
             fullscreenControl: true,
             sateliteView:true,
           }}
-          onLoad={map => setMap(map)}
+          // onLoad={map => setMap(map)}
         >
           <Marker position={center} />    
         </GoogleMap>
