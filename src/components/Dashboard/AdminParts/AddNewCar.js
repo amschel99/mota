@@ -280,8 +280,8 @@ setUser(currentUser.email)
                                         
                                         for(let i=0;i<files.length;i++){
                                             if(files[i].size>2800000){
-                                                setLargeImage(`images that exceed 2.8mbs are not allowed,choose again!`)
-return;
+                                             return   setLargeImage(`images that exceed 2.8mbs are not allowed,choose again!`)
+
                                             }
                                             setFilesEnough(true)
                                             const reader=new FileReader()
@@ -324,8 +324,10 @@ return;
              ctx.drawImage(img, 0, 0, width, height);
              //here we convert the image to 1/2 times the original resolution
 
-            const  data=canvas.toDataURL(files[i].type,0.5)
+            const  data=canvas.toDataURL('image/webp',0.5)
+
             console.log( `the base 64 url for our image is given by ${data}`)
+
 //const data=readerEvent.target.result
 // we then set the relevant states to the relevant base 64 encoded strings
 
