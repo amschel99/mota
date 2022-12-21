@@ -38,7 +38,7 @@ export default function SignUp() {
   googleMapsApiKey:'AIzaSyAX0P-gxcWgeW0pkJtBei0kjd5KnDwGsVY',
   libraries: ['places'],
 })
-const [map, setMap] =React.useState(/** @type google.maps.Map */ (null))
+// const [map, setMap] =React.useState(/** @type google.maps.Map */ (null))
 const [long,setLong]=React.useState(null);
 const [lat,setLat]=React.useState(null);
 const getLocation= async ()=>{
