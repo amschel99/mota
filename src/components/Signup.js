@@ -63,12 +63,7 @@ window.onload= async (event)=>{
    await getLocation();
    
 }
-if (!isLoaded) {
-  return <Skeleton variant="text" animation="wave" sx={{ fontSize: '2rem',bgcolor:'grey.900' }} />
-  
-  
 
-}
 
 const center = { lat:lat, lng:long}
 console.log(lat);
