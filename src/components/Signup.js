@@ -199,10 +199,10 @@ setError(`failed to create an account!${error}`)
                   autoComplete="Enter your location"
                 />
                  </Autocomplete>
-                
+                 
       
               </Grid>
-              <Grid item xs={12} sx={{height:'60px',width:'60px'}}>
+              {/* <Grid item xs={12} sx={{height:'60px',width:'60px'}}>
               <GoogleMap
           center={center}
           zoom={15}
@@ -218,7 +218,7 @@ setError(`failed to create an account!${error}`)
         >
           <Marker position={center} />    
         </GoogleMap>
-              </Grid>
+              </Grid> */}
                <Grid item xs={12}>
                 <TextField
                   required
