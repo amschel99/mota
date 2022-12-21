@@ -289,6 +289,8 @@ return;
 
                                                 //make an img element
                                                 let img=document.createElement('img');
+                                               img.onload=function (){
+
                                                
                                                 img.src = readerEvent.target.result;
                                                 const canvas=document.createElement('canvas')
@@ -333,7 +335,7 @@ if(i===3){
 if(i===4){
     setImage5(data)
 }
-
+                                               }
                                             })
                                             reader.readAsDataURL(files[i])
                                         }
