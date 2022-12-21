@@ -214,10 +214,7 @@ setError(`failed to create an account!${error}`)
           }}
           onLoad={map => setMap(map)}
         >
-          <Marker position={center} />
-        
-            <DirectionsRenderer />
-          
+          <Marker position={center} />    
         </GoogleMap>
               </Grid>
                <Grid item xs={12}>
