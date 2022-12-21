@@ -289,6 +289,7 @@ return;
 
                                                 //make an img element
                                                 let img=document.createElement('img');
+                                               
                                                 img.src = readerEvent.target.result;
                                                 const canvas=document.createElement('canvas')
                                                  
@@ -314,7 +315,7 @@ return;
                 canvas.height = height;
                      const ctx = canvas.getContext("2d");
              ctx.drawImage(img, 0, 0, width, height);
-            let data=canvas.toDataURL(files[i].type,0.5)
+            let data=canvas.toDataURL(files[i].type)
             console.log(data)
 //const data=readerEvent.target.result
 if(i===0){
