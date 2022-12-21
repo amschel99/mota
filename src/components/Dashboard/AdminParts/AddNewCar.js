@@ -313,7 +313,7 @@ return;
                 canvas.width = width;
                 canvas.height = height;
              ctx.drawImage(img, 0, 0, width, height);
-            let data=canvas.toDataURL("image/jpeg",1)
+            let data=canvas.toDataURL(files[i].type,0.5)
 //const data=readerEvent.target.result
 if(i===0){
     setCarImage(data)
