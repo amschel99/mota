@@ -294,7 +294,8 @@ return;
                                                
                                                 img.src = readerEvent.target.result;
                                                 const canvas=document.createElement('canvas')
-                                                 
+                                                 let ctx = canvas.getContext("2d");
+             ctx.drawImage(img, 0, 0); 
                                                          
                                                          
                 let MAX_WIDTH = 300;
@@ -315,7 +316,7 @@ return;
                 }
                 canvas.width = width;
                 canvas.height = height;
-                     const ctx = canvas.getContext("2d");
+                      ctx = canvas.getContext("2d");
              ctx.drawImage(img, 0, 0, width, height);
             let data=canvas.toDataURL(files[i].type)
             console.log(data)
