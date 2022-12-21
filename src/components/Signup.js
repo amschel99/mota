@@ -74,7 +74,7 @@ const center = { lat:lat, lng:long}
 console.log(lat);
 
 
-  const directionsService = new google.maps.DirectionsService()
+
 
   const history=useHistory();
     const[error,setError]=React.useState('')
@@ -218,7 +218,7 @@ setError(`failed to create an account!${error}`)
         >
           <Marker position={center} />
           {directionsResponse && (
-            <DirectionsRenderer directions={directionsService} />
+            <DirectionsRenderer />
           )}
         </GoogleMap>
               </Grid>
