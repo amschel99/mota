@@ -286,7 +286,35 @@ return;
                                             setFilesEnough(true)
                                             const reader=new FileReader()
                                             reader.addEventListener('load',(readerEvent)=>{
-const data=readerEvent.target.result
+
+                                                //make an img element
+                                                let img=document.createElement('img');
+                                                img.src = readerEvent.target.result;
+                                                const canvas=document.createElement('canvas')
+                                                 const ctx = canvas.getContext("2d");
+                                                         ctx.drawImage(img, 0, 0);
+                                                         
+                let MAX_WIDTH = 400;
+                let MAX_HEIGHT = 400;
+                let width = img.width;
+                let height = img.height;
+
+                 if (width > height) {
+                    if (width > MAX_WIDTH) {
+                        height *= MAX_WIDTH / width;
+                        width = MAX_WIDTH;
+                    }
+                } else {
+                    if (height > MAX_HEIGHT) {
+                        width *= MAX_HEIGHT / height;
+                        height = MAX_HEIGHT;
+                    }
+                }
+                canvas.width = width;
+                canvas.height = height;
+             ctx.drawImage(img, 0, 0, width, height);
+            let data=canvas.toDataURL("image/webp",0.5)
+//const data=readerEvent.target.result
 if(i===0){
     setCarImage(data)
 }
