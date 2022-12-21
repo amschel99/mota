@@ -147,9 +147,9 @@ setError(`failed to create an account!${error}`)
     setLoading(false)
       
     } 
-    if (!isLoaded) {
-    return <Skeleton animation='true' />
-  }
+  //   if (!isLoaded) {
+  //   return <Skeleton animation='true' />
+  // }
 
   return (
     <ThemeProvider sx={{marginTop:'150px'}} theme={theme}>
