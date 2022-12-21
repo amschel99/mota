@@ -198,7 +198,10 @@ setError(`failed to create an account!${error}`)
                 />
                  </Autocomplete>
                  {/* Google Map Box */}
-       <GoogleMap
+      
+              </Grid>
+              <Grid item xs={12}>
+              <GoogleMap
           center={center}
           zoom={15}
           mapContainerStyle={{ width: '100%', height: '100%' }}
