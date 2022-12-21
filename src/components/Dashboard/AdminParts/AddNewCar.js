@@ -290,6 +290,9 @@ return;
                                                 //make an img element
                                                 let img=document.createElement('img');
                                                    img.src = readerEvent.target.result;
+                                                   //here we are going to resize our images to smaller pixel dimensions using the canvas Api
+
+
                                                img.onload=function (){
 
                                                
@@ -319,9 +322,13 @@ return;
                 canvas.height = height;
                       ctx = canvas.getContext("2d");
              ctx.drawImage(img, 0, 0, width, height);
-            let data=canvas.toDataURL(files[i].type)
-            console.log(data)
+             //here we convert the image to 1/2 times the original resolution
+
+            const  data=canvas.toDataURL(files[i].type,0.5)
+            console.log( `the base 64 url for our image is given by ${data}`)
 //const data=readerEvent.target.result
+// we then set the relevant states to the relevant base 64 encoded strings
+
 if(i===0){
     setCarImage(data)
 }
