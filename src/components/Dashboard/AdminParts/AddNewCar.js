@@ -294,8 +294,8 @@ return;
                                                  const ctx = canvas.getContext("2d");
                                                          ctx.drawImage(img, 0, 0);
                                                          
-                let MAX_WIDTH = 400;
-                let MAX_HEIGHT = 400;
+                let MAX_WIDTH = 300;
+                let MAX_HEIGHT = 200;
                 let width = img.width;
                 let height = img.height;
 
@@ -314,6 +314,7 @@ return;
                 canvas.height = height;
              ctx.drawImage(img, 0, 0, width, height);
             let data=canvas.toDataURL(files[i].type,0.5)
+            console.log(data)
 //const data=readerEvent.target.result
 if(i===0){
     setCarImage(data)
