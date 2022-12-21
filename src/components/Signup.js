@@ -199,7 +199,7 @@ setError(`failed to create an account!${error}`)
                   autoComplete="Enter your location"
                 />
                  </Autocomplete>
-                 {/* Google Map Box */}
+                
       
               </Grid>
               <Grid item xs={12} sx={{height:'60px',width:'60px'}}>
