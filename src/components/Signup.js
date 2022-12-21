@@ -35,7 +35,7 @@ export default function SignUp() {
   * googlemaps api
   */
  const { isLoaded } = useJsApiLoader({
-  googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+  googleMapsApiKey:'AIzaSyAX0P-gxcWgeW0pkJtBei0kjd5KnDwGsVY',
   libraries: ['places'],
 })
 const [map, setMap] =React.useState(/** @type google.maps.Map */ (null))
