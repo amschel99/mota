@@ -289,10 +289,11 @@ return;
 
                                                 //make an img element
                                                 let img=document.createElement('img');
+                                                   img.src = readerEvent.target.result;
                                                img.onload=function (){
 
                                                
-                                                img.src = readerEvent.target.result;
+                                             
                                                 const canvas=document.createElement('canvas')
                                                  let ctx = canvas.getContext("2d");
              ctx.drawImage(img, 0, 0); 
