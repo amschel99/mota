@@ -19,6 +19,9 @@ import axios from 'axios'
 
 
 const theme = createTheme();
+
+
+export default function SignUp() {
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -36,9 +39,6 @@ function success(pos) {
 function errors(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
-
-export default function SignUp() {
-
 
 React.useEffect(()=>{
 if (navigator.geolocation) {
