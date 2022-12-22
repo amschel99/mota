@@ -168,11 +168,13 @@ setError(`failed to create an account!${error}`)
                   required
                   fullWidth
                   name="location"
-                  label="location"
+                  label="Location description"
                   type="text"
                   id="location"
+                  placeholder="Adress"
+
                    inputRef={locationRef}
-                  autoComplete="Enter your location"
+             autoComplete="location"
                 />
                 
                  
@@ -206,6 +208,8 @@ setError(`failed to create an account!${error}`)
               Locate Me
             </Button>
               </Grid>
+              
+              
                <Grid item xs={12}>
                 <TextField
                   required
