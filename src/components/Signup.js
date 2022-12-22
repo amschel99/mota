@@ -17,7 +17,7 @@ import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-import { MapContainer, TileLayer, Marker, Popup  } from 'react-leaflet'
+ 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg'
 
 const theme = createTheme();
@@ -56,7 +56,7 @@ zoom: zoom
         alert('geolocation not  available')
       console.log("Not Available");
     }
-},[])
+},[latitude,longitude,zoom])
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -191,18 +191,7 @@ setError(`failed to create an account!${error}`)
               </Grid>
 
               <Grid item xs={12}>
-<MapContainer center={[longitude,latitude]} zoom={zoom} >
-  
-  <TileLayer
-    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-   />
- <Marker position={[40.505, -100.09]}>
-      <Popup>
-        I am a pop-up!
-      </Popup>
-  </Marker>
-</MapContainer>
+<div ref={mapContainer} className="map-container" />
            
               </Grid>
               
