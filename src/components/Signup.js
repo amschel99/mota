@@ -16,24 +16,42 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
-
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+ 
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg'
 
 const theme = createTheme();
 
 
 export default function SignUp() {
 
-
+const[latitude,setLatitude]=React.useState(null)
+const[longitude,setLongitude]=React.useState(null)
+const mapContainer = useRef(null);
+const map = useRef(null);
+const [zoom, setZoom] = React.useState(9);
 React.useEffect(()=>{
 
 if ("geolocation" in navigator) {
-  alert('geolocation available')
+  alert('This application uses your current position to create a map of your business')
       console.log("Available");
        navigator.geolocation.getCurrentPosition(function(position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
+      setLatitude(position.coords.latitude)
+      setLongitude(position.coords.longitude)
       alert(position.coords.latitude)
-    });
+      if (map.current && latitude && longitude) return; // initialize map only once
+map.current = new mapboxgl.Map({
+container: mapContainer.current,
+style: 'mapbox://styles/mapbox/streets-v12',
+center: [longitude, latitude],
+zoom: zoom
+});
+    },function(error) {
+      alert(`Error Code${error.code}`)
+        console.error("Error Code = " + error.code + " - " + error.message);
+      });
     } else {
         alert('geolocation not  available')
       console.log("Not Available");
@@ -95,6 +113,8 @@ description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
 instagram:instagramRef.current.value,
+latitude:latitude,
+longitude:longitude
 
 
 
@@ -167,6 +187,11 @@ setError(`failed to create an account!${error}`)
                    inputRef={locationRef}
              autoComplete="location"
                 />
+           
+              </Grid>
+
+              <Grid item xs={12}>
+<div ref={mapContainer} className="map-container" />
            
               </Grid>
               

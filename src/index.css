@@ -21,3 +21,6 @@ code {
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
 }
+.map-container {
+  height: 400px;
+}

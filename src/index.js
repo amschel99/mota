@@ -6,6 +6,7 @@ import {Provider} from "react-redux"
 import store from './store';
 import reportWebVitals from './reportWebVitals';
 import {AuthContextProvider} from "./contexts/AuthContext"
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 ReactDOM.render(
   <React.StrictMode>
