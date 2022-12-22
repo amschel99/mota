@@ -33,14 +33,14 @@ const [zoom, setZoom] = React.useState(9);
 React.useEffect(()=>{
 
 if ("geolocation" in navigator) {
-  alert('This application uses your current position to create a map of your business')
+
       console.log("Available");
        navigator.geolocation.getCurrentPosition(function(position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
       setLatitude(position.coords.latitude)
       setLongitude(position.coords.longitude)
-      alert(position.coords.latitude)
+     
       if (map.current && latitude && longitude) return; // initialize map only once
 map.current = new mapboxgl.Map({
 container: mapContainer.current,
