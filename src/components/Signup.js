@@ -15,9 +15,11 @@ import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
+import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
 import axios from 'axios'
-import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
- //mport
+//import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+ 
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
 
 const theme = createTheme();
@@ -44,7 +46,7 @@ if ("geolocation" in navigator) {
       if (map.current && latitude && longitude) return; // initialize map only once
 map.current = new mapboxgl.Map({
 container: mapContainer.current,
-style: 'mapbox://styles/mapbox/streets-v12',
+style: 'mapbox://styles/mapbox/streets-v11',
 center: [longitude, latitude],
 zoom: zoom
 });
