@@ -17,6 +17,8 @@ import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 
+import { AddressAutofill } from '@mapbox/search-js-react';
+
 const theme = createTheme();
 
 export default function SignUp() {
@@ -134,17 +136,46 @@ setError(`failed to create an account!${error}`)
                 />
               </Grid>
                 <Grid item xs={12}>
+                  <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
                 <TextField
                   required
                   fullWidth
-                  name="location"
-                  label="location"
+                  name="adress"
+                  label="Adress"
                   type="text"
-                  id="location"
+                  id="adress"
+                  placeholder="Adress"
+
                    inputRef={locationRef}
-                  autoComplete="Enter your location"
+             autoComplete="address-line1"
                 />
+                </AddressAutofill>
               </Grid>
+               <Grid item xs={12}>
+                                  <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
+                <TextField
+                name="country" placeholder="Country" type="text"
+autoComplete="country"
+                />
+                </AddressAutofill>
+              </Grid>
+              <Grid item xs={12}>
+                  <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
+                <TextField
+              name="city" placeholder="City" type="text"
+autoComplete="address-level2"
+                />
+                </AddressAutofill>
+              </Grid>
+              <Grid item xs={12}>
+                 <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
+                <TextField
+         name="postcode" placeholder="Postcode" type="text"
+autoComplete="postal-code"
+                />
+                </AddressAutofill>
+              </Grid>
+              
                <Grid item xs={12}>
                 <TextField
                   required

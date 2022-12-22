@@ -20,7 +20,7 @@ const Icon = styled('i')(({ theme }) => ({
 
 const AddNewCar = ({ setProcessStatus }) => {
    const[filesEnough,setFilesEnough]=React.useState(false)
-    const[status,setStatus]=React.useState(" ")
+    const[status,setStatus]=React.useState("")
 
   const {currentUser}=useAuth()
  
@@ -32,17 +32,17 @@ const AddNewCar = ({ setProcessStatus }) => {
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
     const[user,setUser]=React.useState(currentUser.email)
-    const[carImg,setCarImage]=React.useState(" ")
-     const[image2,setImage2]=React.useState(" ")
-     const[image3,setImage3]=React.useState(" ")
-     const[image4,setImage4]=React.useState(" ")
-     const[image5,setImage5]=React.useState(" ")
-   const[largeImage,setLargeImage]=React.useState('')
-  const[message,setMessage]=React.useState('')
+    const[carImg,setCarImage]=React.useState("")
+     const[image2,setImage2]=React.useState("")
+     const[image3,setImage3]=React.useState("")
+     const[image4,setImage4]=React.useState("")
+     const[image5,setImage5]=React.useState("")
+   const[largeImage,setLargeImage]=React.useState("")
+  const[message,setMessage]=React.useState("")
      // form car type state
-    const [fuel, setFuel] = React.useState('') // form fuel type state
+    const [fuel, setFuel] = React.useState("") // form fuel type state
     // handle changing value in form
-const[userName,setUserName]=React.useState('')
+const[userName,setUserName]=React.useState("")
 
 
 
