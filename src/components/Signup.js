@@ -17,49 +17,27 @@ import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 //import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
 import axios from 'axios'
-import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
- import Map, { GeolocateControl } from "react-map-gl";
- import "mapbox-gl/dist/mapbox-gl.css";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
+import Map, { Marker } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+
+//mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
 
 const theme = createTheme();
 
 
 export default function SignUp() {
-
-const[latitude,setLatitude]=React.useState(null)
-const[longitude,setLongitude]=React.useState(null)
-const mapContainer = useRef(null);
-const map = useRef(null);
-const [zoom, setZoom] = React.useState(9);
-React.useEffect(()=>{
-
-if ("geolocation" in navigator) {
-
-      console.log("Available");
-       navigator.geolocation.getCurrentPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-      setLatitude(position.coords.latitude)
-      setLongitude(position.coords.longitude)
-     
-      if (map.current && latitude && longitude) return; // initialize map only once
-map.current = new mapboxgl.Map({
-container: mapContainer.current,
-style: 'mapbox://styles/mapbox/streets-v11',
-center: [longitude, latitude],
-zoom: zoom
-});
-    },function(error) {
-      alert(`Error Code${error.code}`)
-        console.error("Error Code = " + error.code + " - " + error.message);
+const [viewport, setViewport] = React.useState({});
+React.useEffect(() => {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      setViewport({
+        ...viewport,
+        latitude: pos.coords.latitude,
+        longitude: pos.coords.longitude,
+        zoom: 3.5,
       });
-    } else {
-        alert('geolocation not  available')
-      console.log("Not Available");
-    }
-})
+    });
+  }, []);
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -116,8 +94,6 @@ description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
 instagram:instagramRef.current.value,
-latitude:latitude,
-longitude:longitude
 
 
 
@@ -194,20 +170,23 @@ setError(`failed to create an account!${error}`)
               </Grid>
 
               <Grid item xs={12}>
-<Map
-        mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw"
-        initialViewState={{
-          longitude: longitude,
-          latitude: latitude,
-          zoom: 3.5,
-        }}
-        mapStyle="mapbox://styles/mapbox/streets-v11"
-      >
-        <GeolocateControl
-          positionOptions={{ enableHighAccuracy: true }}
-          trackUserLocation={true}
-        />
-      </Map>
+<div>
+      {viewport.latitude && viewport.longitude && (
+        <div>
+          <h1>Your Location:</h1>
+          <Map
+            mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw"
+            initialViewState={viewport}
+            mapStyle="mapbox://styles/mapbox/streets-v11"
+          >
+            <Marker
+              longitude={viewport.longitude}
+              latitude={viewport.latitude}
+            />
+          </Map>
+        </div>
+      )}
+    </div>
            
               </Grid>
               
