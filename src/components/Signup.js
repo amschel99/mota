@@ -48,7 +48,7 @@ setCode(error.code)
 React.useEffect(()=>{
 navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
 Alert('your location will be used to display the map to your business')
-},[latitude,longitude])
+},[])
 
   const history=useHistory();
     const[error,setError]=React.useState('')
