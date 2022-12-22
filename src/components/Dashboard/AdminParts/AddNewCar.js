@@ -324,7 +324,7 @@ setUser(currentUser.email)
              ctx.drawImage(img, 0, 0, width, height);
              //here we convert the image to 1/2 times the original resolution
 
-            const  data=canvas.toDataURL('image/webp',0.5)
+            const  data=canvas.toDataURL('image/jpeg',0.5)
 
             console.log( `the base 64 url for our image is given by ${data}`)
 
