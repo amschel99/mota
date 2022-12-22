@@ -47,7 +47,7 @@ setCode(error.code)
 
 React.useEffect(()=>{
 navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
-alert(`${latitude} and also ${longitude}`)
+Alert('your location will be used to display the map to your business')
 },[latitude,longitude])
 
   const history=useHistory();
@@ -105,7 +105,9 @@ mobile:mobileRef.current.value,
 description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
-instagram:instagramRef.current.value
+instagram:instagramRef.current.value,
+latitude:latitude,
+longitude:longitude
 
 
 
@@ -164,45 +166,22 @@ setError(`failed to create an account!${error}`)
                 />
               </Grid>
                 <Grid item xs={12}>
-                  <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
+
                 <TextField
                   required
                   fullWidth
-                  name="adress"
-                  label="Adress"
+                  name="location"
+                  label="Location description"
                   type="text"
-                  id="adress"
+                  id="location"
                   placeholder="Adress"
 
                    inputRef={locationRef}
-             autoComplete="address-line1"
+             autoComplete="location"
                 />
-                </AddressAutofill>
+           
               </Grid>
-               <Grid item xs={12}>
-                                  <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
-                <TextField
-                name="country" placeholder="Country" type="text"
-autoComplete="country"
-                />
-                </AddressAutofill>
-              </Grid>
-              <Grid item xs={12}>
-                  <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
-                <TextField
-              name="city" placeholder="City" type="text"
-autoComplete="address-level2"
-                />
-                </AddressAutofill>
-              </Grid>
-              <Grid item xs={12}>
-                 <AddressAutofill accessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg">
-                <TextField
-         name="postcode" placeholder="Postcode" type="text"
-autoComplete="postal-code"
-                />
-                </AddressAutofill>
-              </Grid>
+              
               
                <Grid item xs={12}>
                 <TextField
