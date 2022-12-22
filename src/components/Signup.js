@@ -17,7 +17,7 @@ import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
- 
+ //mport
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
 
 const theme = createTheme();
