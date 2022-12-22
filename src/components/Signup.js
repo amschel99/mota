@@ -197,7 +197,14 @@ setError(`failed to create an account!${error}`)
             </Map>
               </Grid>
               <Grid item xs={12}>
-                
+              <Button
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+              onClick={showMyLocation}
+            >
+              Locate Me
+            </Button>
               </Grid>
                <Grid item xs={12}>
                 <TextField
