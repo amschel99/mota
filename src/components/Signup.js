@@ -22,6 +22,34 @@ import { AddressAutofill } from '@mapbox/search-js-react';
 const theme = createTheme();
 
 export default function SignUp() {
+
+const[latitude,setLatitude]=React.useState(null)
+const[longitude,setLongitude]=React.useState(null)
+const[altitude,setAltitude]=React.useState(null)
+const[code,setCode]=React.useState(null)
+const[message,setMessage]=React.useState(null)
+function locationSuccess(position) {
+    setLatitude( position.coords.latitude)
+   setLongitude(position.coords.longitude)
+
+setAltitude(position.coords.altitude)
+    
+ 
+}
+
+function locationError(error) {
+setCode(error.code)
+   setMessage(error.message)
+
+    // read the code and message and decide how you want to handle this!
+}
+
+
+React.useEffect(()=>{
+navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
+alert(`${latitude} and also ${longitude}`)
+},[latitude,longitude])
+
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
