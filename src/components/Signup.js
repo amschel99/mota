@@ -62,7 +62,7 @@ if (navigator.geolocation) {
       alert("Sorry Not available!");
     }
 
-},[])
+},[options])
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
