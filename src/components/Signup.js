@@ -15,48 +15,47 @@ import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
-import axios from 'axios'
-import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
- 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
+import axios from 'axios';
+import { Skeleton} from '@mui/material';
+
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+
+import "leaflet/dist/leaflet.css";
+import osm from './PrivateRoute/util/Osm-providers';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useGeoLocation from './PrivateRoute/util/useGeoLocation';
 
 const theme = createTheme();
-
+const markerIcon = new L.Icon({
+  iconUrl: require("resources/images/marker.png"),
+  iconSize: [40, 40],
+  iconAnchor: [17, 46], //[left/right, top/bottom]
+  popupAnchor: [0, -46], //[left/right, top/bottom]
+});
 
 export default function SignUp() {
 
-const[latitude,setLatitude]=React.useState(null)
-const[longitude,setLongitude]=React.useState(null)
-const mapContainer = useRef(null);
-const map = useRef(null);
-const [zoom, setZoom] = React.useState(9);
-React.useEffect(()=>{
 
-if ("geolocation" in navigator) {
+  const [center, setCenter] = useState({ lat: 13.084622, lng: 80.248357 });
+  const ZOOM_LEVEL = 9;
+  const mapRef = useRef();
 
-      console.log("Available");
-       navigator.geolocation.getCurrentPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-      setLatitude(position.coords.latitude)
-      setLongitude(position.coords.longitude)
-     
-      if (map.current && latitude && longitude) return; // initialize map only once
-map.current = new mapboxgl.Map({
-container: mapContainer.current,
-style: 'mapbox://styles/mapbox/streets-v12',
-center: [longitude, latitude],
-zoom: zoom
-});
-    },function(error) {
-      alert(`Error Code${error.code}`)
-        console.error("Error Code = " + error.code + " - " + error.message);
-      });
+  const location = useGeoLocation();
+
+  const showMyLocation = () => {
+    if (location.loaded && !location.error) {
+      mapRef.current.leafletElement.flyTo(
+        [location.coordinates.lat, location.coordinates.lng],
+        ZOOM_LEVEL,
+        { animate: true }
+      );
     } else {
-        alert('geolocation not  available')
-      console.log("Not Available");
+      alert(location.error.message);
     }
-})
+  
+  }
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -112,16 +111,7 @@ mobile:mobileRef.current.value,
 description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
-instagram:instagramRef.current.value,
-latitude:latitude,
-longitude:longitude
-
-
-
-
-
-
-
+instagram:instagramRef.current.value
  })
 
 setUser(`${JSON.stringify(data)}`)
@@ -136,8 +126,7 @@ setError(`failed to create an account!${error}`)
     setLoading(false)
       
     } 
-   
-
+  
   return (
     <ThemeProvider sx={{marginTop:'150px'}} theme={theme}>
       <Container sx={{marginTop:'150px'}} component="main" maxWidth="xs">
@@ -174,7 +163,7 @@ setError(`failed to create an account!${error}`)
                 />
               </Grid>
                 <Grid item xs={12}>
-
+              
                 <TextField
                   required
                   fullWidth
@@ -187,12 +176,37 @@ setError(`failed to create an account!${error}`)
                    inputRef={locationRef}
              autoComplete="location"
                 />
-           
+                
+                 
+      
               </Grid>
+              <Grid item xs={12} sx={{height:'90px',width:'80px'}}>
+              <Map center={center} zoom={ZOOM_LEVEL} ref={mapRef}>
+              <TileLayer
+                url={osm.maptiler.url}
+                attribution={osm.maptiler.attribution}
+              />
 
+              {location.loaded && !location.error && (
+                <Marker
+                  icon={markerIcon}
+                  position={[
+                    location.coordinates.lat,
+                    location.coordinates.lng,
+                  ]}
+                ></Marker>
+              )}
+            </Map>
+              </Grid>
               <Grid item xs={12}>
-<div ref={mapContainer} className="map-container" />
-           
+              <Button
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+              onClick={showMyLocation}
+            >
+              Locate Me
+            </Button>
               </Grid>
               
               
