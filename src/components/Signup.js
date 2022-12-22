@@ -29,6 +29,11 @@ React.useEffect(()=>{
 if ("geolocation" in navigator) {
   alert('geolocation available')
       console.log("Available");
+       navigator.geolocation.getCurrentPosition(function(position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+      alert(position.coords.latitude)
+    });
     } else {
         alert('geolocation not  available')
       console.log("Not Available");
