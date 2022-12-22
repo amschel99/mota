@@ -17,38 +17,12 @@ import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 
-import { AddressAutofill } from '@mapbox/search-js-react';
 
 const theme = createTheme();
 
 export default function SignUp() {
 
-const[latitude,setLatitude]=React.useState(null)
-const[longitude,setLongitude]=React.useState(null)
-const[altitude,setAltitude]=React.useState(null)
-const[code,setCode]=React.useState(null)
-const[message,setMessage]=React.useState(null)
-function locationSuccess(position) {
-    setLatitude( position.coords.latitude)
-   setLongitude(position.coords.longitude)
 
-setAltitude(position.coords.altitude)
-    
- 
-}
-
-function locationError(error) {
-setCode(error.code)
-   setMessage(error.message)
-
-    // read the code and message and decide how you want to handle this!
-}
-
-
-React.useEffect(()=>{
-navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
-Alert('your location will be used to display the map to your business')
-},[])
 
   const history=useHistory();
     const[error,setError]=React.useState('')
@@ -106,8 +80,7 @@ description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
 instagram:instagramRef.current.value,
-latitude:latitude,
-longitude:longitude
+
 
 
 
