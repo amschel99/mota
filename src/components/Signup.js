@@ -18,59 +18,44 @@ import {useHistory} from 'react-router-dom'
 import axios from 'axios';
 import { Skeleton} from '@mui/material';
 
-//googlemaps api
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 
-import {
-  useJsApiLoader,
-  GoogleMap,
-  Marker,
-  Autocomplete,
-  DirectionsRenderer,
-} from '@react-google-maps/api'
+import "leaflet/dist/leaflet.css";
+import osm from './PrivateRoute/util/Osm-providers';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useGeoLocation from './PrivateRoute/util/useGeoLocation';
 
 const theme = createTheme();
+const markerIcon = new L.Icon({
+  iconUrl: require("resources/images/marker.png"),
+  iconSize: [40, 40],
+  iconAnchor: [17, 46], //[left/right, top/bottom]
+  popupAnchor: [0, -46], //[left/right, top/bottom]
+});
 
 export default function SignUp() {
- /*
-  * googlemaps api
-  */
- const { isLoaded } = useJsApiLoader({
-  googleMapsApiKey:'AIzaSyAX0P-gxcWgeW0pkJtBei0kjd5KnDwGsVY',
-  libraries: ['places'],
-})
-// const [map, setMap] =React.useState(/** @type google.maps.Map */ (null))
-const [long,setLong]=React.useState(null);
-const [lat,setLat]=React.useState(null);
-const getLocation= async ()=>{
-  try{
-    const location= await  navigator.geolocation
-    if(!location){
-         alert('your browser does not support geolocation')
+
+
+  const [center, setCenter] = useState({ lat: 13.084622, lng: 80.248357 });
+  const ZOOM_LEVEL = 9;
+  const mapRef = useRef();
+
+  const location = useGeoLocation();
+
+  const showMyLocation = () => {
+    if (location.loaded && !location.error) {
+      mapRef.current.leafletElement.flyTo(
+        [location.coordinates.lat, location.coordinates.lng],
+        ZOOM_LEVEL,
+        { animate: true }
+      );
+    } else {
+      alert(location.error.message);
     }
-    location.getCurrentPosition((position)=>{
-     const{coords}=position;
-      setLat(coords.latitude)
-      setLong(coords.longitude);
-   },(err)=>{
-     console.log(err);
-   })
-  }catch(err){
-    console.error(err);
-  }
   
-}
-window.onload= async (event)=>{
-   await getLocation();
-   
-}
-
-
-const center = { lat:lat, lng:long}
-console.log(lat);
-
-
-
-
+  }
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -127,12 +112,6 @@ description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
 instagram:instagramRef.current.value
-
-
-
-
-
-
  })
 
 setUser(`${JSON.stringify(data)}`)
@@ -147,10 +126,7 @@ setError(`failed to create an account!${error}`)
     setLoading(false)
       
     } 
-  //   if (!isLoaded) {
-  //   return <Skeleton animation='true' />
-  // }
-
+  
   return (
     <ThemeProvider sx={{marginTop:'150px'}} theme={theme}>
       <Container sx={{marginTop:'150px'}} component="main" maxWidth="xs">
@@ -187,7 +163,7 @@ setError(`failed to create an account!${error}`)
                 />
               </Grid>
                 <Grid item xs={12}>
-                <Autocomplete>
+              
                 <TextField
                   required
                   fullWidth
@@ -198,27 +174,31 @@ setError(`failed to create an account!${error}`)
                    inputRef={locationRef}
                   autoComplete="Enter your location"
                 />
-                 </Autocomplete>
+                
                  
       
               </Grid>
-              {/* <Grid item xs={12} sx={{height:'60px',width:'60px'}}>
-              <GoogleMap
-          center={center}
-          zoom={15}
-          mapContainerStyle={{ width: '100%', height: '100%' }}
-          options={{
-            zoomControl: true,
-            streetViewControl:true,
-            mapTypeControl: true,
-            fullscreenControl: true,
-            sateliteView:true,
-          }}
-          // onLoad={map => setMap(map)}
-        >
-          <Marker position={center} />    
-        </GoogleMap>
-              </Grid> */}
+              <Grid item xs={12} sx={{height:'90px',width:'80px'}}>
+              <Map center={center} zoom={ZOOM_LEVEL} ref={mapRef}>
+              <TileLayer
+                url={osm.maptiler.url}
+                attribution={osm.maptiler.attribution}
+              />
+
+              {location.loaded && !location.error && (
+                <Marker
+                  icon={markerIcon}
+                  position={[
+                    location.coordinates.lat,
+                    location.coordinates.lng,
+                  ]}
+                ></Marker>
+              )}
+            </Map>
+              </Grid>
+              <Grid item xs={12}>
+                
+              </Grid>
                <Grid item xs={12}>
                 <TextField
                   required
