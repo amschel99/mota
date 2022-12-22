@@ -18,7 +18,7 @@ import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
  
-mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg'
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
 
 const theme = createTheme();
 
