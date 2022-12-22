@@ -4,7 +4,7 @@ import React,{useEffect} from 'react'
 import { BrowserRouter as Router, Switch, Route,useLocation} from "react-router-dom";
 import './App.css';
 import Navbar from "./components/Common/Navbar/Navbar";
-import SignUp from "./components/Signup2"
+import SignUp from "./components/Signup"
 import Cars from "./pages/Cars";
 import Home from "./pages/Home";
 import Login from "./components/Login"
