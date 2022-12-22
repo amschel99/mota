@@ -56,7 +56,7 @@ zoom: zoom
         alert('geolocation not  available')
       console.log("Not Available");
     }
-},[zoom])
+})
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
