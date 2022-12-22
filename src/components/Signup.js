@@ -15,10 +15,11 @@ import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
 import {useHistory} from 'react-router-dom'
-import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
+//import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
 import axios from 'axios'
-//import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
- 
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+ import Map, { GeolocateControl } from "react-map-gl";
+ import "mapbox-gl/dist/mapbox-gl.css";
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
 
@@ -193,7 +194,20 @@ setError(`failed to create an account!${error}`)
               </Grid>
 
               <Grid item xs={12}>
-<div ref={mapContainer} className="map-container" />
+<Map
+        mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw"
+        initialViewState={{
+          longitude: longitude,
+          latitude: latitude,
+          zoom: 3.5,
+        }}
+        mapStyle="mapbox://styles/mapbox/streets-v11"
+      >
+        <GeolocateControl
+          positionOptions={{ enableHighAccuracy: true }}
+          trackUserLocation={true}
+        />
+      </Map>
            
               </Grid>
               
