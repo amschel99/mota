@@ -104,15 +104,14 @@ return setError(`passwords do not match`)
   email:emailRef.current.value,
 password:passwordRef.current.value,
 name:nameRef.current.value,
-location:locationRef.current.value,
+location:locationText,
 mobile:mobileRef.current.value,
 description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
 instagram:instagramRef.current.value,
-
-
-
+longitude:center[0],
+latitude:center[1]
 
 
 
