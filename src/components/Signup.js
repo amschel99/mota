@@ -199,18 +199,18 @@ setSearch(e.target.value)
          
           input={<OutlinedInput label="Location" />}
           onChange={(event)=>{
-            locationRef.current.value=event.target.value
-            setLocationText(event.target.value)
-           console.log(event.target.value)
+            locationRef.current.value=event.target.value[0]
+            setLocationText(event.target.value[0])
+          
   
-            setCenter(event.target.key)
+            setCenter(event.target.value[1])
           }}
        
         >
           {placeData.map(({id,center,place_name}) => (
             <MenuItem
               key={center}
-              value={place_name}
+              value={[place_name,center]}
               
             >
               {place_name}
