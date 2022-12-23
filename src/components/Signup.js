@@ -201,7 +201,7 @@ setSearch(e.target.value)
           onChange={(event)=>{
             locationRef.current.value=event.target.value
             setLocationText(event.target.value)
-           
+           console.log(event.target.value)
   
             setCenter(event.target.key)
           }}
