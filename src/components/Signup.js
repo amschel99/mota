@@ -193,8 +193,8 @@ setSearch(e.target.value)
         <Select
           labelId="demo-multiple-name-label"
           id="demo-multiple-name"
-          multiple
          
+      
          
           input={<OutlinedInput label="Location" />}
           onChange={(e)=>{
