@@ -179,10 +179,10 @@ setError(`failed to create an account!${error}`)
                   type="text"
                   id="location"
                   placeholder={locationText}
-value={locationText}
+
                    inputRef={locationRef}
              autoComplete={locationText}
-             onInput={ (e)=>{
+             onChange={ (e)=>{
 setSearch(e.target.value)
              }}
                 />
@@ -200,6 +200,7 @@ setSearch(e.target.value)
          
           input={<OutlinedInput label="Location" />}
           onChange={(e)=>{
+            locationRef.current.value=e.target.value
             setLocationText(e.target.value)
             setCenter(e.target.key)
           }}
