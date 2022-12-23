@@ -20,7 +20,7 @@ function MyMap() {
         <div>
           <h1>Your Location:</h1>
           <Map
-            mapboxAccessToken="MAPBOX_TOKEN"
+            mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA"
             initialViewState={viewport}
             mapStyle="mapbox://styles/mapbox/streets-v11"
           >
