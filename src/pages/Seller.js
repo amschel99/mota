@@ -22,6 +22,8 @@ const Seller = ({ dataAmount }) => {
       const[facebook,setFacebook]=React.useState('')
       const[ twitter,setTwitter]=React.useState('')
       const[instagram,setInstagram]=React.useState('')
+      const[longitude,setLongitude]=React.useState(null)
+      const [latitude,setLatitude]=React.useState(null)
 
 
 
@@ -40,7 +42,8 @@ setDescription(data.description)
 setFacebook(data.facebook)
 setTwitter(data.twitter)
 setInstagram(data.instagram)
-
+setLongitude(data.longitude)
+setLatitude(data.latitude)
 
     }
     catch(e){

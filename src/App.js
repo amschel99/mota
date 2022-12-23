@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Login from "./components/Login"
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute"
 import Reset from './components/Reset'
-import UpdateProfile from './components/UpdateProfile'
+
 import CarDetails from "./pages/CarDetails";
 import Page404 from "./pages/404";
 import Seller from './pages/Seller';
@@ -23,9 +23,8 @@ import LoadingSpinner from "./components/Common/LoadingSpinner/LoadingSpinner";
 import About from "./pages/About";
 import Contact from './pages/Contact';
 import Profile from "./pages/Profile"
-import AddNewCar from "./components/Dashboard/AdminParts/AddNewCar.js"
-import ManageCars from "./components/Dashboard/AdminParts/ManageCars.js"
 
+import Map from './components/Map.js'
 // customize mui theme
 export const theme = createTheme({
   palette: {
@@ -123,9 +122,10 @@ function App() {
                          <About />
                          <Footer/>
                   </>
-           
+       
                   
                   </Route>
+                      <Route exact path="/map"><Map/></Route>
                 <Route exact path="/contact">
                   <Navbar3/>
                   <Contact/>
