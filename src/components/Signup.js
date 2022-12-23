@@ -159,7 +159,7 @@ value={place}
 try{
 const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${e.target.value}.json?access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
 const {features}=data
-const{place_name,center}=features
+const{place_name,center}=features[0]
 setPlace(place_name)
 console.log(data)
 console.log(place_name)
