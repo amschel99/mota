@@ -161,6 +161,7 @@ const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/
 const {features}=data
 const{place_name,center}=features
 setPlace(place_name)
+console.log(data)
 console.log(place_name)
 console.log(center)
 setLatitude(center[1])
