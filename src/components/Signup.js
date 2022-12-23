@@ -188,8 +188,8 @@ setSearch(e.target.value)
            
               </Grid>
 
-             <Grid item xs={12}>
-<InputLabel id="demo-multiple-name-label">Name</InputLabel>
+  {placeData.length>1 &&  (<Grid item xs={12}>
+<InputLabel id="demo-multiple-name-label">location</InputLabel>
         <Select
           labelId="demo-multiple-name-label"
           id="demo-multiple-name"
@@ -212,8 +212,8 @@ setSearch(e.target.value)
             </MenuItem>
           ))}
         </Select>
-             </Grid>
-              
+             </Grid>)
+}
                <Grid item xs={12}>
                 <TextField
                   required
