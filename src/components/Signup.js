@@ -18,26 +18,22 @@ import {useHistory} from 'react-router-dom'
 //import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
 import axios from 'axios'
 
-import Map, { Marker } from "react-map-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
-
-//mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aGpucXcxaGVkM25ueXc1ZDd1bGRpIn0.m4PpfiQVSwNTP_s8Q-Djcw'
+import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA'
 
 const theme = createTheme();
 
 
 export default function SignUp() {
-const [viewport, setViewport] = React.useState({});
-React.useEffect(() => {
-    navigator.geolocation.getCurrentPosition((pos) => {
-      setViewport({
-        ...viewport,
-        latitude: pos.coords.latitude,
-        longitude: pos.coords.longitude,
-        zoom: 3.5,
-      });
-    });
-  }, [viewport]);
+
+const mapRef=useRef()
+const map = new mapboxgl.Map({
+container: mapRef.current.value, // container ID
+style: 'mapbox://styles/mapbox/streets-v12', // style URL
+center: [-74.5, 40], // starting position [lng, lat]
+zoom: 9, // starting zoom
+});
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -168,29 +164,10 @@ setError(`failed to create an account!${error}`)
                 />
            
               </Grid>
-
-              <Grid item xs={12}>
-<div>
-      {viewport.latitude && viewport.longitude &&(
-        <div>
-          <h1>Your Location:</h1>
-          <Map
-            mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA"
-            initialViewState={viewport}
-            mapStyle="mapbox://styles/amschel/clc05bcbu000615pjzs4eopdb"
-          
-          >
-            <Marker
-              longitude={viewport.longitude}
-              latitude={viewport.latitude}
-            />
-          </Map>
-        </div>
-      )}
-    </div>
-           
+<Grid item xs={12}>
+               <div ref={mapRef} id="map"></div>
               </Grid>
-              
+             
               
                <Grid item xs={12}>
                 <TextField
