@@ -25,7 +25,7 @@ import Contact from './pages/Contact';
 import Profile from "./pages/Profile"
 import AddNewCar from "./components/Dashboard/AdminParts/AddNewCar.js"
 import ManageCars from "./components/Dashboard/AdminParts/ManageCars.js"
-
+import MyMap from './components/MyMap.js'
 // customize mui theme
 export const theme = createTheme({
   palette: {
@@ -148,6 +148,13 @@ function App() {
                           <>
                           <Navbar3/>
                           <Login/>
+                          </>
+                          
+                          </Route>
+                          <Route exact path="/location">
+                          <>
+                          <Navbar3/>
+                          <MyMap/>
                           </>
                           
                           </Route>
