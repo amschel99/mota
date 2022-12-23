@@ -178,8 +178,8 @@ setError(`failed to create an account!${error}`)
                   label="Search Location"
                   type="text"
                   id="location"
-                  placeholder="Adress"
-value={locationText}
+                  placeholder={locationText}
+
                    inputRef={locationRef}
              autoComplete="location"
              onChange={ (e)=>{
