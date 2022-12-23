@@ -202,7 +202,7 @@ setSearch(e.target.value)
             locationRef.current.value=event.target.value[0]
             setLocationText(event.target.value[0])
           
-  
+  console.log(event.target.value[1])
             setCenter(event.target.value[1])
           }}
        
