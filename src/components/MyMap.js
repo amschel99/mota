@@ -13,7 +13,7 @@ function MyMap() {
         zoom: 3.5,
       });
     });
-  }, []);
+  }, [viewport]);
   return (
     <div>
       {viewport.latitude && viewport.longitude && (
