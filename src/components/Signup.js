@@ -37,7 +37,7 @@ React.useEffect(() => {
         zoom: 3.5,
       });
     });
-  }, []);
+  }, [viewport]);
   const history=useHistory();
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -171,11 +171,11 @@ setError(`failed to create an account!${error}`)
 
               <Grid item xs={12}>
 <div>
-      {viewport.latitude && viewport.longitude && (
+      {viewport.latitude && viewport.longitude &(
         <div>
           <h1>Your Location:</h1>
           <Map
-            mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGJ5aHI3N2cwYWs2M3FwOGQzN21qMGhvIn0.aSF1TbJw1YWVE-JR5g7BIg"
+            mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA"
             initialViewState={viewport}
             mapStyle="mapbox://styles/mapbox/streets-v11"
           >
