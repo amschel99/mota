@@ -54,6 +54,7 @@ fetchLocation()
   const history=useHistory();
 
 const[center,setCenter]=React.useState([])
+const[locationText,setLocationText]=React.useState('')
   const[placeData,setPlaceData]=React.useState([])
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -174,11 +175,11 @@ setError(`failed to create an account!${error}`)
                   required
                   fullWidth
                   name="location"
-                  label="Location description"
+                  label="Search Location"
                   type="text"
                   id="location"
                   placeholder="Adress"
-
+value={locationText}
                    inputRef={locationRef}
              autoComplete="location"
              onChange={ (e)=>{
@@ -198,14 +199,15 @@ setSearch(e.target.value)
          
           input={<OutlinedInput label="Location" />}
           onChange={(e)=>{
-            setCenter(e.target.value)
+            setLocationText(e.target.value)
+            setCenter(e.target.key)
           }}
        
         >
           {placeData.map(({id,center,place_name}) => (
             <MenuItem
-              key={id}
-              value={center}
+              key={center}
+              value={place_name}
               
             >
               {place_name}
