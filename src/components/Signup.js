@@ -8,6 +8,12 @@ import {useRef} from "react"
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -23,12 +29,32 @@ const theme = createTheme();
 
 
 export default function SignUp() {
+const[search,setSearch]=React.useState('')
+React.useEffect(()=>{
+const fetchLocation= async ()=>{
+try{
+const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${search}.json?access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
+const {features}=data
 
+
+
+setPlaceData(features)// an array
+
+
+}
+catch(error){
+
+return;
+}
+        
+}
+fetchLocation()
+},[search])
 
   const history=useHistory();
-  const[latitude,setLatitude]=React.useState()
-  const [longitude,setLongitude]=React.useState()
-  const[place,setPlace]=React.useState('')
+
+const[center,setCenter]=React.useState([])
+  const[placeData,setPlaceData]=React.useState([])
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
     const [user,setUser]=React.useState('')
@@ -152,31 +178,41 @@ setError(`failed to create an account!${error}`)
                   type="text"
                   id="location"
                   placeholder="Adress"
-value={place}
+
                    inputRef={locationRef}
              autoComplete="location"
-             onChange={ async (e)=>{
-try{
-const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${e.target.value}.json?access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
-const {features}=data
-const{place_name,center}=features[0]
-setPlace(place_name)
-console.log(data)
-console.log(place_name)
-console.log(center)
-setLatitude(center[1])
-setLongitude(center[0])
-}
-catch(error){
-
-return;
-}
+             onChange={ (e)=>{
+setSearch(e.target.value)
              }}
                 />
            
               </Grid>
 
-             
+             <Grid item xs={12}>
+<InputLabel id="demo-multiple-name-label">Name</InputLabel>
+        <Select
+          labelId="demo-multiple-name-label"
+          id="demo-multiple-name"
+          multiple
+         
+         
+          input={<OutlinedInput label="Location" />}
+          onChange={(e)=>{
+            setCenter(e.target.value)
+          }}
+       
+        >
+          {placeData.map(({id,center,place_name}) => (
+            <MenuItem
+              key={id}
+              value={center}
+              
+            >
+              {place_name}
+            </MenuItem>
+          ))}
+        </Select>
+             </Grid>
               
                <Grid item xs={12}>
                 <TextField
