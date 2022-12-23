@@ -179,10 +179,10 @@ setError(`failed to create an account!${error}`)
                   type="text"
                   id="location"
                   placeholder={locationText}
-
+value={locationText}
                    inputRef={locationRef}
              autoComplete={locationText}
-             onChange={ (e)=>{
+             onInput={ (e)=>{
 setSearch(e.target.value)
              }}
                 />
