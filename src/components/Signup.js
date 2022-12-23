@@ -171,7 +171,7 @@ setError(`failed to create an account!${error}`)
 
               <Grid item xs={12}>
 <div>
-      {viewport.latitude && viewport.longitude &(
+      {viewport.latitude && viewport.longitude &&(
         <div>
           <h1>Your Location:</h1>
           <Map
