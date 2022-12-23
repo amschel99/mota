@@ -177,7 +177,8 @@ setError(`failed to create an account!${error}`)
           <Map
             mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA"
             initialViewState={viewport}
-            mapStyle="mapbox://styles/mapbox/streets-v11"
+            mapStyle="mapbox://styles/mapbox/streets-v12"
+          
           >
             <Marker
               longitude={viewport.longitude}
