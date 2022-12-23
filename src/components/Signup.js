@@ -31,13 +31,12 @@ const theme = createTheme();
 export default function SignUp() {
 const[search,setSearch]=React.useState('')
 React.useEffect(()=>{
+
 const fetchLocation= async ()=>{
 try{
-const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${search}.json?access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
+  
+const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/ke/${search}.json?access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
 const {features}=data
-
-
-
 setPlaceData(features)// an array
 
 
@@ -202,7 +201,9 @@ setSearch(e.target.value)
           onChange={(e)=>{
             locationRef.current.value=e.target.value
             setLocationText(e.target.value)
-            setCenter(e.target.key)
+            const selectedIndex = event.target.options.selectedIndex;
+        console.log(event.target.options[selectedIndex].getAttribute('data-key'));
+            setCenter(event.target.options[selectedIndex].getAttribute('data-key'))
           }}
        
         >
