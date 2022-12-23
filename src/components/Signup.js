@@ -192,6 +192,7 @@ setSearch(e.target.value)
   {placeData.length>1 &&  (<Grid item xs={12}>
 <InputLabel id="demo-multiple-name-label">location</InputLabel>
         <Select
+        sx={{width:'100%'}}
           labelId="demo-multiple-name-label"
           id="demo-multiple-name"
          
