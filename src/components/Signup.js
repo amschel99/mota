@@ -18,23 +18,17 @@ import {useHistory} from 'react-router-dom'
 //import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
 import axios from 'axios'
 
-import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from 'mapbox-gl';
-mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA'
 
 const theme = createTheme();
 
 
 export default function SignUp() {
 
-const mapRef=useRef()
-const map = new mapboxgl.Map({
-container: mapRef.current.value, // container ID
-style: 'mapbox://styles/mapbox/streets-v12', // style URL
-center: [-74.5, 40], // starting position [lng, lat]
-zoom: 9, // starting zoom
-});
+
   const history=useHistory();
+  const[latitude,setLatitude]=React.useState()
+  const [longitude,setLongitude]=React.useState()
+  const[place,setPlace]=React.useState('')
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
     const [user,setUser]=React.useState('')
@@ -158,15 +152,29 @@ setError(`failed to create an account!${error}`)
                   type="text"
                   id="location"
                   placeholder="Adress"
-
+value={place}
                    inputRef={locationRef}
              autoComplete="location"
+             onChange={ async (e)=>{
+try{
+const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${e.target.value}.json?access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
+const {features}=data
+const{place_name,center}=features
+setPlace(place_name)
+console.log(place_name)
+console.log(center)
+setLatitude(center[1])
+setLongitude(center[0])
+}
+catch(error){
+
+return;
+}
+             }}
                 />
            
               </Grid>
-<Grid item xs={12}>
-               <div ref={mapRef} id="map"></div>
-              </Grid>
+
              
               
                <Grid item xs={12}>
