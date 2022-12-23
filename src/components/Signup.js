@@ -198,9 +198,9 @@ setSearch(e.target.value)
       
          
           input={<OutlinedInput label="Location" />}
-          onChange={(e)=>{
-            locationRef.current.value=e.target.value
-            setLocationText(e.target.value)
+          onChange={(event)=>{
+            locationRef.current.value=event.target.value
+            setLocationText(event.target.value)
             const selectedIndex = event.target.options.selectedIndex;
         console.log(event.target.options[selectedIndex].getAttribute('data-key'));
             setCenter(event.target.options[selectedIndex].getAttribute('data-key'))
