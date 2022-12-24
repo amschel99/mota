@@ -206,6 +206,21 @@ setSearch(e.target.value)
           }}
        
         >
+           <TextField
+                  required
+                  fullWidth
+                  name="location"
+                  label="Search Location"
+                  type="text"
+                  id="location"
+                  placeholder={locationText}
+
+                   inputRef={locationRef}
+             autoComplete={locationText}
+             onChange={ (e)=>{
+setSearch(e.target.value)
+             }}
+                />
           {placeData.map(({id,center,place_name,geometry}) => (
             <MenuItem
               key={center}
