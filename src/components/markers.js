@@ -1,6 +1,6 @@
 import React from "react";
 import { Marker } from "react-map-gl";
-import { useStateMap } from "../hooks/mapHook";
+import { useStateMap } from "../../src/hooks/maphook";
 export const Markers = () => {
   const { markers } = useStateMap();
   return (
