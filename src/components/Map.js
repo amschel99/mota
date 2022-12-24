@@ -14,21 +14,24 @@ import React from 'react'
         latitude:latitude,
         longitude:longitude,
         zoom:9,
-        width:'500px',
-        height:'500px'
+        width:'100%',
+        height:'100%'
     })
 
 
-return <div>
+return (
+<div className="App" style={{width:'100%',height:"900px"}}>
    
-
-
 <ReactMapGL mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapboxApiAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
+>
 
-/>
+</ReactMapGL>
+
+
 
 
 
 </div>
+)
 }
 export default Map;
