@@ -7,7 +7,7 @@ import store from './store';
 import reportWebVitals from './reportWebVitals';
 import {AuthContextProvider} from "./contexts/AuthContext"
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { MapProvider } from "./hooks/maphook.js";
+import { MapProvider } from "./../hooks/maphook";
 
 ReactDOM.render(
   <React.StrictMode>
