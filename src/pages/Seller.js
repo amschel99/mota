@@ -7,7 +7,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LoadingSpinner from '../components/Common/LoadingSpinner/LoadingSpinner';
 import SingleCar from '../components/CarsSection/SingleCar/SingleCar';
-
+import Map from '../components/Map.js'
 import {useParams} from "react-router-dom";
 import SocialFlow from "../components/Common/socialFlow/socialFlow";
 
@@ -77,6 +77,9 @@ useEffect(() => {
             <Location sx={{marginRight:'10px',marginTop:'5px'}}/><span>{location}</span> 
             
             </Typography>
+            <Box>
+                <Map longitude={longitude} latitude={latitude}/>
+            </Box>
 
              <Typography
                component='a' href={`tel:${mobile}`}
