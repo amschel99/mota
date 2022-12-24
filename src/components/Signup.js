@@ -13,7 +13,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-
+import { ListSubheader, InputAdornment } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -24,7 +24,7 @@ import {useHistory} from 'react-router-dom'
 //import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
 import axios from 'axios'
 
-
+import SearchIcon from "@mui/icons-material/Search";
 const theme = createTheme();
 
 
@@ -173,10 +173,13 @@ setError(`failed to create an account!${error}`)
 <InputLabel id="demo-multiple-name-label">location</InputLabel>
         <Select
         sx={{width:'100%'}}
-          labelId="demo-multiple-name-label"
-          id="demo-multiple-name"
+         MenuProps={{ autoFocus: false }}
+          labelId="search-select-label"
+          id="search-select"
+          value={locationText}
+          label="Search location"
          
-      value={locationText}
+     
          
           input={<OutlinedInput label="Location" />}
           onChange={(event)=>{
@@ -186,9 +189,17 @@ setError(`failed to create an account!${error}`)
   console.log( event.target.value[1])
             setCenter(event.target.value[1])
           }}
-       
+          onClose={()=>{
+            setSearch('')
+          }}
+               renderValue={() => locationText}
         >
+            <ListSubheader>
            <TextField
+           size="small"
+              // Autofocus on textfield
+              autoFocus
+
                   required
                   fullWidth
                   name="location"
@@ -199,10 +210,24 @@ setError(`failed to create an account!${error}`)
 
                    inputRef={locationRef}
              autoComplete={locationText}
+             InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                )
+              }}
              onChange={ (e)=>{
 setSearch(e.target.value)
              }}
+             onKeyDown={(e) => {
+                if (e.key !== "Escape") {
+                  // Prevents autoselecting item while typing (default Select behaviour)
+                  e.stopPropagation();
+                }
+              }}
                 />
+                </ListSubheader>
           {placeData.map(({id,center,place_name,geometry}) => (
             <MenuItem
               key={center}
