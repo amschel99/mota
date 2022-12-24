@@ -48,13 +48,15 @@ const[userName,setUserName]=React.useState("")
 
     
       React.useEffect(()=>{
+        console.log(currentUser.email)
         const getUser= async ()=>{
   try{
+    
 const {data}= await axios.post(`https://milesmotors.onrender.com/auth/login`,{
   email:currentUser.email
 })
 
-console.log(data)
+console.log( "this is"+data)
 setUserName(data.name)
 
 

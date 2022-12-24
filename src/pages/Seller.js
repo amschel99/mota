@@ -42,8 +42,8 @@ setDescription(data.description)
 setFacebook(data.facebook)
 setTwitter(data.twitter)
 setInstagram(data.instagram)
-setLongitude(data.longitude)
-setLatitude(data.latitude)
+setLongitude(parseFloat(data.longitude))
+setLatitude(parseFloat(data.latitude))
 
     }
     catch(e){

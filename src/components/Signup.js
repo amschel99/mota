@@ -110,8 +110,8 @@ description:descriptionRef.current.value,
 facebook:facebookRef.current.value,
 twitter:twitterRef.current.value,
 instagram:instagramRef.current.value,
-longitude:center[0],
-latitude:center[1]
+longitude:center[0].toString(),
+latitude:center[1].toString()
 
 
 
@@ -201,7 +201,7 @@ setSearch(e.target.value)
             locationRef.current.value=event.target.value[0]
             setLocationText(event.target.value[0])
           
-  console.log(event.target.value[1])
+  console.log( event.target.value[1])
             setCenter(event.target.value[1])
           }}
        
