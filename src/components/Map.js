@@ -1,6 +1,6 @@
 import ReactMapGL,{Marker} from 'react-map-gl'
 import React from 'react'
-import { useDispatchMap } from "../components/../../hooks/maphook";
+import { useDispatchMap } from "../hooks/maphook";
 
    // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax
