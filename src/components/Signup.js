@@ -167,25 +167,7 @@ setError(`failed to create an account!${error}`)
                   autoComplete="Enter your name"
                 />
               </Grid>
-                <Grid item xs={12}>
-
-                <TextField
-                  required
-                  fullWidth
-                  name="location"
-                  label="Search Location"
-                  type="text"
-                  id="location"
-                  placeholder={locationText}
-
-                   inputRef={locationRef}
-             autoComplete={locationText}
-             onChange={ (e)=>{
-setSearch(e.target.value)
-             }}
-                />
-           
-              </Grid>
+               
 
   {placeData.length>1 &&  (<Grid item xs={12}>
 <InputLabel id="demo-multiple-name-label">location</InputLabel>
@@ -194,7 +176,7 @@ setSearch(e.target.value)
           labelId="demo-multiple-name-label"
           id="demo-multiple-name"
          
-      
+      value={locationText}
          
           input={<OutlinedInput label="Location" />}
           onChange={(event)=>{
