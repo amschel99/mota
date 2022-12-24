@@ -35,7 +35,7 @@ React.useEffect(()=>{
 const fetchLocation= async ()=>{
 try{
   
-const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/ke/${search}.json?access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
+const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${search}.json?country=ke,ug&types=poi,adress,neighborhood,locality,place,district,postcode&access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
 const {features}=data
 setPlaceData(features)// an array
 
