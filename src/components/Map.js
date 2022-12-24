@@ -13,8 +13,8 @@ import mapboxgl from '!mapbox-gl';
 
  const Map= ({longitude,latitude})=>{
     const [viewPort,setViewPort]=React.useState({
-  latitude:29.763041,
-        longitude:-95.386397,
+        latitude:latitude,
+        longitude:longitude,
         zoom:9,
         width:'100%',
         height:'100%'
