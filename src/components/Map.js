@@ -1,7 +1,7 @@
 import ReactMapGL from 'react-map-gl'
 import React from 'react'
 // added the following 6 lines.
-    import mapboxgl from '!mapbox-gl';
+
 
    
 
