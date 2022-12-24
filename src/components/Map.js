@@ -1,6 +1,6 @@
 import ReactMapGL from 'react-map-gl'
 import React from 'react'
-import {Box } from "@mui/material"
+
 
 
  //latitude:29.763041,
@@ -16,7 +16,8 @@ import {Box } from "@mui/material"
     })
 const access_token='pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA'
 
-return <Box sx={{width:{xs:'100vw',sm:'50vw', height:'500px'}}}>
+return <div className="App" style={{width:'500px',height:'900px'}}>
+   
 
 
 <ReactMapGL mapboxAccessToken={access_token} mapboxApiAccessToken={access_token} mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
@@ -25,7 +26,7 @@ return <Box sx={{width:{xs:'100vw',sm:'50vw', height:'500px'}}}>
 
 
 </ReactMapGL>
-</Box>
 
+</div>
 }
 export default Map;
