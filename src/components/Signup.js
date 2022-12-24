@@ -169,7 +169,7 @@ setError(`failed to create an account!${error}`)
               </Grid>
                
 
-  {placeData.length>1 &&  (<Grid item xs={12}>
+  <Grid item xs={12}>
 <InputLabel id="demo-multiple-name-label">location</InputLabel>
         <Select
         sx={{width:'100%'}}
@@ -239,7 +239,7 @@ setSearch(e.target.value)
           ))}
         </Select>
              </Grid>)
-}
+
                <Grid item xs={12}>
                 <TextField
                   required
