@@ -65,15 +65,15 @@ getUser()
              {description}   
             </Typography>
 
-            <Typography  align="center" color="black"  mb={3}  >
+            <Typography  align="center" color="black"  mb={3} sx={{marginTop:"20px"}}  >
             <span>Located at {location}</span> 
             
             </Typography>
-             <Typography  align="center" color="black"  mb={3}  >
+             <Typography sx={{marginTop:"20px"}} align="center" color="black"  mb={3}  >
             MAP
             
             </Typography>
-            <Box sx={{width:"90vw",marginLeft:"5vw",marginRight:'5px'}}>
+            <Box sx={{width:"90vw",marginLeft:"5vw",marginRight:'5px',marginTop:'20px'}}>
              {longitude && latitude ?  <Map longitude={longitude} latitude={latitude}/>:null}
             </Box>
 
@@ -81,10 +81,10 @@ getUser()
                component='a' href={`tel:${mobile}`}
                 variant="p"
                 
-              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'red',width:'100vw',marginTop:'10px'}}
+              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'red',width:'100vw',marginTop:'10px',fontStyle:'cursive'}}
                 fontWeight={700}
               >
-              <Phone sx={{marginTop:'2px',marginRight:"15px"}}/> Call  {mobile}
+              <Phone sx={{marginTop:'15px',marginRight:"15px"}}/> Call  {mobile}
               </Typography>
              
             
