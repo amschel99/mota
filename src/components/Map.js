@@ -1,6 +1,5 @@
 import ReactMapGL from 'react-map-gl'
 import React from 'react'
-// added the following 6 lines.
 
 
    
@@ -26,10 +25,9 @@ return <div className="App" style={{width:'100vw',height:'60vh'}}>
 
 <ReactMapGL mapboxAccessToken={access_token} mapboxApiAccessToken={access_token} mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
 
->
+/>
 
 
-</ReactMapGL>
 
 </div>
 }
