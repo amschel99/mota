@@ -1,6 +1,6 @@
 import ReactMapGL from 'react-map-gl'
 import React from 'react'
-import {Box } from "@mui/icons-material"
+import {Box } from "@mui/material"
 
 
  //latitude:29.763041,
