@@ -16,7 +16,7 @@ import React from 'react'
     })
 const access_token='pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA'
 
-return <div className="App" style={{width:'500px',height:'900px'}}>
+return <div className="App" style={{width:'100vw',height:'60vh'}}>
    
 
 
