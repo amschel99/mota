@@ -23,7 +23,10 @@ return <div className="App" style={{width:'100vw'}}>
    
 
 
-<ReactMapGL  mapboxApiAccessToken={access_token} mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} />
+<ReactMapGL mapboxAccessToken={access_token} mapboxApiAccessToken={access_token} mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
+
+/>
+
 
 
 </div>
