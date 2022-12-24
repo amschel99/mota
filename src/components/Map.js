@@ -1,6 +1,6 @@
 import ReactMapGL,{Marker} from 'react-map-gl'
 import React from 'react'
-import { useDispatchMap } from "../../src/hooks/maphook";
+import { useDispatchMap,MapProvider} from "../../src/hooks/maphook";
 
    // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -24,7 +24,7 @@ import { Markers} from "./markers";
 
 return (
 <div className="App" style={{width:'100%',height:"400px"}}>
-   
+ <MapProvider> 
 <ReactMapGL mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapboxApiAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
  onViewportChange={(viewport)=>setViewPort(viewport)}  onClick={x => { 
         x.srcEvent.which === 1 && // check if left click
@@ -34,6 +34,7 @@ return (
         }>
  <Markers/>
 </ReactMapGL>
+</MapProvider> 
 
 
 
