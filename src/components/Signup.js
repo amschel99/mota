@@ -238,7 +238,7 @@ setSearch(e.target.value)
             </MenuItem>
           ))}
         </Select>
-             </Grid>)
+             </Grid>
 
                <Grid item xs={12}>
                 <TextField
