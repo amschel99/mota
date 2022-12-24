@@ -69,11 +69,9 @@ getUser()
             <Location sx={{marginRight:'10px',marginTop:'5px'}}/><span>{location}</span> 
             
             </Typography>
-           <div>
-<Map longitude={longitude} latitude={latitude}/>
-           </div>
-                
-    
+            <Box>
+                <Map longitude={longitude} latitude={latitude}/>
+            </Box>
 
              <Typography
                component='a' href={`tel:${mobile}`}
