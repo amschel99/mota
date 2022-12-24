@@ -7,12 +7,15 @@ import store from './store';
 import reportWebVitals from './reportWebVitals';
 import {AuthContextProvider} from "./contexts/AuthContext"
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { MapProvider } from "./hooks/maphook.js";
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
        <Provider store={store}>
+          <MapProvider>
    <App />
+   </MapProvider>
        </Provider>
        </AuthContextProvider>
  
