@@ -15,18 +15,15 @@ import React from 'react'
         longitude:longitude,
         zoom:9,
         width:'100%',
-        height:'100%'
+        height:'500px'
     })
 const access_token='pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA'
 
-return <div className="App" style={{width:'100vw',height:'60vh'}}>
+return <div className="App" style={{width:'100vw'}}>
    
 
 
-<ReactMapGL mapboxAccessToken={access_token} mapboxApiAccessToken={access_token} mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
-
-/>
-
+<ReactMapGL  mapboxApiAccessToken={access_token} mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} />
 
 
 </div>
