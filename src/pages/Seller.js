@@ -60,16 +60,20 @@ getUser()
 
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
         <Box sx={{ maxWidth: 'xl', marginTop:'100px', mx: 'auto', p: 2, justifyContent: "center" }}>
-            <Typography   variant="h4" align="center" color="red" fontWeight="bold" mb={3}> More Details About {user}</Typography>
-            <Typography  variant="h6" align="center" color="black" >
+            <Typography   variant="h4" align="center" color="black" fontWeight="bold" mb={3}>  About {user}</Typography>
+            <Typography sx={{fontStyle:"cursive"}} variant="h6" align="center" color="black" >
              {description}   
             </Typography>
 
             <Typography  align="center" color="black"  mb={3}  >
-            <Location sx={{marginRight:'10px',marginTop:'5px'}}/><span>{location}</span> 
+            <span>Located at {location}</span> 
             
             </Typography>
-            <Box sx={{width:"100vw"}}>
+             <Typography  align="center" color="black"  mb={3}  >
+            MAP
+            
+            </Typography>
+            <Box sx={{width:"90vw",marginLeft:"5vw",marginRight:'5px'}}>
              {longitude && latitude ?  <Map longitude={longitude} latitude={latitude}/>:null}
             </Box>
 
@@ -77,7 +81,7 @@ getUser()
                component='a' href={`tel:${mobile}`}
                 variant="p"
                 
-              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'blue',width:'100vw'}}
+              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'red',width:'100vw',marginTop:'10px'}}
                 fontWeight={700}
               >
               <Phone sx={{marginTop:'2px',marginRight:"15px"}}/> Call  {mobile}
@@ -85,7 +89,7 @@ getUser()
              
             
 
-            <Typography sx={{marginTop:'10px'}} variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>All Cars by {user}</Typography>
+            <Typography sx={{marginTop:'10px'}} variant="h4" align="center" color="primary" fontWeight="bold" mb={6}>Cars in inventory</Typography>
          {userEmail?   <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
                 {
