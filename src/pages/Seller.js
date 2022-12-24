@@ -28,7 +28,7 @@ const Seller = ({ dataAmount }) => {
 
 
 
-  const [cars, setCars] = useState(null);
+  const [cars, setCars] = useState([]);
 useEffect(()=>{
  
 const getUser= async ()=>{
@@ -51,7 +51,7 @@ return null;
     }
 }
 getUser()
-},[userId,cars,userEmail])
+},[userId])
 
 
 
@@ -97,7 +97,7 @@ useEffect(() => {
          {userEmail?   <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3, xl: 4 }}
                 sx={{ justifyContent: 'center' }}>
                 {
-                    cars.map(carInfo => <SingleCar carInfo={carInfo} key={carInfo.carID} />)
+                    cars.map(carInfo => <SingleCar carInfo={carInfo} key={carInfo._id} />)
                 }
             </Grid>:<div>Failed to load cars</div>}
             <SocialFlow facebook={facebook} twitter={twitter} instagram={instagram} mobile={mobile}/>
