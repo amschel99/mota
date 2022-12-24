@@ -66,7 +66,7 @@ getUser()
             </Typography>
 
             <Typography  align="center" color="black"  mb={3} sx={{marginTop:"20px"}}  >
-            <span>Located at {location}</span> 
+            <span>We are located at {location}</span> 
             
             </Typography>
              <Typography sx={{marginTop:"20px"}} align="center" color="black"  mb={3}  >
