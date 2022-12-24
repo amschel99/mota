@@ -44,26 +44,18 @@ setTwitter(data.twitter)
 setInstagram(data.instagram)
 setLongitude(parseFloat(data.longitude))
 setLatitude(parseFloat(data.latitude))
-
+const carsObject=await axios.get(`https://milesmotors.onrender.com/cars/all?user=${userEmail}`)
+setCars(carsObject.data)
     }
     catch(e){
 return null;
     }
 }
 getUser()
-},[userId])
+},[userId,userEmail])
 
 
 
-useEffect(() => {
-        const FetchCars = async () => {
-            
-       const {data} =  await axios.get(`https://milesmotors.onrender.com/cars/all?user=${userEmail}`)
-        setCars(data)
-       
- }
-       FetchCars()   
-    }, [userEmail])
 
 
     return (!cars ? <LoadingSpinner style={{ padding: '100px 0' }} /> :
