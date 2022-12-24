@@ -52,7 +52,7 @@ return null;
     }
 }
 getUser()
-},[userId])
+})
 
 
 

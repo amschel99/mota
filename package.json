@@ -37,7 +37,8 @@
     "react-toastify": "^9.1.1",
     "slick-carousel": "^1.8.1",
     "typewriter-effect": "^2.18.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "worker-loader": "^3.0.8"
   },
   "devDependencies": {
     "react-scripts": "^5.0.0"
@@ -56,17 +57,17 @@
   },
   "browserslist": {
     "production": [
-        ">0.2%",
-        "not dead",
-        "not ie 11",
-        "not chrome < 51",
-        "not safari < 10",
-        "not android < 51"
+      ">0.2%",
+      "not dead",
+      "not ie 11",
+      "not chrome < 51",
+      "not safari < 10",
+      "not android < 51"
     ],
     "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
-}
+  }
 }
