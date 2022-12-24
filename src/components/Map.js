@@ -26,7 +26,7 @@ return (
 <div className="App" style={{width:'100%',height:"400px"}}>
  <MapProvider> 
 <ReactMapGL mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapboxApiAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
- onViewportChange={(viewport)=>setViewPort(viewport)}  onClick={x => { 
+ onViewportChange={setViewPort}  onClick={x => { 
         x.srcEvent.which === 1 && // check if left click
           mapDispatch({ type: "ADD_MARKER", 
             payload: { marker: x.lngLat } });
