@@ -206,10 +206,10 @@ setSearch(e.target.value)
           }}
        
         >
-          {placeData.map(({id,center,place_name}) => (
+          {placeData.map(({id,center,place_name,geometry}) => (
             <MenuItem
               key={center}
-              value={[place_name,center]}
+              value={[place_name,geometry.coordinates]}
               
             >
               {place_name}
