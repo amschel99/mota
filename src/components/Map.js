@@ -22,7 +22,7 @@ import mapboxgl from '!mapbox-gl';
 
 
 return (
-<div className="App" style={{width:'100%',height:"900px"}}>
+<div className="App" style={{width:'100%',height:"400px"}}>
    
 <ReactMapGL mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapboxApiAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
 >

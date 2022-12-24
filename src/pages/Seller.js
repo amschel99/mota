@@ -69,8 +69,8 @@ getUser()
             <Location sx={{marginRight:'10px',marginTop:'5px'}}/><span>{location}</span> 
             
             </Typography>
-            <Box>
-                <Map longitude={longitude} latitude={latitude}/>
+            <Box sx={{width:"100vw"}}>
+             {longitude && latitude ?  <Map longitude={longitude} latitude={latitude}/>:null}
             </Box>
 
              <Typography
