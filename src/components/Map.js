@@ -12,7 +12,7 @@ import { Markers} from "./markers";
 
  const Map= ({longitude,latitude})=>{
     //const mapDispatch = useDispatchMap();
-    const [viewPort,setViewPort]=React.useState({
+    const [viewport,setViewport]=React.useState({
         latitude:latitude,
         longitude:longitude,
         zoom:9,
@@ -24,8 +24,8 @@ import { Markers} from "./markers";
 return (
 <div className="App" style={{width:'100%',height:"400px"}}>
  <MapProvider> 
-<ReactMapGL mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapboxApiAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapStyle='mapbox://styles/mapbox/streets-v12' {...viewPort} 
-onViewportChange={setViewPort}>
+<ReactMapGL mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapboxApiAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapStyle='mapbox://styles/mapbox/streets-v12' 
+onViewportChange={setViewport} {...viewport} >
  <Markers latitude={latitude} longitude={longitude}/>
 </ReactMapGL>
 </MapProvider> 
