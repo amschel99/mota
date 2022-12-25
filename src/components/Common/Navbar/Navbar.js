@@ -53,7 +53,7 @@ const searchRef=React.useRef()
 const [cars,setCars]=React.useState([])
   const dispatch = useDispatch();
   const [value, setValue] = React.useState("");
-
+const[searchText,setSearchText]=React.useState('')
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -138,7 +138,7 @@ fetchCars()
          MenuProps={{ autoFocus: false }}
           labelId="search-select-label"
           id="search-select"
-          value={value}
+          value={searchText}
           label="Search car"
          
      
@@ -146,7 +146,7 @@ fetchCars()
           input={<OutlinedInput label="Location" />}
           onChange={(event)=>{
          searchRef.current.value=event.target.value
-          
+          setSearchText(event.target.value)
                return dispatch(search({ search:event.target.value}));
   
           }}
