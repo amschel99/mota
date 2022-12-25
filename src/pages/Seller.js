@@ -74,7 +74,7 @@ getUser()
             
             </Typography>
 
-          {longitude && latitude ? <Box sx={{width:"80vw",marginRight:{xs:'15vw',sm:'10vw'},marginLeft:'10px',marginTop:'20px'}}>
+          {longitude && latitude ? <Box sx={{width:"80vw",marginRight:{xs:'10vw',sm:'10vw'},marginLeft:'10px',marginTop:'20px'}}>
              {longitude && latitude ?  <Map longitude={longitude} latitude={latitude}/>:<div>loading map...</div>}
             </Box>:null}
 
