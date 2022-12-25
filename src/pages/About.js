@@ -60,7 +60,7 @@ const About = () => {
         </Typography>
 
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
-     Get literary any car from our platform.We partner with automobile dealers from all over the world to bring you a variety of cars at your screen.
+     Get  any car from our platform.We partner with automobile dealers from all over the world to bring you a variety of cars at your screen.
      Buying a car has never been this easier.
      Browse through  the cars from our inventory and when you find the one you are looking for, visit the seller's profile page. From there, you will get all the seller's contact and location details.
      With a huge range all under one platform, there is really no need to go elsewhere.
