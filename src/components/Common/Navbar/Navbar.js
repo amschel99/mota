@@ -131,9 +131,9 @@ fetchCars()
 
 
 
-             <InputLabel sx={{marginTop:'20px'}} id="demo-multiple-name-label">search car</InputLabel>
+             <InputLabel sx={{marginTop:'10px'}} id="demo-multiple-name-label">search car</InputLabel>
         <Select
-         sx={{width:{xs:'35vw',sm:'30vw'},height:"30px", position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
+         sx={{width:{xs:'35vw',sm:'30vw'},height:"40px", position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
      
          MenuProps={{ autoFocus: false }}
           labelId="search-select-label"
