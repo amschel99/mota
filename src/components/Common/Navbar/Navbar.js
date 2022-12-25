@@ -133,7 +133,7 @@ fetchCars()
 
            
         <Select
-         sx={{width:{xs:'35vw',sm:'30vw'},height:"40px", position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
+         sx={{width:{xs:'45vw',sm:'30vw'},height:"40px", position:{xs:'absolute', sm:"relative"}, right:{xs:'120px',sm:'0'}}}
      
          MenuProps={{ autoFocus: false }}
           labelId="search-select-label"
@@ -157,7 +157,7 @@ fetchCars()
         >
             <ListSubheader>
            <TextField
-            sx={{width:{xs:'35vw',sm:'30vw'}, position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
+            sx={{width:{xs:'55vw',sm:'30vw'}, position:{xs:'absolute', sm:"relative"}, right:{xs:'120px',sm:'0'}}}
            size="small"
               // Autofocus on textfield
               autoFocus
