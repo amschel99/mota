@@ -1,6 +1,6 @@
-import ReactMapGL,{Marker} from 'react-map-gl'
+import ReactMapGL from 'react-map-gl'
 import React from 'react'
-import { useDispatchMap,MapProvider} from "../../src/hooks/maphook";
+import {MapProvider} from "../../src/hooks/maphook";
 
    // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -8,8 +8,7 @@ import mapboxgl from '!mapbox-gl';
 import { Markers} from "./markers";
 
 
- //latitude:29.763041,
-       // longitude:-95.386397,
+
 
  const Map= ({longitude,latitude})=>{
     //const mapDispatch = useDispatchMap();

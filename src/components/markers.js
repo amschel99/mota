@@ -1,8 +1,8 @@
 import React from "react";
 import { Marker } from "react-map-gl";
-//import { useStateMap } from "../../src/hooks/maphook";
+
 export const Markers = ({latitude,longitude}) => {
-  //const { markers } = useStateMap();
+  
   return (
     <>
    

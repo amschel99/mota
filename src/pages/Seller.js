@@ -73,9 +73,11 @@ getUser()
             MAP
             
             </Typography>
-            <Box sx={{width:"90vw",marginLeft:"5vw",marginRight:'5px',marginTop:'20px'}}>
+
+          {longitude && latitude ? <Box sx={{width:"80vw",marginLeft:"10vw",marginRight:'10px',marginTop:'20px'}}>
              {longitude && latitude ?  <Map longitude={longitude} latitude={latitude}/>:null}
-            </Box>
+            </Box>:null}
+
 
              <Typography
                component='a' href={`tel:${mobile}`}
