@@ -60,52 +60,25 @@ const About = () => {
         </Typography>
 
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
-      Get new and used cars from our platform. Our dealers are verified!
-      Here at All Cars, finding the right car is easy. Backed by our price promise, you can shop safe so in the knowledge that you are getting the best vehicle at the best price. With a huge range all under one roof there is really no need to go elsewhere! 
+     Get literary any car from our platform.We partner with automobile dealers from all over the world to bring you a variety of cars at your screen.
+     Buying a car has never been this easier.
+     Browse through  the cars from our inventory and when you find the one you are looking for, visit the seller's profile page. From there, you will get all the seller's contact and location details.
+     With a huge range all under one platform, there is really no need to go elsewhere.
+     We partner with a wide range of sellers from corporate automobile companies to small automobile businesses.
+     To create your profile and start advertising, visit the <a href="/register">Register page</a>.
+For any queries and support, contact <a href="tel:+254797168636">Amschel</a>.
 
-Be sure to experience top-tier Pre and After Sales Services.
-Search for any car that you want and chat with the seller.
-
-        <ol>
-          <li>Verified sellers</li>
-          <li>Best prices</li>
-          <li>A wide range of cars</li>
         
-        </ol>
-       Drive your favorite car today
        
       
         </Typography>
-        <Typography variant="h4"  color="red"    sx={{ textAlign: "center", marginBottom: 2 }}>
-          Services Offered
-        </Typography  >
-        <Typography variant="h6"   sx={{ textAlign: "center"}}>
-          <ol>
-            <li> Car Sales. i.e: Brand New and Foreign Used cars.</li>
-            <li>
-             Trade-in: For those wanting to upgrade from their current used
-              units to a newer version.
-            </li>
-            <li> Importation of desired cars on behalf of customers.</li>
-            <li> Buy locally used cars for re-sale.</li>
-            <li>
-               Liaise with financial institutions, i.e: Banks & Micro Finance to
-              provide car financing.
-            </li>
-            <li>
-               Liaise with Insurance firms to provide insurance for customers
-              text
-            </li>
-       </ol>
-        </Typography>
+       
         <Typography variant="h4"  color="red" sx={{ textAlign: "center", marginBottom: 2 }}>
-          Our Brands
+          Brands availabe
         </Typography>
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
-          We stock a wide variety of brands including, but not limited to;
-          Toyota, Mercedes Benz, Lexus, Nissan, Subaru, Mazda, Isuzu, Suzuki,
-          Volkswagen, Range Rover, Hyundai, Mitsubishi, Volvo, Honda, BMW, Audi,
-          Jeep etc.
+         Our platform has a wide variety of car brands including but not limited to;
+         Toyota, Mercedez,Lexus,Nissan,Subaru,Mazda, Suzuki etc.
         </Typography>
    <Typography  variant="h6"   sx={{ textAlign: "center"}}>
           <img src={image1} alt="Cars_Logos" height="10%" width="70" />
