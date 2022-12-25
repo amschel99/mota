@@ -127,13 +127,13 @@ fetchCars()
             </Box>
 
             {/*logo goes up */}
-            <Box sx={{ display: "flex", width:{xs:'45vw',sm:'60vw'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"0px",sm:'15px'} }}>
+            <Box sx={{ display: "flex", width:{xs:'40vw',sm:'60vw'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"0px",sm:'15px'} }}>
 
 
 
            
         <Select
-         sx={{width:{xs:'45vw',sm:'30vw'},height:"40px", position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
+         sx={{width:{xs:'40vw',sm:'30vw'},height:"40px", position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
      
          MenuProps={{ autoFocus: false }}
           labelId="search-select-label"
@@ -165,7 +165,7 @@ fetchCars()
                   required
                   fullWidth
                   name="location"
-                  label="Search Location"
+                  label="Search car"
                   type="text"
                   id="location"
                  
