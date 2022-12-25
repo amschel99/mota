@@ -6,12 +6,35 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Menu, MenuItem, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import { Menu, MenuItem, TextField,Select,InputLabel,ListSubheader,InputAdornment,OutlinedInput} from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { search } from "../../../../src/features/query.js";
+import axios from "axios"
 
 
+
+/** <TextField
+              sx={{width:{xs:'35vw',sm:'30vw'}, position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
+                onChange={(e) => {
+                   setValue(e.target.value);
+               return;
+                
+                   
+                }}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                     
+                    return dispatch(search({ search: value }));
+                  }
+                }}
+                id="outlined-basic"
+                label="Search"
+                variant="outlined"
+                size="small"
+               
+              /> */
 const toggleHeaderVisibility = () => {
   document.getElementById("header-links").classList.toggle("show");
 };
@@ -26,8 +49,8 @@ function changeHeaderOnScroll() {
 }
 
 const Navbar = () => {
-
-  
+const searchRef=React.useRef()
+const [cars,setCars]=React.useState([])
   const dispatch = useDispatch();
   const [value, setValue] = React.useState("");
 
@@ -35,6 +58,25 @@ const Navbar = () => {
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
+ React.useEffect(()=>{
+
+const fetchCars= async ()=>{
+try{
+  
+const {data}=await axios.get(`https://milesmotors.onrender.com/cars/all?name=${value}`)
+
+setCars(data)
+
+
+}
+catch(error){
+
+return;
+}
+        
+}
+fetchCars()
+},[value])
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -86,26 +128,77 @@ const Navbar = () => {
 
             {/*logo goes up */}
             <Box sx={{ display: "flex", width:{xs:'35vw',sm:'60vw'}, flex: { xs: 6, sm: 3 },marginRight:{xs:"0px",sm:'15px'} }}>
-              <TextField
-              sx={{width:{xs:'35vw',sm:'30vw'}, position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
-                onChange={(e) => {
-                   setValue(e.target.value);
-               return;
-                
-                   
-                }}
-                onKeyPress={(e) => {
-                  if (e.key === "Enter") {
-                     
-                    return dispatch(search({ search: value }));
-                  }
-                }}
-                id="outlined-basic"
-                label="Search"
-                variant="outlined"
-                size="small"
-               
-              />
+
+
+
+             <InputLabel id="demo-multiple-name-label">search car</InputLabel>
+        <Select
+        sx={{width:'100%'}}
+         MenuProps={{ autoFocus: false }}
+          labelId="search-select-label"
+          id="search-select"
+          value={value}
+          label="Search car"
+         
+     
+         
+          input={<OutlinedInput label="Location" />}
+          onChange={(event)=>{
+         searchRef.current.value=event.target.value
+          
+               return dispatch(search({ search:event.target.value}));
+  
+          }}
+          onClose={()=>{
+            setValue('')
+          }}
+               renderValue={() => value}
+        >
+            <ListSubheader>
+           <TextField
+           size="small"
+              // Autofocus on textfield
+              autoFocus
+
+                  required
+                  fullWidth
+                  name="location"
+                  label="Search Location"
+                  type="text"
+                  id="location"
+                 
+
+                   inputRef={searchRef}
+           
+             InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                )
+              }}
+             onChange={ (e)=>{
+setValue(e.target.value)
+             }}
+             onKeyDown={(e) => {
+                if (e.key !== "Escape") {
+                  // Prevents autoselecting item while typing (default Select behaviour)
+                  e.stopPropagation();
+                }
+              }}
+                />
+                </ListSubheader>
+          {cars.map(({carName,_id}) => (
+            <MenuItem
+              key={_id}
+              value={carName}
+              
+            >
+              {carName}
+            </MenuItem>
+          ))}
+        </Select>
+             
 
           
             </Box>
