@@ -131,7 +131,7 @@ fetchCars()
 
 
 
-             <InputLabel sx={{marginTop:'10px'}} id="demo-multiple-name-label">search car</InputLabel>
+           
         <Select
          sx={{width:{xs:'35vw',sm:'30vw'},height:"40px", position:{xs:'absolute', sm:"relative"}, right:{xs:'90px',sm:'0'}}}
      
@@ -153,7 +153,7 @@ fetchCars()
           onClose={()=>{
             setValue('')
           }}
-               renderValue={() => value}
+               renderValue={() => searchText}
         >
             <ListSubheader>
            <TextField
