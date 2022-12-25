@@ -83,8 +83,8 @@ getUser()
                component='a' href={`tel:${mobile}`}
                 variant="p"
                 
-              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'red',width:'100vw',marginTop:'10px',fontStyle:'cursive'}}
-                fontWeight={700}
+              sx={{display:'flex',justifyContent:'center',alignItems:'center',color:'red',width:'90vw',marginTop:'10px',fontStyle:'cursive'}}
+
               >
               <Phone sx={{marginTop:'15px',marginRight:"15px"}}/> Call  {mobile}
               </Typography>
