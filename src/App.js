@@ -15,7 +15,7 @@ import CarDetails from "./pages/CarDetails";
 import Page404 from "./pages/404";
 import Seller from './pages/Seller';
 import Navbar3 from './components/Common/Nav3/Navbar3';
-
+import Terms from './pages/Terms/Terms'
 import Footer from "./components/Common/Footer/Footer";
 //import SocialFlow from "./components/Common/socialFlow/socialFlow";
 
@@ -150,6 +150,10 @@ function App() {
                           <Login/>
                           </>
                           
+                          </Route>
+
+                          <Route exact path="terms">
+                            <Terms/>
                           </Route>
                           
                            <Route exact path="/reset">
