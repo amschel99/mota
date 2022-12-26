@@ -20,6 +20,7 @@ import Container from '@mui/material/Container';
 import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuth from "../others/useAuthContext"
+import Checkbox from '@mui/material/Checkbox';
 import {useHistory} from 'react-router-dom'
 //import mapboxgl from  'mapbox-gl/dist/mapbox-gl.js'
 import axios from 'axios'
@@ -51,9 +52,14 @@ fetchLocation()
 },[search])
 
   const history=useHistory();
+ const [checked, setChecked] = React.useState(false);
+   const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
 
 const[center,setCenter]=React.useState([])
 const[locationText,setLocationText]=React.useState('')
+const[privacyAlert,setPrivacyAlert]=React.useState('')
   const[placeData,setPlaceData]=React.useState([])
     const[error,setError]=React.useState('')
     const[loading,setLoading]=React.useState(false)
@@ -339,17 +345,34 @@ setSearch(e.target.value)
                   autoComplete="confirm_password"
                 />
               </Grid>
+              <Grid item xs={12}>
+                Before you signup, confirm that you agree with our <a href="/terms">Terms and conditions</a>
+                And our <a href="/privacy">Privacy policy</a>
+                  <Checkbox
+        checked={checked}
+      onChange={handleChange}
+        sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+      />
+              </Grid>
             
             </Grid>
+
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              disabled={loading}
+              onClick={()=>{
+                if(!checked){
+return setPrivacyAlert('Please agree to the terms,conditions and the privacy policy ')
+                }
+                
+              }}
+              disabled={loading || !checked}
             >
               Sign Up
             </Button>
+            <Alert severity="error">{privacyAlert}</Alert>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">
