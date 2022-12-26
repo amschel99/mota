@@ -346,7 +346,7 @@ setSearch(e.target.value)
                 />
               </Grid>
               <Grid item xs={12}>
-                Before you signup, confirm that you agree with our <a href="/terms">Terms and conditions</a>
+                Before you signup, confirm that you have read, understood and  agreed with our <a href="/terms">Terms and conditions</a>
                 And our <a href="/privacy">Privacy policy</a>
                   <Checkbox
         checked={checked}
