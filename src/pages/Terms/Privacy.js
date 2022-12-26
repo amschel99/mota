@@ -54,7 +54,7 @@ We use cookies to customize our website to your needs. The data we collect is us
 Our website contains links to other websites. If you click on this links, Mota is not held responsible for your data and privacy protection. Visiting those websites is not governed by this privacy policy agreement. Make sure you read the privacy policy of the website you visit.
 Mota will not lease or sell your personal information to any third parties unless we have your permission  We might do so if the law forces us.
 <br></br>
-<a href="./privacy.pdf">Download our privacy poilicy</a>
+
         </Typography>
     
     </>

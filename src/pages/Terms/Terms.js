@@ -47,7 +47,7 @@ any dispute or claim relating in any way to your use of any Mota Service, or thr
 The entire contents of our website are protected by intellectual property law, including international copyright and trademark laws. The owner of the copyrights and/or trademarks are our website, and/or other third party licensors or related entities.
 You do not own rights to any PICTURE,TEXT, or CODE posted on our website.
 <br></br>
-<a href="./termsAndConditions.pdf" download> Download our terms and conditions</a>
+
         </Typography>
     
     </>
