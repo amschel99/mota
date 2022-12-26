@@ -69,12 +69,9 @@ getUser()
             <span>We are located at {location}</span> 
             
             </Typography>
-             <Typography sx={{marginTop:"20px"}} align="center" color="black"  mb={3}  >
-            MAP
-            
-            </Typography>
+             
 
-          {longitude && latitude ? <Box sx={{width:"80vw",marginRight:{xs:'15vw',sm:'10vw'},marginLeft:'5vw',marginTop:'20px'}}>
+          {longitude && latitude ? <Box sx={{width:"80vw",marginRight:{xs:'15vw',sm:'10vw'},marginLeft:{xs:'5vw',sm:'10vw'},marginTop:'20px'}}>
              {longitude && latitude ?  <Map longitude={longitude} latitude={latitude}/>:<div>loading map...</div>}
             </Box>:null}
 
