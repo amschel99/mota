@@ -372,7 +372,8 @@ return setPrivacyAlert('Please agree to the terms,conditions and the privacy pol
             >
               Sign Up
             </Button>
-            <Alert severity="error">{privacyAlert}</Alert>
+            {privacyAlert &&  <Alert severity="error">{privacyAlert}</Alert>}
+           
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">
