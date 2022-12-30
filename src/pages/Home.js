@@ -72,7 +72,10 @@ const Home = () => {
                   return dispatch(type({ type: 'Renault' }));
                 }}
                     >
+                        <div style={{display:'flex',flexDirection:'column'}}>
 <img src={image2} alt="Cars_Logos" height="10%" width="70" />
+<div>Renault</div>
+</div>
                     </Typography>
 
                      <Typography component={Button} 
@@ -82,7 +85,10 @@ const Home = () => {
                   return dispatch(type({ type: 'Saab' }));
                 }}
                     >
-                         <img src={image3} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>  <img src={image3} alt="Cars_Logos" height="10%" width="70" />
+                       <div>Saab</div>
+                       </div>
+                       
 
                     </Typography>
 
@@ -93,7 +99,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Subaru' }));
                 }}
                     >
-                         <img src={image4} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}> <img src={image4} alt="Cars_Logos" height="10%" width="70" />
+                       <div>Subaru</div>
+                       </div>
+
+                         
 
                     </Typography>
 
@@ -102,7 +112,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Suzuki' }));
                 }}
                     >
-                      <img src={image5} alt="Cars_Logos" height="10%" width="70" />    
+                       <div style={{display:'flex',flexDirection:'column'}}>
+  <img src={image5} alt="Cars_Logos" height="10%" width="70" /> 
+  <div>Suzuki</div>
+                         </div>
+                       
 
                     </Typography>
 
@@ -111,7 +125,12 @@ const Home = () => {
                   return dispatch(type({ type: 'Tata' }));
                 }}
                     >
-                     <img src={image6} alt="Cars_Logos" height="10%" width="70" />    
+                        <div style={{display:'flex',flexDirection:'column'}}>
+
+                            <img src={image6} alt="Cars_Logos" height="10%" width="70" />  
+                            <div>Tata</div>
+                        </div>
+                     
 
                     </Typography>
 
@@ -121,7 +140,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Toyota' }));
                 }}
                     >
-                      <img src={image7} alt="Cars_Logos" height="10%" width="70" />
+                           <div style={{display:'flex',flexDirection:'column'}}>
+        <img src={image7} alt="Cars_Logos" height="10%" width="70" />
+        <div>Toyota</div>
+                           </div>
+              
 
                     </Typography>
 
@@ -131,7 +154,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Volvo' }));
                 }}
                     >
-                      <img src={image8} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>
+  <img src={image8} alt="Cars_Logos" height="10%" width="70" />
+  <div> Volvo</div>
+                       </div>
+                    
 
                     </Typography>
 
@@ -140,7 +167,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Audi' }));
                 }}
                     >
-                        <img src={image9} alt="Cars_Logos" height="10%" width="70" />
+                        <div style={{display:'flex',flexDirection:'column'}}>
+ <img src={image9} alt="Cars_Logos" height="10%" width="70" />
+ <div>Audi</div>
+                        </div>
+                       
 
                     </Typography>
 
@@ -149,7 +180,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Bmw' }));
                 }}
                     >
-                      <img src={image10} alt="Cars_Logos" height="10%" width="70" />
+                      <div style={{display:'flex',flexDirection:'column'}}>
+<img src={image10} alt="Cars_Logos" height="10%" width="70" />
+<div>Bmw</div>
+                      </div>
+                      
 
                     </Typography>
 
@@ -159,7 +194,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Chevrolet' }));
                 }}
                     >
-                    <img src={image11} alt="Cars_Logos" height="10%" width="70" />
+                     <div style={{display:'flex',flexDirection:'column'}}>
+ <img src={image11} alt="Cars_Logos" height="10%" width="70" />
+ <div>Chevrolet</div>
+                      </div> 
+                   
 
                     </Typography>
 
@@ -169,7 +208,12 @@ const Home = () => {
                   return dispatch(type({ type: 'Hino' }));
                 }}
                     >
-                    <img src={image12} alt="Cars_Logos" height="10%" width="70" />
+                      <div style={{display:'flex',flexDirection:'column'}}>
+      <img src={image12} alt="Cars_Logos" height="10%" width="70" />
+      <div>Hino</div>
+                      </div>
+                      
+              
 
                     </Typography>
 
@@ -178,7 +222,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Honda' }));
                 }}
                     >
-                   <img src={image13} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>
+       <img src={image13} alt="Cars_Logos" height="10%" width="70" />
+       <div>Honda</div>
+                       </div>
+            
 
                     </Typography>
 
@@ -188,8 +236,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Hyundai' }));
                 }}
                     >
-                   <img src={image14} alt="Cars_Logos" height="10%" width="70" />
-
+                      <div style={{display:'flex',flexDirection:'column'}}>
+   <img src={image14} alt="Cars_Logos" height="10%" width="70" />
+<div>Hyundai</div>
+                      </div>
+                
                     </Typography>
 
 
@@ -198,7 +249,10 @@ const Home = () => {
                   return dispatch(type({ type: 'Infiniti' }));
                 }}
                     >
-                   <img src={image15} alt="Cars_Logos" height="10%" width="70" />
+                      <div style={{display:'flex',flexDirection:'column'}}><img src={image15} alt="Cars_Logos" height="10%" width="70" />
+                      <div>Infiniti</div>
+                        </div>
+                   
 
                     </Typography>
 
@@ -207,7 +261,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Isuzu' }));
                 }}
                     >
-                   <img src={image16} alt="Cars_Logos" height="10%" width="70" />
+                        <div style={{display:'flex',flexDirection:'column'}}>    <img src={image16} alt="Cars_Logos" height="10%" width="70" />
+                        
+                        <div>Isuzu</div>
+                        </div>
+               
 
                     </Typography>
 
@@ -216,7 +274,13 @@ const Home = () => {
                   return dispatch(type({ type: 'Jaguar' }));
                 }}
                     >
-                   <img src={image17} alt="Cars_Logos" height="10%" width="70" />
+                          <div style={{display:'flex',flexDirection:'column'}}>
+
+      <img src={image17} alt="Cars_Logos" height="10%" width="70" />
+      <div>Jaguar</div>
+                          </div>
+
+             
 
                     </Typography>
 
@@ -225,7 +289,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Jeep' }));
                 }}
                     >
-                   <img src={image18} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>
+  <img src={image18} alt="Cars_Logos" height="10%" width="70" />
+  <div>Jeep</div>
+                       </div>
+                 
 
                     </Typography>
 
@@ -234,7 +302,11 @@ const Home = () => {
                   return dispatch(type({ type: 'LandRover' }));
                 }}
                     >
-                   <img src={image19} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>
+  <img src={image19} alt="Cars_Logos" height="10%" width="70" />
+  <div>Land Rover</div>
+                       </div>
+                 
 
                     </Typography>
 
@@ -243,7 +315,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Lexus' }));
                 }}
                     >
-                   <img src={image20} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>
+<img src={image20} alt="Cars_Logos" height="10%" width="70" />
+<div>Lexus </div>
+                       </div>
+                   
 
                     </Typography>
 
@@ -253,7 +329,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Man' }));
                 }}
                     >
-                   <img src={image21} alt="Cars_Logos" height="10%" width="70" />
+                          <div style={{display:'flex',flexDirection:'column'}}>
+  <img src={image21} alt="Cars_Logos" height="10%" width="70" />
+  <div>Man</div>
+                          </div>
+                 
 
                     </Typography>
 
@@ -262,7 +342,12 @@ const Home = () => {
                   return dispatch(type({ type: 'Mazda' }));
                 }}
                     >
-                   <img src={image22} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>
+    <img src={image22} alt="Cars_Logos" height="10%" width="70" />
+    <div>Mazda</div>
+
+                       </div>
+               
 
                     </Typography>
 
@@ -271,7 +356,12 @@ const Home = () => {
                   return dispatch(type({ type: 'Mercedez-Amg' }));
                 }}
                     >
-                   <img src={image23} alt="Cars_Logos" height="10%" width="70" />
+                      <div style={{display:'flex',flexDirection:'column'}}>
+
+     <img src={image23} alt="Cars_Logos" height="10%" width="70" />
+     <div>Mercedez-Amg</div>
+                      </div>
+              
 
                     </Typography>
 
@@ -280,7 +370,12 @@ const Home = () => {
                   return dispatch(type({ type: 'Mercedez-Benz' }));
                 }}
                     >
-                   <img src={image24} alt="Cars_Logos" height="10%" width="70" />
+                      <div style={{display:'flex',flexDirection:'column'}}>
+
+  <img src={image24} alt="Cars_Logos" height="10%" width="70" />
+  <div>Mercedez-Benz</div>
+                      </div>
+                 
 
                     </Typography>
 
@@ -289,7 +384,11 @@ const Home = () => {
                   return dispatch(type({ type: 'Mini' }));
                 }}
                     >
-                   <img src={image25} alt="Cars_Logos" height="10%" width="70" />
+                        <div style={{display:'flex',flexDirection:'column'}}>
+    <img src={image25} alt="Cars_Logos" height="10%" width="70" />
+    <div>Mini</div>
+                        </div>
+               
 
                     </Typography>
                     
@@ -298,7 +397,12 @@ const Home = () => {
                   return dispatch(type({ type: 'Mitsubishi' }));
                 }}
                     >
-                   <img src={image26} alt="Cars_Logos" height="10%" width="70" />
+                       <div style={{display:'flex',flexDirection:'column'}}>
+   <img src={image26} alt="Cars_Logos" height="10%" width="70" />
+   <div>Mitsubishi</div>
+
+                       </div>
+                
 
                     </Typography>
 
@@ -308,7 +412,12 @@ const Home = () => {
                   return dispatch(type({ type: 'Nissan' }));
                 }}
                     >
-                   <img src={image27} alt="Cars_Logos" height="10%" width="70" />
+                            <div style={{display:'flex',flexDirection:'column'}}>
+<img src={image27} alt="Cars_Logos" height="10%" width="70" />
+<div>Nissan</div>
+
+                            </div>
+                   
 
                     </Typography>
 
@@ -317,6 +426,10 @@ const Home = () => {
                   return dispatch(type({ type: 'Peugeot' }));
                 }}
                     >
+                       <div style={{display:'flex',flexDirection:'column'}}>
+
+                        <div>Peugot</div>
+                       </div>
                    <img src={image29} alt="Cars_Logos" height="10%" width="70" />
 
                     </Typography>
