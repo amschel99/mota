@@ -60,8 +60,10 @@ const Home = () => {
                   return dispatch(type({ type: 'Porsche' }));
                 }}
                     >
+                      <div style={{display:'flex',flexDirection:'column'}}>
 <img src={image1} alt="Cars_Logos" height="10%" width="70" />
 <div>Porsche</div>
+</div>
                     </Typography>
                      <Typography component={Button} 
                       
