@@ -15,20 +15,20 @@ import { autoPlay } from 'react-swipeable-views-utils';
 const bannerSlides = [
     {
         id: 1,
-        label: 'Get foreign used cars ',
+        label: 'Get forign used cars ',
         imgPath: '/images/all-cars/1.jpg',
     },
    
     {
         id: 2,
-        label: 'Get your favourite car',
+        label: 'A variety of car brands',
         imgPath: '/images/all-cars/2.jpg',
     },
   
     {
         id: 3,
-        label: 'Best deals',
-        imgPath: 'images/all-cars/3.jpg',
+        label: '',
+        imgPath: 'Get forign used cars',
     },
   
 ]
@@ -92,7 +92,7 @@ const HomeBanner = () => {
                 <Typography variant="h6" sx={{
                     fontWeight: 'bold', textShadow: '0 0 10px black',
                     px: 8, py: 1, fontSize: '15px'
-                }}>Welcome to Miles Motors</Typography>
+                }}>Welcome to Mota</Typography>
             </Paper>
             <Box sx={{
                 background: 'linear-gradient(#00000000, #000000cc)', pt: 8,
