@@ -19,6 +19,7 @@ export const  uploadBlob=  async (files)=>{
              urls.push(blobUrl)
         }
         await Promise.all(promises);
+        alert(urls)
         return urls;
         
   }
