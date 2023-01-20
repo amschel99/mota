@@ -2,7 +2,8 @@ import { Button,Alert, FormControl, Grid, InputAdornment, InputLabel, MenuItem, 
 import { Box, styled } from '@mui/system';
 import axios from 'axios';
 import React from 'react';
-
+import {getStorage} from "firebase/storage"
+import { uploadBlob } from '../../../../utils/azure';
 import useAuth from "../AdminParts/../../../others/useAuthContext"
 
 import LoadingSpinner from '../../Common/LoadingSpinner/LoadingSpinner';
@@ -31,12 +32,10 @@ const AddNewCar = ({ setProcessStatus }) => {
 
     const [values, setValues] = React.useState({}) // form values state
     const [carType, setCarType] = React.useState('')
+    const [urls, setUrls]=React.useState([])
     const[user,setUser]=React.useState(currentUser.email)
-    const[carImg,setCarImage]=React.useState("")
-     const[image2,setImage2]=React.useState("")
-     const[image3,setImage3]=React.useState("")
-     const[image4,setImage4]=React.useState("")
-     const[image5,setImage5]=React.useState("")
+
+
    const[largeImage,setLargeImage]=React.useState("")
   const[message,setMessage]=React.useState("")
      // form car type state
@@ -77,7 +76,7 @@ setUser(currentUser.email)
   
     const handleSubmit =  (event) => {
 
-        const newCarInfo = { ...values, carType, fuel,user,carImg,image2,image3,image4,image5}
+        const newCarInfo = { ...values, carType, fuel,user,carImg:urls[0],image2:urls[1],image3:urls[2],image4:urls[3],image5:urls[4]}
  //buttonRef.current.setAttribute("disabled",true)
   setMessage("adding car ....")
  axios.post('https://milesmotors.onrender.com/car', newCarInfo)
@@ -273,88 +272,11 @@ setUser(currentUser.email)
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                             onChange={
-                                (e)=>{
-                                    const files=e.target?.files
-                                    if(files){
-                                        if(files.length<5){
-                                    return;
-                                        }
-                                        
-                                        for(let i=0;i<files.length;i++){
-                                            if(files[i].size>2800000){
-                                             return   setLargeImage(`images that exceed 2.8mbs are not allowed,choose again!`)
 
-                                            }
-                                            setFilesEnough(true)
-                                            const reader=new FileReader()
-                                            reader.addEventListener('load',(readerEvent)=>{
-
-                                                //make an img element
-                                                let img=document.createElement('img');
-                                                   img.src = readerEvent.target.result;
-                                                   //here we are going to resize our images to smaller pixel dimensions using the canvas Api
-
-
-                                               img.onload=function (){
-
-                                               
-                                             
-                                                const canvas=document.createElement('canvas')
-                                                 let ctx = canvas.getContext("2d");
-             ctx.drawImage(img, 0, 0); 
-                                                         
-                                                         
-                let MAX_WIDTH = 300;
-                let MAX_HEIGHT = 200;
-                let width = img.width;
-                let height = img.height;
-
-                 if (width > height) {
-                    if (width > MAX_WIDTH) {
-                        height *= MAX_WIDTH / width;
-                        width = MAX_WIDTH;
-                    }
-                } else {
-                    if (height > MAX_HEIGHT) {
-                        width *= MAX_HEIGHT / height;
-                        height = MAX_HEIGHT;
-                    }
-                }
-                canvas.width = width;
-                canvas.height = height;
-                      ctx = canvas.getContext("2d");
-             ctx.drawImage(img, 0, 0, width, height);
-             //here we convert the image to 1/2 times the original resolution
-
-            const  data=canvas.toDataURL(files[i].type)
-
-            console.log( `the base 64 url for our image is given by ${data}`)
-
-//const data=readerEvent.target.result
-// we then set the relevant states to the relevant base 64 encoded strings
-
-if(i===0){
-    setCarImage(data)
-}
-if(i===1){
-    setImage2(data)
-}
-if(i===2){
-    setImage3(data)
-}
-if(i===3){
-    setImage4(data)
-}
-if(i===4){
-    setImage5(data)
-}
-                                               }
-                                            })
-                                            reader.readAsDataURL(files[i])
-                                        }
-                                    }
-
-                                }
+                             ()=>{
+                              const resultOfUploadingFiles=  uploadBlob(e.target.files)
+                             return setUrls(resultOfUploadingFiles)
+                             }
                             }
                             />
                                
