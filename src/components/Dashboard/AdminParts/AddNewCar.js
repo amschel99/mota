@@ -3,7 +3,7 @@ import { Box, styled } from '@mui/system';
 import axios from 'axios';
 import React from 'react';
 import {getStorage} from "firebase/storage"
-import { uploadBlob } from '../../../../utils/azure';
+import { uploadBlob } from '../../../utils/azure'; 
 import useAuth from "../AdminParts/../../../others/useAuthContext"
 
 import LoadingSpinner from '../../Common/LoadingSpinner/LoadingSpinner';
