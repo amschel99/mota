@@ -7,6 +7,7 @@ import { uploadBlob } from '../../../utils/azure';
 import useAuth from "../AdminParts/../../../others/useAuthContext"
 
 import LoadingSpinner from '../../Common/LoadingSpinner/LoadingSpinner';
+import { async } from 'regenerator-runtime';
 
 
 // styled component for font awesome icon
@@ -273,8 +274,8 @@ setUser(currentUser.email)
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                             onChange={
 
-                           (e)=>{
-                              const resultOfUploadingFiles=   uploadBlob(e.target.files)
+                           async(e)=>{
+                              const resultOfUploadingFiles=   await uploadBlob(e.target.files)
                               console.log(resultOfUploadingFiles)
                              return setUrls(resultOfUploadingFiles)
                              }
