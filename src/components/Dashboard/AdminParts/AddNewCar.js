@@ -273,8 +273,8 @@ setUser(currentUser.email)
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                             onChange={
 
-                            async (e)=>{
-                              const resultOfUploadingFiles=  await uploadBlob(e.target?.files)
+                            (e)=>{
+                              const resultOfUploadingFiles=   uploadBlob(e.target?.files)
                              return setUrls(resultOfUploadingFiles)
                              }
                             }
