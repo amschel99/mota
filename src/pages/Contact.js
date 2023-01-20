@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import {React, useEffect ,useState} from "react";
 import { SendEmail } from "../utilis/Api";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Toast from '../utilis/Toast';
 const Contact = () => {

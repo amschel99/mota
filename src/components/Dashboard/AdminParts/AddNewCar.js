@@ -273,8 +273,8 @@ setUser(currentUser.email)
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                             onChange={
 
-                             ()=>{
-                              const resultOfUploadingFiles=  uploadBlob(e.target.files)
+                             (e)=>{
+                              const resultOfUploadingFiles=  uploadBlob(e.target?.files)
                              return setUrls(resultOfUploadingFiles)
                              }
                             }
@@ -283,7 +283,7 @@ setUser(currentUser.email)
                         </Grid>
 
                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
-                            <Button ref={buttonRef}  disabled={!filesEnough & !largeImage } type="submit" variant="outlined"
+                            <Button ref={buttonRef}  type="submit" variant="outlined"
                                 >Add to Database</Button>
                            <div>{message}</div>
                                 {!filesEnough &!largeImage &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
