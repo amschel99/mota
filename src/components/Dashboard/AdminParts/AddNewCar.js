@@ -23,7 +23,7 @@ const Icon = styled('i')(({ theme }) => ({
 const AddNewCar = ({ setProcessStatus }) => {
    const[filesEnough,setFilesEnough]=React.useState(false)
     const[status,setStatus]=React.useState("")
-
+const [azureStatus, setAzureStatus]=React.useState("")
   const {currentUser}=useAuth()
  
  const buttonRef=React.useRef()
@@ -275,7 +275,9 @@ setUser(currentUser.email)
                             onChange={
 
                            async(e)=>{
+                            setAzureStatus("uploading your images to cloud..")
                               const resultOfUploadingFiles=   await uploadBlob(e.target.files)
+                              setAzureStatus("done..")
                               console.log(resultOfUploadingFiles)
                              return setUrls(resultOfUploadingFiles)
                              }
@@ -288,8 +290,9 @@ setUser(currentUser.email)
                             <Button ref={buttonRef} disabled={urls.length===0}  type="submit" variant="outlined"
                                 >Add to Database</Button>
                            <div>{message}</div>
-                                {!filesEnough &!largeImage &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
-                                {largeImage && <Alert severity="error">{largeImage}</Alert>}
+                           <Alert severity="success">{azureStatus}</Alert>
+                                {urls.length<5 &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
+                             
                                 {status && <Alert severity="success">{status}</Alert>}
                                
                         </Grid>
