@@ -290,7 +290,7 @@ setUser(currentUser.email)
                             <Button ref={buttonRef} disabled={urls.length===0}  type="submit" variant="outlined"
                                 >Add to Database</Button>
                            <div>{message}</div>
-                           <Alert severity="success">{azureStatus}</Alert>
+                          {azureStatus && <Alert severity="success">{azureStatus}</Alert>}
                                 {urls.length<5 &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
                              
                                 {status && <Alert severity="success">{status}</Alert>}
