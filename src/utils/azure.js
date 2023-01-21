@@ -1,21 +1,27 @@
 
-import { BlobServiceClient } from "@azure/storage-blob"
+import { BlobServiceClient, StorageSharedKeyCredential} from "@azure/storage-blob"
 
 
+const accountKey="9mvfsI+x7fmnEEv9LDjwPxZkd4erWnTKwWvKkoPjtemXSXCCINSLn6Eb1PYowFyErSCukhDqkbC/+AStwkwQsw=="
+const accountName="motaautombiles"
+const sharedKeyCredential = new StorageSharedKeyCredential(accountName, accountKey);
 
-const blobServiceClient= new BlobServiceClient("https://motaautombiles.blob.core.windows.net/?sv=2021-06-08&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2023-01-21T15:56:48Z&st=2023-01-21T07:56:48Z&spr=https,http&sig=HRAkAHxWtU0EMsbT080sUUmP0nmQ044zVyEDcwY1Mkc%3D")
-const containerClient= blobServiceClient.getContainerClient("cars")
+const blobServiceClient = new BlobServiceClient(
+  `https://${accountName}.blob.core.windows.net`,
+  sharedKeyCredential
+);
+
 let blobUrl;
 let blockBlobClient;
 export const  uploadBlob=  async (files)=>{
   try{
-
+    const containerClient=  blobServiceClient.getContainerClient("cars")
         const promises = [];
         let urls=[]
         for (const file of files) {
             const blockBlobClient = containerClient.getBlockBlobClient(file.name);
                 blobUrl= blockBlobClient.url;// 
-            promises.push(blockBlobClient.uploadBrowserData(file));
+            promises.push(blockBlobClient.upload(file,file.length));
              urls.push(blobUrl)
         }
         await Promise.all(promises);
