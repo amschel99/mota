@@ -279,6 +279,7 @@ setUser(currentUser.email)
                               const resultOfUploadingFiles=   await uploadBlob(e.target.files)
                               setAzureStatus("done..")
                               console.log(resultOfUploadingFiles)
+                              setAzureStatus("")
                              return setUrls(resultOfUploadingFiles)
                              }
                             }
