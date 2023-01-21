@@ -20,7 +20,7 @@ export const  uploadBlob=  async (files)=>{
         for (const file of files) {
             const blockBlobClient = containerClient.getBlockBlobClient(file.name);
                 blobUrl= blockBlobClient.url;// 
-            promises.push(blockBlobClient.upload(file,file.length));
+            promises.push(blockBlobClient.uploadBrowserData(file));
              urls.push(blobUrl)
         }
         await Promise.all(promises);
