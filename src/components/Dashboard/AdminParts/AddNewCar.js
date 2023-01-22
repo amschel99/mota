@@ -75,27 +75,19 @@ setUser(currentUser.email)
     }
     // add new car in database
   const  uploadFiles= async(files) =>{
-    let myArray = [];
+    let urlArrays=[]
+    for (const file of files){
+        const reader= new FileReader()
+    reader.addEventListener("load",(e)=>{
+urlArrays.push(e.target.result)
+    }) 
+    reader.readAsBinaryString(file)
+    }
     
-    for(let i = 0; i < files.length; i++){
-
-      let  file = {
-            'lastMod'    : files[i].lastModified,
-            'lastModDate': files[i].lastModifiedDate,
-            'name'       : files[i].name,
-            'size'       : files[i].size,
-            'type'       : files[i].type,
-        } 
-  
-        //add the file obj to your array
-        myArray.push(file)
-      }
-  
-       
         try {
             
        console.log(files)
-            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify(myArray))
+            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify(urlArrays),)
             console.log(data)
             return setUrls(data)
              
@@ -304,6 +296,7 @@ setUser(currentUser.email)
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                          onChange={async (e) => {
+                            
                          uploadFiles(e.target.files)
                        
                          
