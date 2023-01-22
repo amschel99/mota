@@ -75,7 +75,7 @@ setUser(currentUser.email)
     }
     // add new car in database
   const  uploadFiles= async(files) =>{
-        console.log(files[0])
+       
         try {
             
             if(files){
@@ -290,7 +290,7 @@ setUser(currentUser.email)
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                          onChange={async (e) => {
                            e.preventDefault()
-                         const response=  await uploadFiles(e.target?.files)
+                         const response=  await uploadFiles(e.target.files)
                        
                          return setUrls(response)
                          }}
