@@ -281,8 +281,9 @@ setUser(currentUser.email)
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                          onChange={async (e) => {
-                            e.preventDefault()
+                           
                          const response=  await uploadFiles(e.target?.files)
+                         e.preventDefault()
                          return setUrls(response)
                          }}
                             />
