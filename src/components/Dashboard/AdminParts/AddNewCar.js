@@ -76,16 +76,11 @@ setUser(currentUser.email)
     // add new car in database
     async function uploadFiles(files) {
         try {
-            
-            const response = await fetch('https://motaautomobiles.azurewebsites.net/api/upload', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({files} )
-            });
-            const data = await response.json();
+            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify({files}))
+           console.log(data)
             return setUrls(data);
         } catch (e) {
-            console.log(e.message);
+            console.log(e);
         }
     }
   
