@@ -74,6 +74,22 @@ setUser(currentUser.email)
         setValues({ ...values, [prop]: event.target.value });
     }
     // add new car in database
+  async function uploadFiles(files) {
+    const formData = new FormData();
+    for (const file of files) {
+        formData.append('file', file);
+    }
+    try {
+        const response = await fetch('https://motaautomobiles.azurewebsites.net/api/HttpTrigger1?code=3Su9k3b-qQA0qrbpGEWh2Pu24hnzt0zqqLiuoHUumdSWAzFuIjOqiw==', {
+            method: 'POST',
+            body: formData
+        });
+        const data = await response.json();
+        return setUrls(data);
+    } catch (e) {
+        console.log(e);
+    }
+}
   
     const handleSubmit =  (event) => {
 
@@ -272,19 +288,11 @@ setUser(currentUser.email)
                          <Grid item xs={12} sx={{ textAlign: 'right' }}>
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
-                            onChange={
-
-                           async(e)=>{
-                            setAzureStatus("uploading your images to cloud..")
-                              const resultOfUploadingFiles=   await uploadBlob(e.target.files)
-                              setAzureStatus("done..")
-                              console.log(resultOfUploadingFiles)
-                              setAzureStatus("")
-                             return setUrls(resultOfUploadingFiles)
-                             }
-                            }
+                         onChange={(e) => {
+                            e.preventDefault()
+                            uploadFiles(e.target.files)}}
                             />
-                               
+                          
                         </Grid>
 
                         <Grid item xs={12} sx={{ textAlign: 'right' }}>
