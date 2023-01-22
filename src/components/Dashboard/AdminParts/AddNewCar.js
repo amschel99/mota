@@ -75,18 +75,27 @@ setUser(currentUser.email)
     }
     // add new car in database
   const  uploadFiles= async(files) =>{
-     let formData = new FormData();
-    for (let i = 0; i < 5; i++) {
-        formData.append(`file${i + 1}`, files[i]);
-    }
+    let myArray = [];
+    
+    for(let i = 0; i < files.length; i++){
+
+      let  file = {
+            'lastMod'    : files[i].lastModified,
+            'lastModDate': files[i].lastModifiedDate,
+            'name'       : files[i].name,
+            'size'       : files[i].size,
+            'type'       : files[i].type,
+        } 
+  
+        //add the file obj to your array
+        myArray.push(file)
+      }
+  
        
         try {
             
        console.log(files)
-            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',formData,{
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }})
+            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify(myArray))
             console.log(data)
             return setUrls(data)
              
