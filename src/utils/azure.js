@@ -1,19 +1,13 @@
-import "regenerator-runtime/runtime"// for features built only for node js to work
-import { BlobServiceClient, StorageSharedKeyCredential} from "@azure/storage-blob"
+
+import { BlobServiceClient} from "@azure/storage-blob"
 
 
-
-const accountName="motaautombiles"
-const accountKey='9mvfsI+x7fmnEEv9LDjwPxZkd4erWnTKwWvKkoPjtemXSXCCINSLn6Eb1PYowFyErSCukhDqkbC/+AStwkwQsw=='
-if (!accountName) throw Error('Azure Storage accountName not found');
-if (!accountKey) throw Error('Azure Storage accountKey not found')
-const sharedKeyCredential = new StorageSharedKeyCredential(accountName, accountKey);
-
-
-
+//const accountKey="9mvfsI+x7fmnEEv9LDjwPxZkd4erWnTKwWvKkoPjtemXSXCCINSLn6Eb1PYowFyErSCukhDqkbC/+AStwkwQsw=="
+//const accountName="motaautombiles"
+//const sharedKeyCredential = new StorageSharedKeyCredential(accountName, accountKey);
+const sasToken="https://motaautombiles.blob.core.windows.net/?sv=2021-06-08&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2023-01-21T19:13:54Z&st=2023-01-21T11:13:54Z&spr=https,http&sig=Hj15E3l7QqDoD0Nnk7iXOWrFj3FeQP3bXhvbp8bUXF4%3D"
 const blobServiceClient = new BlobServiceClient(
-  `https://${accountName}.blob.core.windows.net`,
-  sharedKeyCredential
+ `${sasToken}`
 );
 
 let blobUrl;
@@ -41,4 +35,3 @@ console.log(e)
 
 
 }
-
