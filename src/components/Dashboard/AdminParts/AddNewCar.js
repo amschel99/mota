@@ -80,7 +80,7 @@ setUser(currentUser.email)
         formData.append('file', file);
     }
     try {
-        const response = await fetch('https://motaautomobiles.azurewebsites.net/api/HttpTrigger1?code=3Su9k3b-qQA0qrbpGEWh2Pu24hnzt0zqqLiuoHUumdSWAzFuIjOqiw==', {
+        const response = await fetch('https://motaautomobiles.azurewebsites.net/api/upload', {
             method: 'POST',
             body: formData
         });
