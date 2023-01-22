@@ -79,7 +79,11 @@ setUser(currentUser.email)
         try {
             
        console.log(files)
-            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify({files}))
+            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify(files),{
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
             console.log(data)
             return setUrls(data)
              
