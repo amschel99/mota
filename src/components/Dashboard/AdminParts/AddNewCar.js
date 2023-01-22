@@ -81,7 +81,7 @@ setUser(currentUser.email)
     reader.addEventListener("load",(e)=>{
 urlArrays.push(e.target.result)
     }) 
-    reader.readAsBinaryString(file)
+    reader.readAsDataURL(file)
     }
     
         try {
