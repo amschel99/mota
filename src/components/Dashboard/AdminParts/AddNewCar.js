@@ -74,22 +74,19 @@ setUser(currentUser.email)
         setValues({ ...values, [prop]: event.target.value });
     }
     // add new car in database
-  async function uploadFiles(files) {
-    const formData = new FormData();
-    for (const file of files) {
-        formData.append('file', file);
+    async function uploadFiles(files) {
+        try {
+            const response = await fetch('https://motaautomobiles.azurewebsites.net/api/upload', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ files })
+            });
+            const data = await response.json();
+            return setUrls(data);
+        } catch (e) {
+            console.log(e.message);
+        }
     }
-    try {
-        const response = await fetch('https://motaautomobiles.azurewebsites.net/api/upload', {
-            method: 'POST',
-            body: formData
-        });
-        const data = await response.text();
-        return setUrls(data);
-    } catch (e) {
-        console.log(e.message);
-    }
-}
   
     const handleSubmit =  (event) => {
 
