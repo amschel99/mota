@@ -87,7 +87,7 @@ setUser(currentUser.email)
         const data = await response.text();
         return setUrls(data);
     } catch (e) {
-        console.log(e);
+        console.log(e.message);
     }
 }
   
