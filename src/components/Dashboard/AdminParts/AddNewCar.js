@@ -74,7 +74,7 @@ setUser(currentUser.email)
         setValues({ ...values, [prop]: event.target.value });
     }
     // add new car in database
-    async function uploadFiles(files) {
+  const  uploadFiles= async(files) =>{
         console.log(files[0])
         try {
             
