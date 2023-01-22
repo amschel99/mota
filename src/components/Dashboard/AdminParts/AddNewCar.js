@@ -78,15 +78,14 @@ setUser(currentUser.email)
        
         try {
             
-            if(files){
+       
             const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify({files}))
-            return data;
-            }
-            if(!files){
-                return alert("files object is empty")
+            console.log(data)
+            return setUrls(data)
+             
             }
           
-        } catch (e) {
+        catch (e) {
             console.log(e);
         }
     }
@@ -289,10 +288,9 @@ setUser(currentUser.email)
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                          onChange={async (e) => {
-                           e.preventDefault()
-                         const response=  await uploadFiles(e.target.files)
+                         uploadFiles(e.target.files)
                        
-                         return setUrls(response)
+                         
                          }}
                             />
                           
