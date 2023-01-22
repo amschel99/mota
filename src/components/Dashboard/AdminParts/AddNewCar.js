@@ -76,7 +76,7 @@ setUser(currentUser.email)
     // add new car in database
     async function uploadFiles(files) {
         try {
-            console.log(`here are your files ${JSON.parse(files)}`)
+            
             const response = await fetch('https://motaautomobiles.azurewebsites.net/api/upload', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
