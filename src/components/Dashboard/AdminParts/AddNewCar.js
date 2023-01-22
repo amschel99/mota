@@ -85,7 +85,7 @@ setUser(currentUser.email)
             body: formData
         });
         const data = await response.json();
-        return setUrls(JSON.parse(data));
+        return setUrls(data);
     } catch (e) {
         console.log(e);
     }
