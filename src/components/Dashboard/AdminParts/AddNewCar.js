@@ -79,7 +79,7 @@ setUser(currentUser.email)
             const response = await fetch('https://motaautomobiles.azurewebsites.net/api/upload', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ files })
+                body: JSON.stringify( files )
             });
             const data = await response.json();
             return setUrls(data);
