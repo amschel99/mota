@@ -84,8 +84,8 @@ setUser(currentUser.email)
             method: 'POST',
             body: formData
         });
-        const data = await response.json();
-        return setUrls(data);
+        const data = await response.text();
+        return setUrls(JSON.parse(data));
     } catch (e) {
         console.log(e);
     }
