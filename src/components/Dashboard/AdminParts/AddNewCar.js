@@ -286,9 +286,9 @@ setUser(currentUser.email)
                          <Grid item xs={12} sx={{ textAlign: 'right' }}>
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
-                         onChange={(e) => {
+                         onChange={async (e) => {
                             e.preventDefault()
-                            uploadFiles(e.target.files)}}
+                           await uploadFiles(e.target?.files)}}
                             />
                           
                         </Grid>
