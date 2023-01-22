@@ -77,8 +77,7 @@ setUser(currentUser.email)
     async function uploadFiles(files) {
         try {
             const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',JSON.stringify({files}))
-           console.log(data)
-            return setUrls(data);
+          return data;
         } catch (e) {
             console.log(e);
         }
@@ -283,7 +282,9 @@ setUser(currentUser.email)
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                          onChange={async (e) => {
                             e.preventDefault()
-                           await uploadFiles(e.target?.files)}}
+                         const response=  await uploadFiles(e.target?.files)
+                         return setUrls(response)
+                         }}
                             />
                           
                         </Grid>
@@ -318,5 +319,6 @@ setUser(currentUser.email)
 };
 
 export default AddNewCar;
+
 
 
