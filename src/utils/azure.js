@@ -1,15 +1,19 @@
-
+import "regenerator-runtime/runtime"// for features built only for node js to work
 import { BlobServiceClient, StorageSharedKeyCredential} from "@azure/storage-blob"
-import {DefaultAzureCredential} from '@azure/identity'
+
 
 
 const accountName="motaautombiles"
+const accountKey='9mvfsI+x7fmnEEv9LDjwPxZkd4erWnTKwWvKkoPjtemXSXCCINSLn6Eb1PYowFyErSCukhDqkbC/+AStwkwQsw=='
+if (!accountName) throw Error('Azure Storage accountName not found');
+if (!accountKey) throw Error('Azure Storage accountKey not found')
+const sharedKeyCredential = new StorageSharedKeyCredential(accountName, accountKey);
 
 
 
 const blobServiceClient = new BlobServiceClient(
   `https://${accountName}.blob.core.windows.net`,
-  new DefaultAzureCredential()
+  sharedKeyCredential
 );
 
 let blobUrl;
