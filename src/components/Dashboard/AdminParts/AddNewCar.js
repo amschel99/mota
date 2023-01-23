@@ -83,7 +83,7 @@ setUser(currentUser.email)
         try {
             
        console.log(files)
-            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',formData)
+            const {data}= await axios.post('https://uploader-d569.onrender.com',formData)
             console.log(data)
             return setUrls(data)
              
