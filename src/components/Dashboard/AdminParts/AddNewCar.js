@@ -76,9 +76,10 @@ setUser(currentUser.email)
     // add new car in database
   const  uploadFiles= async(files) =>{
     const formData = new FormData();
-    files.forEach(file => {
-        formData.append("images", file);
-      });
+      for (const file of files){
+           formData.append("images", file);
+      }
+  
         try {
             
        console.log(files)
