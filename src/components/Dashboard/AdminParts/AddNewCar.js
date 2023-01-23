@@ -83,7 +83,7 @@ setUser(currentUser.email)
         try {
             
        console.log(files)
-            const {data}= await axios.post('https://uploader-d569.onrender.com',formData)
+            const {data}= await axios.post('https://uploader-d569.onrender.com/upload',formData)
             console.log(data)
             return setUrls(data)
              
