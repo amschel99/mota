@@ -82,7 +82,7 @@ setUser(currentUser.email)
         try {
             
        console.log(files)
-            const {data}= await axios.post('http://localhost:3000/upload',formData)
+            const {data}= await axios.post('https://motaautomobiles.azurewebsites.net/api/upload',formData)
             console.log(data)
             return setUrls(data)
              
