@@ -74,25 +74,7 @@ setUser(currentUser.email)
         setValues({ ...values, [prop]: event.target.value });
     }
     // add new car in database
-  const  uploadFiles= async(files) =>{
-    const formData = new FormData();
-      for (const file of files){
-           formData.append("images", file);
-      }
-  
-        try {
-            
-       console.log(files)
-            const {data}= await axios.post('https://uploader-d569.onrender.com/upload',formData)
-            console.log(data)
-            return setUrls(data)
-             
-            }
-          
-        catch (e) {
-            console.log(e);
-        }
-    }
+ 
   
     const handleSubmit =  (event) => {
 
@@ -292,8 +274,12 @@ setUser(currentUser.email)
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                          onChange={async (e) => {
+                         setAzureStatus("hang on as we process your images...")
                             e.preventDefault()
-                         uploadFiles(e.target.files)
+                        const response= await  uploadBlob(e.target.files)
+                        setAzureStatus("done");
+                        setInterval(()=>{setAzureStatus("")},2000);
+                        return setUrls(response);
                        
                          
                          }}
