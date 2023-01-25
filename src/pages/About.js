@@ -59,7 +59,7 @@ const About = () => {
           About Us
         </Typography>
 
-        <Typography variant="h6"   sx={{ textAlign: "center", fontFamily:"cursive"}}>
+        <Typography variant="h6"   sx={{ textAlign: "center", fontFamily:"Helvetica"}}>
         Are you in the market for a new set of wheels? Look no further! Our platform offers a vast selection of cars from dealers all over the world, making the car buying process a breeze. Whether you're searching for a sleek sports car, a spacious family SUV, or a reliable work truck, we've got you covered.
 Our platform makes it easy for you to find the perfect car for your needs and budget. Browse our inventory and find the car of your dreams, and then visit the seller's profile page to get all the necessary details about the seller and their location.
 We partner with a diverse range of sellers, from major corporate car companies to small, local businesses, ensuring that you have access to a wide variety of options.
@@ -76,8 +76,9 @@ For any queries and support, contact <a href="tel:+254797168636">Amschel</a>.
           Brands availabe
         </Typography>
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
-         Our platform has a wide variety of car brands including but not limited to;
-         Toyota, Mercedez,Lexus,Nissan,Subaru,Mazda, Suzuki etc.
+         At our platform, we understand the importance of having options when it comes to purchasing a vehicle. That's why we offer a wide range of car brands, catering to every taste and need. From luxury brands such as Mercedes-Benz and Lexus, to more practical options like Toyota and Honda, our inventory is sure to have something for everyone.
+In addition to these well-known brands, we also offer a selection of specialty and niche brands such as Subaru and Mazda. These brands offer unique features and designs that set them apart from the rest.
+We pride ourselves in offering a diverse array of options for our customers, ensuring that each individual finds the perfect car to fit their lifestyle. So whether you're in the market for a sporty convertible or a spacious family SUV, our platform has you covered
         </Typography>
    <Typography  variant="h6"   sx={{ textAlign: "center"}}>
           <img src={image1} alt="Cars_Logos" height="10%" width="70" />
