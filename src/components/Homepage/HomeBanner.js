@@ -28,7 +28,8 @@ const bannerSlides = [
     {
         id: 3,
         label: '',
-        imgPath: 'Get forign used cars',
+        imgPath: '/images/all-cars/3.jpg',
+        
     },
   
 ]
