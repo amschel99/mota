@@ -60,11 +60,10 @@ const About = () => {
         </Typography>
 
         <Typography variant="h6"   sx={{ textAlign: "center"}}>
-     Get  any car from our platform.We partner with automobile dealers from all over the world to bring you a variety of cars at your screen.
-     Buying a car has never been this easier.
-     Browse through  the cars from our inventory and when you find the one you are looking for, visit the seller's profile page. From there, you will get all the seller's contact and location details.
-     With a huge range all under one platform, there is really no need to go elsewhere.
-     We partner with a wide range of sellers from corporate automobile companies to small automobile businesses.
+        Are you in the market for a new set of wheels? Look no further! Our platform offers a vast selection of cars from dealers all over the world, making the car buying process a breeze. Whether you're searching for a sleek sports car, a spacious family SUV, or a reliable work truck, we've got you covered.
+Our platform makes it easy for you to find the perfect car for your needs and budget. Browse our inventory and find the car of your dreams, and then visit the seller's profile page to get all the necessary details about the seller and their location.
+We partner with a diverse range of sellers, from major corporate car companies to small, local businesses, ensuring that you have access to a wide variety of options.
+Don't waste your time and energy scouring the internet for the perfect car. Let us do the work for you.
      To create your profile and start advertising, visit the <a href="/register">Register page</a>.
 For any queries and support, contact <a href="tel:+254797168636">Amschel</a>.
 
