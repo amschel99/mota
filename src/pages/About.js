@@ -59,7 +59,7 @@ const About = () => {
           About Us
         </Typography>
 
-        <Typography variant="h6"   sx={{ textAlign: "center"}}>
+        <Typography variant="h6"   sx={{ textAlign: "center", fontFamily:"cursive"}}>
         Are you in the market for a new set of wheels? Look no further! Our platform offers a vast selection of cars from dealers all over the world, making the car buying process a breeze. Whether you're searching for a sleek sports car, a spacious family SUV, or a reliable work truck, we've got you covered.
 Our platform makes it easy for you to find the perfect car for your needs and budget. Browse our inventory and find the car of your dreams, and then visit the seller's profile page to get all the necessary details about the seller and their location.
 We partner with a diverse range of sellers, from major corporate car companies to small, local businesses, ensuring that you have access to a wide variety of options.
