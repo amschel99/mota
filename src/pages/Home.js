@@ -41,7 +41,7 @@ const Home = () => {
       const dispatch = useDispatch();
      
     return (
-        <div style={{fontSize:'6px'}}>
+        <div style={{fontSize:'10px'}}>
             {/* home banner */}
             <Box>
                 <HomeBanner />
@@ -62,7 +62,7 @@ const Home = () => {
                     >
                       <div style={{display:'flex',flexDirection:'column'}}>
 <img src={image1} alt="Cars_Logos" height="10%" width="70" />
-<div style={{fontSize:'6px'}}>Porsche</div>
+<div style={{fontSize:'10px'}}>Porsche</div>
 </div>
                     </Typography>
                      <Typography component={Button} 
@@ -74,7 +74,7 @@ const Home = () => {
                     >
                         <div style={{display:'flex',flexDirection:'column'}}>
 <img src={image2} alt="Cars_Logos" height="10%" width="70" />
-<div style={{fontSize:'6px'}}>Renault</div>
+<div style={{fontSize:'10px'}}>Renault</div>
 </div>
                     </Typography>
 
@@ -86,7 +86,7 @@ const Home = () => {
                 }}
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>  <img src={image3} alt="Cars_Logos" height="10%" width="70" />
-                       <div style={{fontSize:'6px'}}>Saab</div>
+                       <div style={{fontSize:'10px'}}>Saab</div>
                        </div>
                        
 
@@ -100,7 +100,7 @@ const Home = () => {
                 }}
                     >
                        <div style={{display:'flex',flexDirection:'column'}}> <img src={image4} alt="Cars_Logos" height="10%" width="70" />
-                       <div style={{fontSize:'6px'}}>Subaru</div>
+                       <div style={{fontSize:'10px'}}>Subaru</div>
                        </div>
 
                          
@@ -114,7 +114,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
   <img src={image5} alt="Cars_Logos" height="10%" width="70" /> 
-  <div style={{fontSize:'6px'}}>Suzuki</div>
+  <div style={{fontSize:'10px'}}>Suzuki</div>
                          </div>
                        
 
@@ -128,7 +128,7 @@ const Home = () => {
                         <div style={{display:'flex',flexDirection:'column'}}>
 
                             <img src={image6} alt="Cars_Logos" height="10%" width="70" />  
-                            <div style={{fontSize:'6px'}}>Tata</div>
+                            <div style={{fontSize:'10px'}}>Tata</div>
                         </div>
                      
 
@@ -142,7 +142,7 @@ const Home = () => {
                     >
                            <div style={{display:'flex',flexDirection:'column'}}>
         <img src={image7} alt="Cars_Logos" height="10%" width="70" />
-        <div style={{fontSize:'6px'}}>Toyota</div>
+        <div style={{fontSize:'10px'}}>Toyota</div>
                            </div>
               
 
@@ -156,7 +156,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
   <img src={image8} alt="Cars_Logos" height="10%" width="70" />
-  <div style={{fontSize:'6px'}}> Volvo</div>
+  <div style={{fontSize:'10px'}}> Volvo</div>
                        </div>
                     
 
@@ -169,7 +169,7 @@ const Home = () => {
                     >
                         <div style={{display:'flex',flexDirection:'column'}}>
  <img src={image9} alt="Cars_Logos" height="10%" width="70" />
- <div style={{fontSize:'6px'}}>Audi</div>
+ <div style={{fontSize:'10px'}}>Audi</div>
                         </div>
                        
 
@@ -182,7 +182,7 @@ const Home = () => {
                     >
                       <div style={{display:'flex',flexDirection:'column'}}>
 <img src={image10} alt="Cars_Logos" height="10%" width="70" />
-<div style={{fontSize:'6px'}}>Bmw</div>
+<div style={{fontSize:'10px'}}>Bmw</div>
                       </div>
                       
 
@@ -196,7 +196,7 @@ const Home = () => {
                     >
                      <div style={{display:'flex',flexDirection:'column'}}>
  <img src={image11} alt="Cars_Logos" height="10%" width="70" />
- <div style={{fontSize:'6px'}}>Chevrolet</div>
+ <div style={{fontSize:'10px'}}>Chevrolet</div>
                       </div> 
                    
 
@@ -210,7 +210,7 @@ const Home = () => {
                     >
                       <div style={{display:'flex',flexDirection:'column'}}>
       <img src={image12} alt="Cars_Logos" height="10%" width="70" />
-      <div style={{fontSize:'6px'}}>Hino</div>
+      <div style={{fontSize:'10px'}}>Hino</div>
                       </div>
                       
               
@@ -224,7 +224,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
        <img src={image13} alt="Cars_Logos" height="10%" width="70" />
-       <div style={{fontSize:'6px'}}>Honda</div>
+       <div style={{fontSize:'10px'}}>Honda</div>
                        </div>
             
 
@@ -238,7 +238,7 @@ const Home = () => {
                     >
                       <div style={{display:'flex',flexDirection:'column'}}>
    <img src={image14} alt="Cars_Logos" height="10%" width="70" />
-<div style={{fontSize:'6px'}}>Hyundai</div>
+<div style={{fontSize:'10px'}}>Hyundai</div>
                       </div>
                 
                     </Typography>
@@ -250,7 +250,7 @@ const Home = () => {
                 }}
                     >
                       <div style={{display:'flex',flexDirection:'column'}}><img src={image15} alt="Cars_Logos" height="10%" width="70" />
-                      <div style={{fontSize:'6px'}}>Infiniti</div>
+                      <div style={{fontSize:'10px'}}>Infiniti</div>
                         </div>
                    
 
@@ -263,7 +263,7 @@ const Home = () => {
                     >
                         <div style={{display:'flex',flexDirection:'column'}}>    <img src={image16} alt="Cars_Logos" height="10%" width="70" />
                         
-                        <div style={{fontSize:'6px'}}>Isuzu</div>
+                        <div style={{fontSize:'10px'}}>Isuzu</div>
                         </div>
                
 
@@ -277,7 +277,7 @@ const Home = () => {
                           <div style={{display:'flex',flexDirection:'column'}}>
 
       <img src={image17} alt="Cars_Logos" height="10%" width="70" />
-      <div style={{fontSize:'6px'}}>Jaguar</div>
+      <div style={{fontSize:'10px'}}>Jaguar</div>
                           </div>
 
              
@@ -291,7 +291,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
   <img src={image18} alt="Cars_Logos" height="10%" width="70" />
-  <div style={{fontSize:'6px'}}>Jeep</div>
+  <div style={{fontSize:'10px'}}>Jeep</div>
                        </div>
                  
 
@@ -304,7 +304,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
   <img src={image19} alt="Cars_Logos" height="10%" width="70" />
-  <div style={{fontSize:'6px'}}>Land Rover</div>
+  <div style={{fontSize:'10px'}}>Land Rover</div>
                        </div>
                  
 
@@ -317,7 +317,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
 <img src={image20} alt="Cars_Logos" height="10%" width="70" />
-<div style={{fontSize:'6px'}}>Lexus </div>
+<div style={{fontSize:'10px'}}>Lexus </div>
                        </div>
                    
 
@@ -331,7 +331,7 @@ const Home = () => {
                     >
                           <div style={{display:'flex',flexDirection:'column'}}>
   <img src={image21} alt="Cars_Logos" height="10%" width="70" />
-  <div style={{fontSize:'6px'}}>Man</div>
+  <div style={{fontSize:'10px'}}>Man</div>
                           </div>
                  
 
@@ -344,7 +344,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
     <img src={image22} alt="Cars_Logos" height="10%" width="70" />
-    <div style={{fontSize:'6px'}}>Mazda</div>
+    <div style={{fontSize:'10px'}}>Mazda</div>
 
                        </div>
                
@@ -359,7 +359,7 @@ const Home = () => {
                       <div style={{display:'flex',flexDirection:'column'}}>
 
      <img src={image23} alt="Cars_Logos" height="10%" width="70" />
-     <div style={{fontSize:'6px'}}>Mercedez-Amg</div>
+     <div style={{fontSize:'10px'}}>Mercedez-Amg</div>
                       </div>
               
 
@@ -373,7 +373,7 @@ const Home = () => {
                       <div style={{display:'flex',flexDirection:'column'}}>
 
   <img src={image24} alt="Cars_Logos" height="10%" width="70" />
-  <div style={{fontSize:'6px'}}>Mercedez-Benz</div>
+  <div style={{fontSize:'10px'}}>Mercedez-Benz</div>
                       </div>
                  
 
@@ -386,7 +386,7 @@ const Home = () => {
                     >
                         <div style={{display:'flex',flexDirection:'column'}}>
     <img src={image25} alt="Cars_Logos" height="10%" width="70" />
-    <div style={{fontSize:'6px'}}>Mini</div>
+    <div style={{fontSize:'10px'}}>Mini</div>
                         </div>
                
 
@@ -399,7 +399,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
    <img src={image26} alt="Cars_Logos" height="10%" width="70" />
-   <div style={{fontSize:'6px'}}>Mitsubishi</div>
+   <div style={{fontSize:'10px'}}>Mitsubishi</div>
 
                        </div>
                 
@@ -414,7 +414,7 @@ const Home = () => {
                     >
                             <div style={{display:'flex',flexDirection:'column'}}>
 <img src={image27} alt="Cars_Logos" height="10%" width="70" />
-<div style={{fontSize:'6px'}}>Nissan</div>
+<div style={{fontSize:'10px'}}>Nissan</div>
 
                             </div>
                    
@@ -428,7 +428,7 @@ const Home = () => {
                     >
                        <div style={{display:'flex',flexDirection:'column'}}>
 
-                        <div style={{fontSize:'6px'}}>Peugot</div>
+                        <div style={{fontSize:'10px'}}>Peugot</div>
                        </div>
                    <img src={image29} alt="Cars_Logos" height="10%" width="70" />
 
