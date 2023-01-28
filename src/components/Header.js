@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Button, styled, Typography } from "@mui/material";
 import { Link } from 'react-router-dom'
-//img
-import headerImg from 'https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg'
+
+
 
 const Header = () => {
 
@@ -128,7 +128,7 @@ const Header = () => {
             })}
             >
                 <img
-                src={headerImg}
+                src='https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg'
                 alt="headerImg"
                 style={{ 
                     width: "100%", 

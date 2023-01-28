@@ -7,8 +7,7 @@ import {
 } from '@mui/material'
 import Title from './Title'
 // img
-import imgDetail from 'https://cdn.pixabay.com/photo/2020/06/07/20/49/toyota-rav-4-5272095__340.jpg';
-import imgDetail2 from 'https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg';
+
 
 
 const GetStarted = () => {
@@ -61,7 +60,7 @@ const GetStarted = () => {
             </CustomGridItem>
             
             <Grid item xs={12} sm={4} md={6}>
-                <img src={imgDetail} alt="" 
+                <img src='https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg' alt="" 
                 style={{
                     width: '100%',
                 }}
@@ -73,7 +72,7 @@ const GetStarted = () => {
                 order: {xs: 4, sm: 4, md: 3}
             }}
             >
-                <img src={imgDetail2} alt="" 
+                <img src='https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg' alt="" 
                 style={{ 
                     width: "100%",
                 }}
