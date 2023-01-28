@@ -41,14 +41,14 @@ const Header = () => {
             component='section'
             >
                 <Typography
-                variant='h2'
-                component= 'h1'
+                variant='h4'
+                component= 'h3'
                 sx={{
                     fontWeight: 700,
                     color: '#fff',
                 }}
                 >
-                 Drive Your Automotive Sales to the Next Level with MOTA - The Premier Advertising Platform for the Automotive Industry
+              MOTA: The ultimate platform for automotive advertising. Sellers reach targeted buyers, buyers find their dream vehicle with ease
                 </Typography>
 
                 <Typography
@@ -60,7 +60,8 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-              MOTA: The ultimate platform for automotive advertising. Sellers reach targeted buyers, buyers find their dream vehicle with ease
+                                     Drive Your Automotive Sales to the Next Level with MOTA - The Premier Advertising Platform for the Automotive Industry
+
                 </Typography>
 
                 <Box>
