@@ -113,7 +113,7 @@ fetchCars()
               <Box
                 sx={{ width: { xs: "30vw", sm: "20vw" } }}
                 component={NavLink}
-                to="/"
+                to="/home"
                 id="header-logo"
               >
                 <Box

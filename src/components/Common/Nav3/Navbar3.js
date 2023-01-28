@@ -55,7 +55,7 @@ const Navbar3= ({setOpen})=>{
                <Box
                 sx={{ width: { xs: "50vw", sm: "30vw" } }}
                 component={NavLink}
-                to="/"
+                to="/home"
                 id="header-logo"
               >
                 <Box
