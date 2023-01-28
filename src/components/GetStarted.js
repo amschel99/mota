@@ -8,7 +8,8 @@ import {
 import Title from './Title'
 // img
 
-import image2 from "../images/landing1.jpg"
+import image1 from "../images/landing1.jpg"
+import image2 from "../images/landing2.jpg"
 
 
 
