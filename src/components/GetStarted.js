@@ -8,7 +8,8 @@ import {
 import Title from './Title'
 // img
 
-
+import image2 from "../.././public/images/landing2.jpg"
+import image1 from "../.././public/images/landing1.jpg"
 
 const GetStarted = () => {
 
@@ -63,7 +64,7 @@ Overall, MOTA is the ultimate platform for both sellers and buyers in the automo
             </CustomGridItem>
             
             <Grid sx={{}} item xs={12} sm={4} md={6}>
-                <img src='https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg' alt="" 
+                <img src={`${image2}`} alt="" 
                 style={{
                     width: '100%',
                 }}
@@ -75,7 +76,7 @@ Overall, MOTA is the ultimate platform for both sellers and buyers in the automo
                 order: {xs: 4, sm: 4, md: 3}
             }}
             >
-                <img src='https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg' alt="" 
+                <img src={`${image1}`} alt="" 
                 style={{ 
                     width: "100%",
                 }}
