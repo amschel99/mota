@@ -30,6 +30,7 @@ const GetStarted = () => {
             
         <Grid container spacing={{ xs: 4, sm: 4, md: 0 }}   
         sx={{
+            marginTop:'10px',
             py: 0,
             px: 2,
              
