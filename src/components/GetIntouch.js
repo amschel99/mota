@@ -22,23 +22,20 @@ const GetInTouch = () => {
         >
             <Title 
             text={
-                'Contact us to buy property'
+                'BROWSE OUR INVENTORY'
                 } 
             textAlign={'center'}
             />
             <Paragraph 
             text={
-                'It is our commitment to ensure a professional and enjoyable \
-                new home buying experience for you. \
-                If you want to get a home to start living as a family in an \
-                area that you love click the button below.'
+                "Ready to find your dream vehicle? Browse through our extensive inventory and discover a wide variety of vehicles from multiple sellers. Our advanced search and filtering options make it easy to find the specific make and model you're looking for, and our detailed vehicle information provides all the information you need to make an informed decision. Don't wait, start browsing now and drive away in your perfect car today!"
             }
             maxWidth = {'sm'}
             mx={0}
             textAlign={'center'}
             />
             <Button component={Link} 
-            to={'/contact'}
+            to={'/home'}
             variant="contained" 
             type="submit"
             size="medium"
@@ -50,13 +47,13 @@ const GetInTouch = () => {
                 mt: 3, 
                 mb: 2,
                 borderRadius: 0,
-                backgroundColor: '#14192d',
+                backgroundColor: 'red',
                 "&:hover": {
-                    backgroundColor: '#1e2a5a',
+                    backgroundColor: 'red',
                 }
             }}
             >
-                get in touch
+                Browse our Inventory
             </Button>
  
         </Stack>

@@ -14,7 +14,7 @@ const Header = () => {
         gap: theme.spacing(2),
         paddingTop: theme.spacing(10),
         // cor de fundo
-        backgroundColor: 'orange',
+        backgroundColor: 'red',
         [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             alignItems: 'center',
@@ -48,7 +48,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We'll build house of your dream
+                 Drive Your Automotive Sales to the Next Level with MOTA - The Premier Advertising Platform for the Automotive Industry
                 </Typography>
 
                 <Typography
@@ -60,8 +60,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We have 9000 more review and our customers
-                    trust on out property and quality products.
+              MOTA: The ultimate platform for automotive advertising. Sellers reach targeted buyers, buyers find their dream vehicle with ease
                 </Typography>
 
                 <Box>
@@ -85,7 +84,7 @@ const Header = () => {
                         }
                     }}
                     >
-                        buy now
+                      List your car
                     </Button>
                     <Button 
                     component={Link} 
