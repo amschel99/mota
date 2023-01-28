@@ -24,7 +24,7 @@ import { Markers} from "./markers";
 return (
 <div className="App" style={{width:'100%',height:"400px"}}>
  <MapProvider> 
-<ReactMapGL mapboxAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapboxApiAccessToken="pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA" mapStyle='mapbox://styles/mapbox/streets-v12' 
+<ReactMapGL mapboxAccessToken={`${process.env.REACT_APP_MAPBOX_TOKEN}`} mapboxApiAccessToken={`${process.env.REACT_APP_MAPBOX_TOKEN}`} mapStyle='mapbox://styles/mapbox/streets-v12' 
 onViewportChange={setViewport} {...viewport} >
  <Markers latitude={latitude} longitude={longitude}/>
 </ReactMapGL>

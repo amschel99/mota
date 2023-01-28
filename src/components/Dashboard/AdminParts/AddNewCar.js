@@ -35,7 +35,7 @@ const [azureStatus, setAzureStatus]=React.useState("")
     const [carType, setCarType] = React.useState('')
     const [urls, setUrls]=React.useState([])
     const[user,setUser]=React.useState(currentUser.email)
-
+const[errStatus,setErrStatus]=React.useState("")
 
    const[largeImage,setLargeImage]=React.useState("")
   const[message,setMessage]=React.useState("")
@@ -274,6 +274,10 @@ setUser(currentUser.email)
                          <label for="images">Choose upto 5 pictures</label>
                             <input type="file" multiple required name="images" id="images" accept='image/png, image/jpeg'
                          onChange={async (e) => {
+                            if(e.target.files.length<5){
+                                return setErrStatus("please choose upto 5 pictures")
+                            }
+                            setErrStatus("")
                          setAzureStatus("hang on as we process your images...")
                             e.preventDefault()
                         const response= await  uploadBlob(e.target.files)
@@ -292,7 +296,7 @@ setUser(currentUser.email)
                                 >Add to Database</Button>
                            <div>{message}</div>
                           {azureStatus && <Alert severity="success">{azureStatus}</Alert>}
-                                {urls.length<5 &&<Alert severity="error" >Please choose upto 5 photos</Alert>}
+                                {errStatus &&<Alert severity="error" >{errStatus}</Alert>}
                              
                                 {status && <Alert severity="success">{status}</Alert>}
                                

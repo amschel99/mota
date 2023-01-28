@@ -36,7 +36,7 @@ React.useEffect(()=>{
 const fetchLocation= async ()=>{
 try{
   
-const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${search}.json?country=ke,ug&types=poi,address,neighborhood,locality,place,district,postcode&limit=10&access_token=pk.eyJ1IjoiYW1zY2hlbCIsImEiOiJjbGMwMzhvbngwbGRmM29temcweGN0cG5mIn0.gD-j9QLpchwuiUcn1BfEWA`)
+const {data}=await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${search}.json?country=ke,ug&types=poi,address,neighborhood,locality,place,district,postcode&limit=10&access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`)
 const {features}=data
 setPlaceData(features)// an array
 
@@ -260,7 +260,7 @@ setSearch(e.target.value)
               </Grid>
                <Grid item xs={12}>
                 <TextField
-                  required
+                  
                   fullWidth
                   name="facebook"
                   label="facebook"
@@ -272,7 +272,7 @@ setSearch(e.target.value)
               </Grid>
                <Grid item xs={12}>
                 <TextField
-                  required
+                 
                   fullWidth
                   name="twitter"
                   label="twitter"
@@ -284,7 +284,7 @@ setSearch(e.target.value)
               </Grid>
                <Grid item xs={12}>
                 <TextField
-                  required
+                  
                   fullWidth
                   name="instagram"
                   label="instagram"
