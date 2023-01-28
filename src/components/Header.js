@@ -132,7 +132,7 @@ const Header = () => {
                 src='https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg'
                 alt="headerImg"
                 style={{ 
-                    width: "100%", 
+                    width: "90%", 
                     marginBottom: -15,
                 }}
                 />
