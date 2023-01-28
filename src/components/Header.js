@@ -41,10 +41,10 @@ const Header = () => {
             component='section'
             >
                 <Typography
-                variant='h4'
-                component= 'h3'
+                variant='h5'
+                component= 'h6'
                 sx={{
-                    fontWeight: 700,
+                    fontWeight: 300,
                     color: '#fff',
                 }}
                 >
