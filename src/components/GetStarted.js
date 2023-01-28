@@ -46,7 +46,7 @@ const GetStarted = () => {
                 >
                     <Title
                     text={
-                        'We make it easy for tenants and landlords'
+                        'Why choose Mota'
                     }
                     textAlign={'start'}
                     />
@@ -93,7 +93,7 @@ Overall, MOTA is the ultimate platform for both sellers and buyers in the automo
                 >
                     <Title
                     text={
-                        'Match with the best agent'
+                        'Our sellers are verified!'
                         
                     }
                     textAlign={'start'}
