@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
 
     const CustomBox = styled(Box) (({ theme }) => ({
-        minHeight: '50vh',
+      height: '50vh',
         display: 'flex',
         justifyContent: 'center',
         // tamanhos
@@ -24,6 +24,7 @@ const Header = () => {
 
     const BoxText = styled(Box) (({ theme }) => ({
         flex: '1',
+        marginTop:0,
         paddingLeft: theme.spacing(8),
         [theme.breakpoints.down('md')]: {
             flex: '2',
