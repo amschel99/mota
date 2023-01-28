@@ -8,8 +8,9 @@ import {
 import Title from './Title'
 // img
 
-import image2 from "../.././public/images/landing2.jpg"
-import image1 from "../.././public/images/landing1.jpg"
+import image2 from "../images/landing1.jpg"
+import image2 from "../images/landing2.jpg"
+
 
 const GetStarted = () => {
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import { Box, Button, styled, Typography } from "@mui/material";
 import { Link } from 'react-router-dom'
-import image1 from "../.././public/images/landing1.jpg"
-import image2 from "../.././public/images/landing2.jpg"
+import image1 from "../images/landing2.jpg"
 
 
 
