@@ -12,7 +12,7 @@ const Header = () => {
         justifyContent: 'center',
         // tamanhos
         gap: theme.spacing(2),
-        paddingTop: theme.spacing(10),
+        paddingTop: theme.spacing(2),
         // cor de fundo
         backgroundColor: 'red',
         [theme.breakpoints.down('md')]: {
