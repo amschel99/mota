@@ -220,20 +220,14 @@ setValue(e.target.value)
 
               <Box noWrap id="header-links">
                 <NavLink
-                  to="/"
+                  to="/home"
                   exact
                   activeClassName="active"
                   onClick={toggleHeaderVisibility}
                 >
                   <Typography variant="h6">Home</Typography>
                 </NavLink>
-                <NavLink
-                  to="/cars"
-                  activeClassName="active"
-                  onClick={toggleHeaderVisibility}
-                >
-                  <Typography variant="h6">Explore</Typography>
-                </NavLink>
+                
                 <NavLink
                   to="/about"
                   activeClassName="active"
