@@ -30,7 +30,7 @@ const GetStarted = () => {
             
         <Grid container spacing={{ xs: 4, sm: 4, md: 0 }}   
         sx={{
-            py: 10,
+            py: 0,
             px: 2,
              
         }}
@@ -61,7 +61,7 @@ Overall, MOTA is the ultimate platform for both sellers and buyers in the automo
 
             </CustomGridItem>
             
-            <Grid item xs={12} sm={4} md={6}>
+            <Grid sx={{}} item xs={12} sm={4} md={6}>
                 <img src='https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg' alt="" 
                 style={{
                     width: '100%',
