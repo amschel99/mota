@@ -292,7 +292,7 @@ setValue(e.target.value)
                           toggleHeaderVisibility();
                         }}
                       >
-                        Profile
+                       Seller Profile
                       </MenuItem>
                     </NavLink>
                   </Menu>

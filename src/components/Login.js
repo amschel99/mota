@@ -107,6 +107,9 @@ setError(`failed to login!${error}`)
                 <Link href="/reset" variant="body2">
                   forgot password?
                 </Link>
+                <Link href="/register" variant="body2">
+                  Are you new? Register
+                </Link>
               </Grid>
             
             </Grid>
