@@ -101,11 +101,11 @@ function App() {
                 {/* routes */}
                 <Route exact path="/">
                   <>
-                       <Navbar   />  
+                     
                         {/* navigation bar */}
                         <LandingPage/>
                   
-                   <Footer/>
+                   
                   </>
                  
                   
