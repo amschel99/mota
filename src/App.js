@@ -104,7 +104,7 @@ function App() {
                        <Navbar   />  
                         {/* navigation bar */}
                         <LandingPage/>
-                   <Home  />
+                  
                    <Footer/>
                   </>
                  
