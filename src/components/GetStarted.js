@@ -7,8 +7,8 @@ import {
 } from '@mui/material'
 import Title from './Title'
 // img
-import imgDetail from '../assets/pexels-alex-staudinger-1732414.jpg';
-import imgDetail2 from '../assets/pexels-pixabay-271816.jpg';
+import imgDetail from 'https://cdn.pixabay.com/photo/2020/06/07/20/49/toyota-rav-4-5272095__340.jpg';
+import imgDetail2 from 'https://cdn.pixabay.com/photo/2021/12/23/02/31/cadillac-6888500__340.jpg';
 
 
 const GetStarted = () => {
