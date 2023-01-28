@@ -6,12 +6,12 @@ const app= firebase.initializeApp(
 
     {
 
- apiKey: "AIzaSyBHu9e5cuW4YGDhOseC5-8GAnRLvx_r2IM",
-  authDomain: "miles-auth-37380.firebaseapp.com",
-  projectId: "miles-auth-37380",
-  storageBucket: "miles-auth-37380.appspot.com",
-  messagingSenderId: "639435829172",
-  appId: "1:639435829172:web:f2350d86723986f2858ce1"
+ apiKey:process.env.REACT_APP_FIREBASE_API_KEY, //"AIzaSyBHu9e5cuW4YGDhOseC5-8GAnRLvx_r2IM",
+  authDomain:process.env.REACT_APP_AUTH_DOMAIN, //"miles-auth-37380.firebaseapp.com",
+  projectId:process.env.REACT_APP_PROJECTID,// "miles-auth-37380",
+  storageBucket:process.env.REACT_APP_STORAGE_BUCKET,// "miles-auth-37380.appspot.com",
+  messagingSenderId:process.env.REACT_APP_MSGID,// "639435829172",
+  appId:process.env.REACT_APP_APPID// "1:639435829172:web:f2350d86723986f2858ce1"
     
     }
 )
