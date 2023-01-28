@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Login from "./components/Login"
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute"
 import Reset from './components/Reset'
-
+import LandingPage from "./pages/landing/Landing";
 import CarDetails from "./pages/CarDetails";
 import Page404 from "./pages/404";
 import Seller from './pages/Seller';
@@ -101,7 +101,20 @@ function App() {
                 {/* routes */}
                 <Route exact path="/">
                   <>
-                       <Navbar   />   {/* navigation bar */}
+                       <Navbar   />  
+                        {/* navigation bar */}
+                        <LandingPage/>
+                   <Home  />
+                   <Footer/>
+                  </>
+                 
+                  
+                  </Route>
+                  <Route exact path="/home">
+                  <>
+                       <Navbar   />  
+                        {/* navigation bar */}
+                  
                    <Home  />
                    <Footer/>
                   </>

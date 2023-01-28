@@ -1,0 +1,52 @@
+.landing-page {
+    text-align: center;
+    background-color: white;
+  }
+  
+  .list-car-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .list-car-btn:hover {
+    background-color: darkred;
+    cursor: pointer;
+  }
+  
+  .browse-inventory-btn {
+    background-color: white;
+    color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid red;
+    transition: background-color 0.2s ease;
+  }
+  
+  .browse-inventory-btn:hover {
+    background-color:
+    #f2f2f2;
+    cursor: pointer;
+    }
+    
+    .reviews {
+    margin: 50px 0;
+    }
+    
+    .review {
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }  
