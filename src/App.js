@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route,useLocation} from "react-router-
 import './App.css';
 import Navbar from "./components/Common/Navbar/Navbar";
 import SignUp from "./components/Signup"
+import Paypal from "./pages/Paypal";
 
 import Home from "./pages/Home";
 import Login from "./components/Login"
@@ -145,6 +146,15 @@ function App() {
                       <>
                       <Navbar3/>
                         <SignUp/>
+                        <Footer/>
+                      </>
+                    
+                      
+                      </Route>
+                      <Route exact path="/pay">
+                      <>
+                      <Navbar3/>
+                        <Paypal/>
                         <Footer/>
                       </>
                     
