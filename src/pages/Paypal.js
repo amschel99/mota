@@ -7,11 +7,16 @@ export default function Paypal() {
  const [success, setSuccess] = useState(false);
  const [ErrorMessage, setErrorMessage] = useState("");
  const [orderID, setOrderID] = useState(false);
- 
+ const initialOptions = {
+    "client-id": process.env.REACT_APP_CLIENT_ID,
+    currency: "USD",
+    intent: "capture",
+  };
+  
  // creates a paypal order
  const createOrder = (data, actions) => {
    return actions.order
-     .capture({
+     .create({
        purchase_units: [
          {
            description: "Basic",
@@ -50,9 +55,7 @@ export default function Paypal() {
  };
  return (
    <PayPalScriptProvider
-     options={{
-       "client-id":process.env.REACT_APP_CLIENT_ID,
-     }}
+   options={initialOptions}
    >
      <div>
        <div className="wrapper">
