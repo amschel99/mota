@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import "./App.css";
+
  
 export default function Paypal() {
  const [show, setShow] = useState(false);
