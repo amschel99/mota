@@ -11,7 +11,7 @@ export default function Paypal() {
  // creates a paypal order
  const createOrder = (data, actions) => {
    return actions.order
-     .create({
+     .capture({
        purchase_units: [
          {
            description: "Basic",
