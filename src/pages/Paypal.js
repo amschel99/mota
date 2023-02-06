@@ -17,7 +17,7 @@ export default function Paypal() {
            description: "Basic",
            amount: {
              currency_code: "USD",
-             value: 10,
+             value: 0.080,
            },
          },
        ],
@@ -36,11 +36,14 @@ export default function Paypal() {
  const onApprove = (data, actions) => {
    return actions.order.capture().then(function (details) {
      const { payer } = details;
+     console.log(payer)
      setSuccess(true);
    });
  };
  //capture likely error
  const onError = (data, actions) => {
+    console.log(data)
+    console.log(actions)
    setErrorMessage("An Error occured with your payment ");
  };
  return (
@@ -54,7 +57,7 @@ export default function Paypal() {
          <div className="product-img">
            <img
              src="https://cdn.pixabay.com/photo/2021/08/15/06/54/sunflower-6546993_1280.jpg"
-             alt="SunFlower"
+             alt="basic_plan"
              height="420"
              width="327"
            />
