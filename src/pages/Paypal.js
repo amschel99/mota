@@ -69,12 +69,12 @@ currency_code: "USD",
  
  <Card sx={{ width:'100vw'}}>
       <CardMedia
-        sx={{ height: 300 }}
+        sx={{ height: 500 }}
         image={basic}
         title="basic"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="p" component="p">
 Here are some of the benefits of upgrading your account:
 Access to detailed analytics: Keep track of how many people are viewing your listings, which ones are getting the most traffic, and more.
 
@@ -92,8 +92,30 @@ Regular updates: Stay up to date with the latest features and improvements, ensu
         </Typography>
       </CardContent>
       <CardActions>
-        <Button className="subscribe-btn" onClick={() => setShow(true)} size="small">Paypal</Button>
-        <Button size="small">Mpesa</Button>
+        <Button sx={{
+                    backgroundColor: '#2680EB',
+  color: 'white',
+  fontSize: '18px',
+  fontWeight: '700',
+  padding: '15px 40px',
+  border: 'none',
+  borderRadius: '50px',
+  cursor: 'pointer',
+  transition: 'all 0.3s ease',
+  outline: 'none',
+                   }} onClick={() => setShow(true)} size="small">Paypal</Button>
+        <Button sx={{
+                    backgroundColor: '#2680EB',
+  color: 'white',
+  fontSize: '18px',
+  fontWeight: '700',
+  padding: '15px 40px',
+  border: 'none',
+  borderRadius: '50px',
+  cursor: 'pointer',
+  transition: 'all 0.3s ease',
+  outline: 'none',
+                   }} size="small">Mpesa</Button>
       </CardActions>
     </Card>
      
