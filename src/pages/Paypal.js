@@ -97,19 +97,8 @@ Here are some of the benefits of upgrading your account:
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   outline: 'none',
-                   }} onClick={() => setShow(true)} size="small">Paypal</Button>
-        <Button sx={{
-                    backgroundColor: '#2680EB',
-  color: 'white',
-  fontSize: '18px',
-  fontWeight: '700',
-  padding: '15px 40px',
-  border: 'none',
-  borderRadius: '50px',
-  cursor: 'pointer',
-  transition: 'all 0.3s ease',
-  outline: 'none',
-                   }} size="small">Mpesa</Button>
+                   }} onClick={() => setShow(true)} size="small">Pay Now/Button>
+       
       </CardActions>
     </Card>
      
