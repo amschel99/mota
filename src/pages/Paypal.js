@@ -66,8 +66,8 @@ currency_code: "USD",
             <img
               src={`${basic}`}
               alt="basic_plan"
-              height="200"
-              width="100vw"
+              height="150"
+              width="200"
             />
           </div>
           <div className="product-info">
