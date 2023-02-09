@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import "./Paypal.css";
+import basic from './BASIC.png'
+
  
 export default function Paypal() {
   const [show, setShow] = useState(false);
@@ -62,7 +64,7 @@ currency_code: "USD",
         <div className="product-box">
           <div className="product-img">
             <img
-              src="https://cdn.pixabay.com/photo/2021/08/15/06/54/sunflower-6546993_1280.jpg"
+              src=`${basic}`
               alt="basic_plan"
               height="200"
               width="200"
