@@ -67,7 +67,7 @@ currency_code: "USD",
   return (
     <PayPalScriptProvider options={initialOptions}>
  
- <Card sx={{ maxWidth: 500}}>
+ <Card sx={{ width:'100vw'}}>
       <CardMedia
         sx={{ height: 300 }}
         image={basic}
