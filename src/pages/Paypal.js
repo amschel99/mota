@@ -97,7 +97,7 @@ Here are some of the benefits of upgrading your account:
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   outline: 'none',
-                   }} onClick={() => setShow(true)} size="small">Pay Now/Button>
+                   }} onClick={() => setShow(true)} size="small">Pay Now</Button>
        
       </CardActions>
     </Card>
