@@ -77,7 +77,7 @@ currency_code: "USD",
             <div className="product-price-btn">
               <p className="product-price">$10</p>
               <button type="submit" className="subscribe-btn" onClick={() => setShow(true)}>
-                Subscribe now
+                Pay Now
               </button>
             </div>
           </div>
