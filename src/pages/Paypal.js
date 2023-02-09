@@ -96,7 +96,7 @@ currency_code: "USD",
             onError={onError}
           />
         ) : null}
-      </div>
+     
     </PayPalScriptProvider>
   );
 }
