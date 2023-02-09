@@ -67,15 +67,25 @@ currency_code: "USD",
   return (
     <PayPalScriptProvider options={initialOptions}>
  
- <Card sx={{ maxWidth: 345 }}>
+ <Card sx={{ maxWidth: 500}}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 300 }}
         image={basic}
         title="basic"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-       Post unlimited number of automobiles
+Here are some of the benefits of upgrading your account:
+Access to detailed analytics: Keep track of how many people are viewing your listings, which ones are getting the most traffic, and more.
+
+High-quality images: Showcase your vehicles in the best light possible with unlimited image uploads.
+
+Customizable listings: Personalize each listing with your own descriptions, pricing, and more.
+
+Search engine optimization (SEO): Improve your visibility on search engines like Google, making it easier for potential buyers to find your listings.
+
+Customer support: Receive assistance from a dedicated support team to help you with any questions or issues you may have.
+Regular updates: Stay up to date with the latest features and improvements, ensuring your platform remains at the cutting edge.
         </Typography>
         <Typography variant="body2" color="text.secondary">
          
