@@ -67,7 +67,7 @@ currency_code: "USD",
   return (
     <PayPalScriptProvider options={initialOptions}>
  
- <Card sx={{ width:'100vw'}}>
+ <Card sx={{ width:'100vw', marginTop:'50px'}}>
      <Typography> UPGRADE ACCOUNT AND POST UNLIMITED CARS</Typography>
       <CardContent>
         <Typography gutterBottom variant="p" component="p">
