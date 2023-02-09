@@ -3,6 +3,12 @@ import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import "./Paypal.css";
 import basic from './BASIC.png'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
  
 export default function Paypal() {
@@ -60,30 +66,27 @@ currency_code: "USD",
 
   return (
     <PayPalScriptProvider options={initialOptions}>
-      <div className="paypal-container">
-        <div className="product-box">
-          <div className="product-img">
-            <img
-              src={`${basic}`}
-              alt="basic_plan"
-              height="150"
-              width="200"
-            />
-          </div>
-          <div className="product-info">
-            <h1 className="product-title">Basic plan</h1>
-            <h2 className="product-subtitle">Upload upto 70 photos</h2>
-            <p className="product-description">
-              Upload upto 70 photos for 2 months
-            </p>
-            <div className="product-price-btn">
-              <p className="product-price">$10</p>
-              <button type="submit" className="subscribe-btn" onClick={() => setShow(true)}>
-                Pay Now
-              </button>
-            </div>
-          </div>
-        </div>
+ 
+ <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image={basic}
+        title="basic"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+       Post unlimited number of automobiles
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button className="subscribe-btn" onClick={() => setShow(true)} size="small">Paypal</Button>
+        <Button size="small">Mpesa</Button>
+      </CardActions>
+    </Card>
+     
 
         {show ? (
           <PayPalButtons
