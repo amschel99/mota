@@ -67,12 +67,8 @@ currency_code: "USD",
   return (
     <PayPalScriptProvider options={initialOptions}>
  
- <Card sx={{ width:'70vw',marginLeft:'15vw',marginRight:'15vw'}}>
-      <CardMedia
-        sx={{ height: 500 }}
-        image={basic}
-        title="basic"
-      />
+ <Card sx={{ width:'100vw'}}>
+     <Typography> UPGRADE ACCOUNT AND POST UNLIMITED CARS</Typography>
       <CardContent>
         <Typography gutterBottom variant="p" component="p">
 Here are some of the benefits of upgrading your account:
