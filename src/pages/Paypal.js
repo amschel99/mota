@@ -64,7 +64,7 @@ currency_code: "USD",
         <div className="product-box">
           <div className="product-img">
             <img
-              src=`${basic}`
+              src={`${basic}`}
               alt="basic_plan"
               height="200"
               width="200"
