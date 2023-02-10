@@ -94,6 +94,8 @@ Here are some of the benefits of upgrading your account:
   padding: '15px 40px',
   border: 'none',
   borderRadius: '50px',
+  display:'block',
+  text-align:'centre',                  
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   outline: 'none',
