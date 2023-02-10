@@ -93,6 +93,8 @@ Here are some of the benefits of upgrading your account:
   fontWeight: '700',
   padding: '15px 40px',
   border: 'none',
+  display:"block",
+  text-align: 'centre',
   borderRadius: '50px',
   cursor: 'pointer',
   transition: 'all 0.3s ease',
