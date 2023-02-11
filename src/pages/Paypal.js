@@ -32,7 +32,7 @@ export default function Paypal() {
           {
             description: "Basic",
             amount: {
-              value: 0.0080,
+              value: 0.04,
 
 currency_code: "USD",
             },
