@@ -75,7 +75,7 @@ currency_code: "USD",
       <CardContent>
         <Typography gutterBottom variant="p" component="p">
 Here are some of the benefits of upgrading your account:
-<ul>
+<ul type='disc'>
   <li>Access to detailed analytics: Keep track of how many people are viewing your listings, which ones are getting the most traffic, and more.</li>
   <li>High-quality images: Showcase your vehicles in the best light possible with unlimited image uploads.</li>
   <li>Customizable listings: Personalize each listing with your own descriptions, pricing, and more.</li>
