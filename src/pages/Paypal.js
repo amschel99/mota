@@ -82,6 +82,7 @@ Here are some of the benefits of upgrading your account:
   <li>Search engine optimization (SEO): Improve your visibility on search engines like Google, making it easier for potential buyers to find your listings.</li>
   <li>Customer support: Receive assistance from a dedicated support team to help you with any questions or issues you may have.</li>
   <li>Regular updates: Stay up to date with the latest features and improvements, ensuring your platform remains at the cutting edge.</li>
+  <li>WITH THE FREE TRIAL, YOU CAN POST UPTO 3 AUTOMOBILES</li>
 </ul>
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -106,15 +107,16 @@ Here are some of the benefits of upgrading your account:
 
   <Button sx={{
               marginLeft:"5px",
-                    backgroundColor: '#2680EB',
+                  
+  backgroundColor: '#2680EB',
   color: 'white',
-  fontSize: '18px',
+  fontSize: '10px',
   fontWeight: '300',
   padding: '15px 20px',
   border: 'none',
   display:'block',
   "text-align": 'centre',
-  borderRadius: '50px',
+  borderRadius: '30px',
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   outline: 'none',
