@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import "./Paypal.css";
+
 import basic from './BASIC.png'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -92,24 +92,25 @@ Here are some of the benefits of upgrading your account:
         <Button sx={{
                     backgroundColor: '#2680EB',
   color: 'white',
-  fontSize: '18px',
-  fontWeight: '700',
-  padding: '15px 40px',
+  fontSize: '10px',
+  fontWeight: '300',
+  padding: '15px 20px',
   border: 'none',
   display:'block',
   "text-align": 'centre',
-  borderRadius: '50px',
+  borderRadius: '30px',
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   outline: 'none',
                    }} onClick={() => setShow(true)} size="small">Pay Now</Button>
 
   <Button sx={{
+              marginLeft:"5px",
                     backgroundColor: '#2680EB',
   color: 'white',
   fontSize: '18px',
-  fontWeight: '700',
-  padding: '15px 40px',
+  fontWeight: '300',
+  padding: '15px 20px',
   border: 'none',
   display:'block',
   "text-align": 'centre',
