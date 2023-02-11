@@ -9,10 +9,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {useHistory,Link} from 'react-router-dom'
 
  
 export default function Paypal() {
   const [show, setShow] = useState(false);
+ const history=useHistory();
   const [success, setSuccess] = useState(false);
   const [ErrorMessage, setErrorMessage] = useState("");
   const [orderID, setOrderID] = useState(false);
@@ -30,7 +32,7 @@ export default function Paypal() {
           {
             description: "Basic",
             amount: {
-              value: 0.080,
+              value: 0.0080,
 
 currency_code: "USD",
             },
@@ -55,6 +57,7 @@ currency_code: "USD",
       console.log(payer);
       console.log(actions);
       setSuccess(true);
+     history.push('/profile')
     });
   };
   //capture likely error
@@ -100,6 +103,21 @@ Here are some of the benefits of upgrading your account:
   transition: 'all 0.3s ease',
   outline: 'none',
                    }} onClick={() => setShow(true)} size="small">Pay Now</Button>
+
+  <Button sx={{
+                    backgroundColor: '#2680EB',
+  color: 'white',
+  fontSize: '18px',
+  fontWeight: '700',
+  padding: '15px 40px',
+  border: 'none',
+  display:'block',
+  "text-align": 'centre',
+  borderRadius: '50px',
+  cursor: 'pointer',
+  transition: 'all 0.3s ease',
+  outline: 'none',
+                   }} component={Link} to="/profile" size="small">Try For Free</Button>
        
       </CardActions>
     </Card>
