@@ -128,7 +128,7 @@ setUser(`${JSON.stringify(data)}`)
  
 
  await
- history.push('/profile')
+ history.push('/pay')
     }
     catch(error){
 setError(`failed to create an account!${error}`)
